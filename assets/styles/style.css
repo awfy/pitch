@@ -480,8 +480,73 @@ body div#content-wrapper div#container div#content div#content-left ul#submenu {
 }
 body div#content-wrapper div#container div#content div#content-left ul#submenu li {
   float: left;
+  position: relative;
   display: block;
   vertical-align: middle;
+}
+body div#content-wrapper div#container div#content div#content-left ul#submenu li#submenu-filter {
+  position: absolute;
+}
+body div#content-wrapper div#container div#content div#content-left ul#submenu li#submenu-filter span.title {
+  color: #666963;
+  text-align: right;
+}
+body div#content-wrapper div#container div#content div#content-left ul#submenu li#submenu-filter span#submenu-filter-title {
+  display: inline-block;
+  height: 31px;
+  padding: 0 10px;
+  background-color: #83c441;
+  border: 0;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 31px;
+}
+body div#content-wrapper div#container div#content div#content-left ul#submenu li#submenu-filter ul {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  padding: 10px 0;
+  width: 180px;
+  background-color: #fff;
+  border: 0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 0 1px rgba(171,179,161,0.4), 0 3px 9px rgba(0,0,0,0.1);
+  box-shadow: 0 0 0 1px rgba(171,179,161,0.4), 0 3px 9px rgba(0,0,0,0.1);
+}
+body div#content-wrapper div#container div#content div#content-left ul#submenu li#submenu-filter ul::before {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: -10px;
+  display: block;
+  height: 10px;
+  content: '';
+}
+body div#content-wrapper div#container div#content div#content-left ul#submenu li#submenu-filter ul li {
+  float: none;
+  font-size: inherit;
+  line-height: normal;
+}
+body div#content-wrapper div#container div#content div#content-left ul#submenu li#submenu-filter ul li > a {
+  display: block;
+  height: 30px;
+  padding: 0 15px;
+  width: auto;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: #111;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 30px;
+}
+body div#content-wrapper div#container div#content div#content-left ul#submenu li#submenu-filter ul li > a:hover {
+  background-color: #83c441;
+  color: #fff;
+  text-decoration: none;
 }
 body div#content-wrapper div#container div#content div#content-left ul#submenu li a {
   position: relative;

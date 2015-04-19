@@ -469,10 +469,80 @@ body
 
             li
               float: left
+              position: relative
 
               display: block
 
               vertical-align: middle
+
+              &#submenu-filter
+                position: absolute
+
+                span
+
+                  &.title
+                    color: fontColorLight
+                    text-align: right
+
+                  &#submenu-filter-title
+                    display: inline-block
+                    height: submenuHeight
+                    padding: 0 10px
+
+                    background-color: fontColorLink
+                    border: 0
+                    border-radius: 5px
+                    color: #ffffff
+                    font-size: 14px
+                    font-weight: 600
+                    line-height: submenuHeight
+
+                ul
+                  position: absolute
+                  right: 0
+                  top: submenuHeight + 4px
+
+                  padding: 10px 0
+                  width: 180px
+
+                  background-color: #ffffff
+                  border: 0
+                  border-radius: 4px
+                  box-shadow: 0 0 0 1px rgba(#abb3a1,0.4), 0 3px 9px rgba(#000000,0.1)
+
+                  &::before
+                    left: 0
+                    position: absolute
+                    right: 0
+                    top: -10px
+
+                    display: block
+                    height: 10px
+
+                    content: ''
+
+                  li
+                    float: none
+
+                    font-size: inherit
+                    line-height: normal
+
+                    > a
+                      display: block
+                      height: 30px
+                      padding: 0 15px
+                      width: auto
+
+                      border-radius: 0
+                      color: fontColorDark
+                      font-size: 14px
+                      font-weight: 600
+                      line-height: 30px
+
+                      &:hover
+                        background-color: fontColorLink
+                        color: #ffffff
+                        text-decoration: none
 
               a
                 position: relative
