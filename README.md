@@ -1,2 +1,2 @@
-# pitch
-A browser extension for HypeMachine
+# Pitch for HypeMachine
+A browser extension for HypeMachine.
