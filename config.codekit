@@ -68,6 +68,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/imgs\/logo-hover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 953,
+		"inputAbbreviatedPath": "\/assets\/imgs\/logo-hover.png",
+		"outputAbbreviatedPath": "\/assets\/imgs\/logo-hover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/imgs\/logo-hover@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1879,
+		"inputAbbreviatedPath": "\/assets\/imgs\/logo-hover@2x.png",
+		"outputAbbreviatedPath": "\/assets\/imgs\/logo-hover@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/imgs\/logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -86,6 +108,50 @@
 		"initialSize": 2368,
 		"inputAbbreviatedPath": "\/assets\/imgs\/logo@2x.png",
 		"outputAbbreviatedPath": "\/assets\/imgs\/logo@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/imgs\/search-icon-focus.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 505,
+		"inputAbbreviatedPath": "\/assets\/imgs\/search-icon-focus.png",
+		"outputAbbreviatedPath": "\/assets\/imgs\/search-icon-focus.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/imgs\/search-icon-focus@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1014,
+		"inputAbbreviatedPath": "\/assets\/imgs\/search-icon-focus@2x.png",
+		"outputAbbreviatedPath": "\/assets\/imgs\/search-icon-focus@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/imgs\/search-icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 505,
+		"inputAbbreviatedPath": "\/assets\/imgs\/search-icon.png",
+		"outputAbbreviatedPath": "\/assets\/imgs\/search-icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/imgs\/search-icon@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1029,
+		"inputAbbreviatedPath": "\/assets\/imgs\/search-icon@2x.png",
+		"outputAbbreviatedPath": "\/assets\/imgs\/search-icon@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

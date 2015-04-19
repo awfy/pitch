@@ -5,6 +5,14 @@
 /* build */
 body
   background-color: fontColor !important
+  color: fontColor !important
+  font-family: fontFamily !important
+  font-size: 400 !important
+  vertical-align: middle !important
+
+  h1, h2, h3, h4, h5, h6,
+  a, em, p, strong
+    font-family: fontFamily !important
 
   /*
     This entire section exists to remove a bunch of elements from
@@ -74,7 +82,10 @@ body
 
         div#content-left
 
-          div#message
+          div#message,
+          div#tags,
+
+          hr.space
             display: none !important
 
           div#track-list div.section.section-track
@@ -94,6 +105,9 @@ body
                 display: none !important
 
         div#content-right
+          display: none !important
+
+        div#time-machine
           display: none !important
 
   /*
@@ -165,20 +179,29 @@ body
         left: 10px
         position: absolute
         top: 0
+        z-index: 5
 
         height: headerHeight
         padding: 0
         width: 97px
 
         background-position: 20px 23px
+        background-repeat: no-repeat
         color: fontColorDark
         image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/logo.png' 57px 18px
         font-size: inherit
         line-height: normal
 
+        &:hover
+          background-color: fontColorLink
+          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/logo-hover.png' 57px 18px
+
+          &::after
+            display: none
+
         &::after
           position: absolute
-          right: -1px
+          right: 0
           top: 15px
 
           display: block
@@ -190,9 +213,10 @@ body
 
       /* navigation */
       ul.menu
-        left: 108px
+        left: 106px
         position: absolute
         top: 0
+        z-index: 10
 
         display: block
         height: headerHeight
@@ -318,6 +342,8 @@ body
 
         input#q
           float: none
+          position: relative
+          z-index: 5
 
           box-sizing: border-box
           height: 28px
@@ -325,16 +351,26 @@ body
           padding: 0 30px 0 15px
           width: 158px
 
+          background-color: #ffffff
+          background-position: 132px 6px
+          background-repeat: no-repeat
           border: 1px solid #d8dbd3
           border-radius: 50px
-          color: fontColor
+          color: FontColorLight
           font-family: fontFamily
           font-size: 13px
           font-weight: 400
+          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/search-icon.png' 14px 14px
           line-height: 28px
           outline: 0
 
           placeholder(FontColorLight)
+
+          &:focus
+            border-color: #aeb3a6
+            color: FontColor
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/search-icon-focus.png' 14px 14px
+
 
   /* player */
   div#player-container
@@ -413,7 +449,86 @@ body
 
           margin: 0 auto
           min-height: 0
+          padding-top: 30px
           width: width
 
           background-color: transparent
+
+          /* filter (submenu) */
+          ul#submenu
+            position: relative
+
+            height: submenuHeight
+            padding-bottom: 20px
+            width: auto
+
+            border: 0
+            border-bottom: 1px solid #e5e8e1
+            font-size: inherit
+            line-height: normal
+
+            li
+              float: left
+
+              display: block
+
+              vertical-align: middle
+
+              a
+                position: relative
+
+                display: block
+                height: submenuHeight
+                padding: 0 10px
+
+                background-color: transparent
+                border: 0
+                border-radius: 5px
+                color: fontColorDark
+                font-size: 14px
+                font-weight: 600
+                line-height: submenuHeight
+                opacity: 0.75
+
+                &:hover
+                  border: 0
+                  opacity: 1
+                  text-decoration: none
+
+                &.selected
+                  background-color: fontColorLink
+                  border: 0
+                  color: #ffffff
+                  opacity: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
