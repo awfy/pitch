@@ -1,0 +1,85 @@
+
+/* imports */
+global-reset()
+@import 'nib'
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,300,700,800')
+
+/* dimensions */
+width               = 700px
+headerHeight        = 64px
+playerHeight        = 82px
+
+/* font family */
+fontFamily          = "Open Sans", "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif
+
+/* font colors */
+fontColor           = #333631;
+fontColorLight      = #666963;
+fontColorDark       = #111111;
+fontColorLink       = #83C441;
+
+/* border arrow */
+arrow(direction, color, size)
+  display: block
+  height: 0
+  width: 0
+
+  if direction == "top"
+    border-bottom: size solid color
+    border-left: size solid transparent
+    border-right: size solid transparent
+
+  else if direction == "right"
+    border-bottom: size solid transparent
+    border-left: size solid color
+    border-top: size solid transparent
+
+  else if direction == "bottom"
+    border-left: size solid transparent
+    border-right: size solid transparent
+    border-top: size solid color
+
+  else if direction == "left"
+    border-bottom: size solid transparent
+    border-right: size solid color
+    border-top: size solid transparent
+
+  else if direction == "top-left"
+    border-right: size solid transparent
+    border-top: size solid color
+
+  else if direction == "top-right"
+    border-left: size solid transparent
+    border-top: size solid color
+
+  else if direction == "bottom-left"
+    border-bottom: size solid color
+    border-right: size solid transparent
+
+  else if direction == "bottom-right"
+    border-bottom: size solid color
+    border-left: size solid transparent
+
+/* placeholder */
+placeholder(placeholder = #999999)
+
+  /* Chrome + Safari */
+  &::-webkit-input-placeholder
+    color: placeholder
+
+  /* Firefox 18- */
+  &:-moz-placeholder
+    color: placeholder
+
+  /* Firefox 19+ */
+  &::-moz-placeholder
+    color: placeholder
+
+  /* Internet Explorer */
+  &:-ms-input-placeholder
+    color: placeholder
+
+/* retina images */
+image-set(normal, retina)
+  background-image: image_url(normal)
+  background-image: -webkit-image-set(image_url(normal) 1x, image_url(retina) 2x)

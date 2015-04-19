@@ -1,0 +1,402 @@
+/* helpers */
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,300,700,800");
+/* build */
+body {
+  background-color: #333631 !important;
+/*
+    This entire section exists to remove a bunch of elements from
+    the page that aren't required as part of this UI concept. Be
+    careful when removing an element from this list as it may break
+    a whole bunch of stuff.
+
+    Try to keep everything in alphabetical order.
+  */
+/*
+    Back to the fun stuff now, that's all of the things we needed to
+    hide. Here we go!
+
+    .$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$.
+    $$$$$$$ $$$'  '$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$'  '$$$ $$$$$$$
+    $$$$$$$ $$$s__s$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$s__s$$$ $$   $$
+    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$   $$
+    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$'     `$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$$$$$$$$p'  'q$'       $'      `$$$$$$$$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$p' `q$p      $      .ssSSSSS$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$     $       $      $'               `$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$     $       $      $                  `$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$     $       $      $.                  $$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$     $       $      `$.                 $$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$     $       !       `$$$$SSSss.        $$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$b._.d$b._ _.d$b._  _.d$b._  _.d'        $$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$$        "       ""       ""            $$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$$$                                     .$$$$$$$$$$ $$$$$$$
+    $$$$$$$ '$$$$$$$$$$$$                                    .$$$$$$$$$$' $$$$$$$
+    $$$$$$$s._____________                                  ____________.s$$$$$$$
+    $$$$$$$$$$$$$$$$$$$$$$.                                .$$$$$$$$$$$$$$$$$$$$$
+    $$$$$$$$$$$$$$$$$$$$$$$.                              $$$$$$$$$$$$$$$$$$$$$$$
+    $$$$$$$$$$$$$$$$$'  _____                            __   ________   `$$$$$$$
+    $$$$$$$$$$$$$$$$$ .s$$$$$.                          $$$s. $$$$$$$$$s. $$$$$$$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$$$$$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$$$$$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$$$$$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$$$$$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$ $$$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$ $$$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $.   .$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$. .$$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$.$$$
+    `$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$$$$$
+      `$$$$$$$$$$$'   $$$$$$$$                      dp $$$$$$ $$$$$$$$$$$ $$$$$$'
+  */
+/* header */
+/* player */
+/* content */
+}
+body div#about-site,
+body div#footer-menu,
+body div#footer,
+body div#keyboard,
+body div#toast-prompt {
+  display: none !important;
+}
+body div#header div#header-inner a#logo-txt::before {
+  display: none !important;
+}
+body div#header div#header-inner div#hh-header,
+body div#header div#header-inner div#hh-wrap-header,
+body div#header div#header-inner div#stack-menu,
+body div#header div#header-inner div#tv-controls,
+body div#header div#header-inner div#zeitgeist-header-menu {
+  display: none !important;
+}
+body div#header div#header-inner form#search-form a#shuf,
+body div#header div#header-inner form#search-form input[type="submit"] {
+  display: none !important;
+}
+body div#header div#header-inner ul.menu li#menu-item-directory,
+body div#header div#header-inner ul.menu li#menu-item-hh,
+body div#header div#header-inner ul.menu li#menu-item-more,
+body div#header div#header-inner ul.menu li#menu-item-premiere,
+body div#header div#header-inner ul.menu li#menu-item-search {
+  display: none !important;
+}
+body div#player-container div#player-inner div#filter,
+body div#player-container div#player-inner div#player-page {
+  display: none !important;
+}
+body div#player-container div#player-inner div#player-controls div#player-nowplaying a.store.read-post,
+body div#player-container div#player-inner div#player-controls div#player-nowplaying div.share-icons {
+  display: none !important;
+}
+body div#content-wrapper a#phonograph,
+body div#content-wrapper div.tsad-skin {
+  display: none !important;
+}
+body div#content-wrapper div#container div#ad-breakout {
+  display: none !important;
+}
+body div#content-wrapper div#container div#content div#content-left div#message {
+  display: none !important;
+}
+body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.track-info {
+  display: none !important;
+}
+body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player div.act_info,
+body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player div.meta,
+body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player p.post_info,
+body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player span.share-links {
+  display: none !important;
+}
+body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player ul.tools li.playlist-ctrls {
+  display: none !important;
+}
+body div#content-wrapper div#container div#content div#content-right {
+  display: none !important;
+}
+body div#header {
+  position: relative;
+  height: auto;
+  width: auto;
+  background-color: #fff;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
+  line-height: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+body div#header div#header-inner {
+  position: relative;
+  height: 64px;
+  margin: 0 auto;
+  width: 700px;
+/* logo */
+/* navigation */
+/* search field */
+}
+body div#header div#header-inner a#logo-txt {
+  float: none;
+  left: 10px;
+  position: absolute;
+  top: 0;
+  height: 64px;
+  padding: 0;
+  width: 97px;
+  background-position: 20px 23px;
+  color: #111;
+  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/logo.png");
+  font-size: inherit;
+  line-height: normal;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
+  body div#header div#header-inner a#logo-txt {
+    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/logo@2x.png");
+    -webkit-background-size: 57px 18px;
+    -moz-background-size: 57px 18px;
+    background-size: 57px 18px;
+  }
+}
+body div#header div#header-inner a#logo-txt::after {
+  position: absolute;
+  right: -1px;
+  top: 15px;
+  display: block;
+  height: 34px;
+  width: 1px;
+  background-color: #e5e8e1;
+  content: '';
+}
+body div#header div#header-inner ul.menu {
+  left: 108px;
+  position: absolute;
+  top: 0;
+  display: block;
+  height: 64px;
+  font-size: inherit;
+  vertical-align: middle;
+}
+body div#header div#header-inner ul.menu li {
+  float: left;
+  display: block;
+  margin-left: -1px;
+  vertical-align: middle;
+}
+body div#header div#header-inner ul.menu li > a {
+  display: block;
+  padding: 0 15px;
+  background-color: transparent;
+  border: 0;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  color: #111;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 64px;
+  opacity: 0.75;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+  filter: alpha(opacity=75);
+  vertical-align: middle;
+}
+body div#header div#header-inner ul.menu li > a:hover {
+  background-color: transparent;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+body div#header div#header-inner ul.menu li:hover {
+  background-color: transparent;
+}
+body div#header div#header-inner ul.menu li:hover ul {
+  display: block;
+}
+body div#header div#header-inner ul.menu li:first-child {
+  margin-left: 0;
+}
+body div#header div#header-inner ul.menu li.active {
+  background-color: transparent;
+}
+body div#header div#header-inner ul.menu li.active > a {
+  height: 65px;
+  margin-bottom: -1px;
+  background-color: #333631;
+  border-left-color: #222422;
+  border-right-color: #222422;
+  color: #fff;
+  font-weight: 600;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  text-decoration: none;
+}
+body div#header div#header-inner ul.menu li.active > a:hover {
+  background-color: #333631;
+}
+body div#header div#header-inner ul.menu li ul {
+  left: 15px;
+  position: absolute;
+  top: 54px;
+  padding: 10px 0;
+  width: 180px;
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 0 1px rgba(171,179,161,0.4), 0 3px 9px rgba(0,0,0,0.1);
+  box-shadow: 0 0 0 1px rgba(171,179,161,0.4), 0 3px 9px rgba(0,0,0,0.1);
+}
+body div#header div#header-inner ul.menu li ul::before {
+  left: 15px;
+  position: absolute;
+  top: -10px;
+  display: block;
+  height: 0;
+  width: 0;
+  border-bottom: 10px solid rgba(171,179,161,0.4);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  content: '';
+}
+body div#header div#header-inner ul.menu li ul::after {
+  left: 15px;
+  position: absolute;
+  top: -9px;
+  display: block;
+  height: 0;
+  width: 0;
+  border-bottom: 10px solid #fff;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  content: '';
+}
+body div#header div#header-inner ul.menu li ul li {
+  float: none;
+  font-size: inherit;
+  line-height: normal;
+}
+body div#header div#header-inner ul.menu li ul li > a {
+  display: block;
+  height: 30px;
+  padding: 0 15px;
+  width: auto;
+  color: #111;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 30px;
+}
+body div#header div#header-inner ul.menu li ul li > a:hover {
+  background-color: #83c441;
+  color: #fff;
+  text-decoration: none;
+}
+body div#header div#header-inner form#search-form {
+  position: absolute;
+  right: 30px;
+  top: 17px;
+  display: block;
+  height: auto;
+  width: auto;
+  vertical-align: middle;
+}
+body div#header div#header-inner form#search-form input#q {
+  float: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 28px;
+  margin: 0;
+  padding: 0 30px 0 15px;
+  width: 158px;
+  border: 1px solid #d8dbd3;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  color: #333631;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 28px;
+  outline: 0;
+/* Chrome + Safari */
+/* Firefox 18- */
+/* Firefox 19+ */
+/* Internet Explorer */
+}
+body div#header div#header-inner form#search-form input#q::-webkit-input-placeholder {
+  color: FontColorLight;
+}
+body div#header div#header-inner form#search-form input#q:-moz-placeholder {
+  color: FontColorLight;
+}
+body div#header div#header-inner form#search-form input#q::-moz-placeholder {
+  color: FontColorLight;
+}
+body div#header div#header-inner form#search-form input#q:-ms-input-placeholder {
+  color: FontColorLight;
+}
+body div#player-container {
+  left: 0;
+  position: absolute;
+  right: 0;
+  height: 82px;
+  width: auto;
+  background-color: #333631;
+  border: 0;
+  border-bottom: 1px solid #222422;
+  border-top: 1px solid #222422;
+  color: #cacfc4;
+  line-height: normal;
+}
+body div#player-container div#player-inner {
+  position: relative;
+  height: auto;
+  margin: 0 auto;
+  width: 700px;
+}
+body div#player-container div#player-inner div#player-controls {
+  float: none;
+  position: relative;
+  height: auto;
+  width: auto;
+}
+body div#player-container div#player-inner div#player-controls div#player-timebar {
+  position: relative;
+  top: auto;
+  display: block;
+  height: auto;
+  width: auto;
+  background-color: transparent;
+  border: 0;
+  font-size: inherit;
+  line-height: normal;
+}
+body div#content-wrapper {
+  position: relative;
+  margin: 0;
+  min-height: 0;
+  overflow: visible;
+  padding-top: 84px;
+  width: 100%;
+  background-color: #fff;
+}
+body div#content-wrapper div#container {
+  position: relative;
+  display: block;
+  margin: 0;
+  width: auto;
+  background-color: transparent;
+}
+body div#content-wrapper div#container div#content {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+body div#content-wrapper div#container div#content div#content-left {
+  float: none;
+  position: relative;
+  margin: 0 auto;
+  min-height: 0;
+  width: 700px;
+  background-color: transparent;
+}

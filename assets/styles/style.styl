@@ -1,0 +1,419 @@
+
+/* helpers */
+@import '_helpers.styl'
+
+/* build */
+body
+  background-color: fontColor !important
+
+  /*
+    This entire section exists to remove a bunch of elements from
+    the page that aren't required as part of this UI concept. Be
+    careful when removing an element from this list as it may break
+    a whole bunch of stuff.
+
+    Try to keep everything in alphabetical order.
+  */
+
+  div#about-site,
+  div#footer-menu,
+  div#footer,
+  div#keyboard,
+  div#toast-prompt
+    display: none !important
+
+  div#header div#header-inner
+
+    a#logo-txt::before
+      display: none !important
+
+    div#hh-header,
+    div#hh-wrap-header,
+    div#stack-menu,
+    div#tv-controls,
+    div#zeitgeist-header-menu
+      display: none !important
+
+    form#search-form
+      a#shuf,
+      input[type="submit"]
+        display: none !important
+
+    ul.menu
+      li#menu-item-directory,
+      li#menu-item-hh,
+      li#menu-item-more,
+      li#menu-item-premiere,
+      li#menu-item-search
+        display: none !important
+
+  div#player-container div#player-inner
+
+    div#filter,
+    div#player-page
+      display: none !important
+
+    div#player-controls div#player-nowplaying
+
+      a.store.read-post,
+      div.share-icons
+        display: none !important
+
+  div#content-wrapper
+
+    a#phonograph,
+    div.tsad-skin
+      display: none !important
+
+    div#container
+
+      div#ad-breakout
+        display: none !important
+
+      div#content
+
+        div#content-left
+
+          div#message
+            display: none !important
+
+          div#track-list div.section.section-track
+
+            div.track-info
+              display: none !important
+
+            div.section-player
+
+              div.act_info,
+              div.meta,
+              p.post_info,
+              span.share-links
+                display: none !important
+
+              ul.tools li.playlist-ctrls
+                display: none !important
+
+        div#content-right
+          display: none !important
+
+  /*
+    Back to the fun stuff now, that's all of the things we needed to
+    hide. Here we go!
+
+    .$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$.
+    $$$$$$$ $$$'  '$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$'  '$$$ $$$$$$$
+    $$$$$$$ $$$s__s$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$s__s$$$ $$   $$
+    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$   $$
+    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$'     `$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$$$$$$$$p'  'q$'       $'      `$$$$$$$$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$p' `q$p      $      .ssSSSSS$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$     $       $      $'               `$$$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$     $       $      $                  `$$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$     $       $      $.                  $$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$     $       $      `$.                 $$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$     $       !       `$$$$SSSss.        $$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$b._.d$b._ _.d$b._  _.d$b._  _.d'        $$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$$        "       ""       ""            $$$$$$$$$$ $$$$$$$
+    $$$$$$$ $$$$$$$$$$$$$                                     .$$$$$$$$$$ $$$$$$$
+    $$$$$$$ '$$$$$$$$$$$$                                    .$$$$$$$$$$' $$$$$$$
+    $$$$$$$s._____________                                  ____________.s$$$$$$$
+    $$$$$$$$$$$$$$$$$$$$$$.                                .$$$$$$$$$$$$$$$$$$$$$
+    $$$$$$$$$$$$$$$$$$$$$$$.                              $$$$$$$$$$$$$$$$$$$$$$$
+    $$$$$$$$$$$$$$$$$'  _____                            __   ________   `$$$$$$$
+    $$$$$$$$$$$$$$$$$ .s$$$$$.                          $$$s. $$$$$$$$$s. $$$$$$$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$$$$$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$$$$$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$$$$$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$$$$$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$ $$$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$ $$$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $.   .$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$. .$$
+    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$.$$$
+    `$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$$$$$
+      `$$$$$$$$$$$'   $$$$$$$$                      dp $$$$$$ $$$$$$$$$$$ $$$$$$'
+  */
+
+  /* header */
+  div#header
+    position: relative
+
+    height: auto
+    width: auto
+
+    background-color: #ffffff
+    font-family: fontFamily
+    line-height: normal
+    text-align: left
+    vertical-align: middle
+
+    div#header-inner
+      position: relative
+
+      height: headerHeight
+      margin: 0 auto
+      width: width
+
+      /* logo */
+      a#logo-txt
+        float: none
+        left: 10px
+        position: absolute
+        top: 0
+
+        height: headerHeight
+        padding: 0
+        width: 97px
+
+        background-position: 20px 23px
+        color: fontColorDark
+        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/logo.png' 57px 18px
+        font-size: inherit
+        line-height: normal
+
+        &::after
+          position: absolute
+          right: -1px
+          top: 15px
+
+          display: block
+          height: 34px
+          width: 1px
+
+          background-color: #e5e8e1
+          content: ''
+
+      /* navigation */
+      ul.menu
+        left: 108px
+        position: absolute
+        top: 0
+
+        display: block
+        height: headerHeight
+
+        font-size: inherit
+        vertical-align: middle
+
+        li
+          float: left
+
+          display: block
+          margin-left: -1px
+
+          vertical-align: middle
+
+          > a
+            display: block
+            padding: 0 15px
+
+            background-color: transparent
+            border: 0
+            border-left: 1px solid transparent
+            border-right: 1px solid transparent
+            color: fontColorDark
+            font-size: 15px
+            font-weight: 600
+            line-height: headerHeight
+            opacity: 0.75
+            vertical-align: middle
+
+            &:hover
+              background-color: transparent
+              opacity: 1
+
+          &:hover
+            background-color: transparent
+
+            ul
+              display: block
+
+          &:first-child
+            margin-left: 0
+
+          &.active
+            background-color: transparent
+
+            > a
+              height: headerHeight + 1px
+              margin-bottom: -1px
+
+              background-color: fontColor
+              border-left-color: #222422
+              border-right-color: #222422
+              color: #ffffff
+              font-weight: 600
+              opacity: 1
+              text-decoration: none
+
+              &:hover
+                background-color: fontColor
+
+          ul
+            left: 15px
+            position: absolute
+            top: headerHeight - 10px
+
+            padding: 10px 0
+            width: 180px
+
+            background-color: #ffffff
+            border-radius: 4px
+            box-shadow: 0 0 0 1px rgba(#abb3a1,0.4), 0 3px 9px rgba(#000000,0.1)
+
+            &::before
+              left: 15px
+              position: absolute
+              top: -10px
+
+              arrow(top, rgba(#abb3a1,0.4), 10px)
+              content: ''
+
+            &::after
+              left: 15px
+              position: absolute
+              top: -9px
+
+              arrow(top, #ffffff, 10px)
+              content: ''
+
+            li
+              float: none
+
+              font-size: inherit
+              line-height: normal
+
+              > a
+                display: block
+                height: 30px
+                padding: 0 15px
+                width: auto
+
+                color: fontColorDark
+                font-size: 14px
+                font-weight: 600
+                line-height: 30px
+
+                &:hover
+                  background-color: fontColorLink
+                  color: #ffffff
+                  text-decoration: none
+
+      /* search field */
+      form#search-form
+        position: absolute
+        right: 30px
+        top: 17px
+
+        display: block
+        height: auto
+        width: auto
+
+        vertical-align: middle
+
+        input#q
+          float: none
+
+          box-sizing: border-box
+          height: 28px
+          margin: 0
+          padding: 0 30px 0 15px
+          width: 158px
+
+          border: 1px solid #d8dbd3
+          border-radius: 50px
+          color: fontColor
+          font-family: fontFamily
+          font-size: 13px
+          font-weight: 400
+          line-height: 28px
+          outline: 0
+
+          placeholder(FontColorLight)
+
+  /* player */
+  div#player-container
+    left: 0
+    position: absolute
+    right: 0
+
+    height: playerHeight
+    width: auto
+
+    background-color: fontColor
+    border: 0
+    border-bottom: 1px solid #222422
+    border-top: 1px solid #222422
+    color: #cacfc4
+    line-height: normal
+
+    div#player-inner
+      position: relative
+
+      height: auto
+      margin: 0 auto
+      width: width
+
+      div#player-controls
+        float: none
+        position: relative
+
+        height: auto
+        width: auto
+
+        div#player-timebar
+          position: relative
+          top: auto
+
+          display: block
+          height: auto
+          width: auto
+
+          background-color: transparent
+          border: 0
+          font-size: inherit
+          line-height: normal
+
+  /* content */
+  div#content-wrapper
+    position: relative
+
+    margin: 0
+    min-height: 0
+    overflow: visible
+    padding-top: playerHeight + 2px /* + 2px for border widths */
+    width: 100%
+
+    background-color: #ffffff
+
+    div#container
+      position: relative
+
+      display: block
+      margin: 0
+      width: auto
+
+      background-color: transparent
+
+      div#content
+        position: relative
+
+        margin: 0
+        padding: 0
+        width: auto
+
+        div#content-left
+          float: none
+          position: relative
+
+          margin: 0 auto
+          min-height: 0
+          width: width
+
+          background-color: transparent
+
