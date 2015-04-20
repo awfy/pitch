@@ -68,7 +68,8 @@ html body div#content-wrapper div#container div#content div#content-left div#tra
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player div.meta,
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player div.sparkdiv,
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player p.post_info,
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player span.share-links {
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player span.share-links,
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player ul.tags {
   display: none !important;
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player h3.track_name a.track span.remix-count {
@@ -686,10 +687,10 @@ body div#content-wrapper div#container div#content div#content-left {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
   min-height: 0;
-  padding: 30px;
-  width: 700px;
+  padding: 30px 0;
+  width: auto;
   background-color: transparent;
 /* filter (submenu) */
 /* track list */
@@ -697,10 +698,10 @@ body div#content-wrapper div#container div#content div#content-left {
 body div#content-wrapper div#container div#content div#content-left ul#submenu {
   position: relative;
   height: 31px;
+  margin: 0 auto;
   padding-bottom: 20px;
-  width: auto;
+  width: 640px;
   border: 0;
-  border-bottom: 1px solid #e5e8e1;
   font-size: inherit;
   line-height: normal;
 }
@@ -812,11 +813,19 @@ body div#content-wrapper div#container div#content div#content-left div#track-li
   padding: 0;
   background-color: transparent;
   border: 0;
+  border-bottom: 1px solid #f0f2ed;
+}
+body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track.first {
+  border-top: 1px solid #e5e8e1;
 }
 body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player {
-  min-height: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-height: 90px;
   padding: 20px 126px 20px 64px;
-  border-bottom: 1px solid #f0f2ed;
+  width: 640px;
 }
 body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player:hover h3.track_name {
   opacity: 1;
@@ -879,7 +888,13 @@ body div#content-wrapper div#container div#content div#content-left div#track-li
   font-size: 16px;
   font-weight: 600;
 }
+body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player h3.track_name a.track:hover {
+  text-decoration: none;
+}
 body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player h3.track_name a.track span:hover {
+  text-decoration: none;
+}
+body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player h3.track_name a.track span.base-title {
   text-decoration: none;
 }
 body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player h3.track_name a.track span.remix-link {

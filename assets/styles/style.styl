@@ -473,10 +473,10 @@ body
           position: relative
 
           box-sizing: border-box
-          margin: 0 auto
+          margin: 0
           min-height: 0
-          padding: padding
-          width: width
+          padding: padding 0
+          width: auto
 
           background-color: transparent
 
@@ -485,11 +485,11 @@ body
             position: relative
 
             height: submenuHeight
+            margin: 0 auto
             padding-bottom: 20px
-            width: auto
+            width: width - (padding * 2)
 
             border: 0
-            border-bottom: 1px solid #e5e8e1
             font-size: inherit
             line-height: normal
 
@@ -605,12 +605,17 @@ body
 
             background-color: transparent
             border: 0
+            border-bottom: 1px solid #f0f2ed
+
+            &.first
+              border-top: 1px solid #e5e8e1
 
             div.section-player
-              min-height: 50px
+              box-sizing: border-box
+              margin: 0 auto
+              min-height: 90px
               padding: 20px 126px 20px 64px
-
-              border-bottom: 1px solid #f0f2ed
+              width: width - (padding * 2)
 
               &:hover
 
@@ -678,9 +683,15 @@ body
                     font-size: 16px
                     font-weight: 600
 
+                    &:hover
+                      text-decoration: none
+
                     span
 
                       &:hover
+                        text-decoration: none
+
+                      &.base-title
                         text-decoration: none
 
                       &.remix-link
@@ -753,7 +764,6 @@ body
 
                       &.favcount-on
                         color: fontColorFavorite
-
 
 
 
