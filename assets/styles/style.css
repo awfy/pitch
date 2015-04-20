@@ -55,6 +55,9 @@ html body div#content-wrapper div#container div.ad-breakout,
 html body div#content-wrapper div#container div#ad-breakout {
   display: none !important;
 }
+html body div#content-wrapper div#container div#content div.ad-wrapper {
+  display: none !important;
+}
 html body div#content-wrapper div#container div#content div#content-left div#end-of-infinity,
 html body div#content-wrapper div#container div#content div#content-left div.header-box,
 html body div#content-wrapper div#container div#content div#content-left div.locale-blogs-header,
