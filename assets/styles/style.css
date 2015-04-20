@@ -674,6 +674,15 @@ body div#content-wrapper div#container {
   margin: 0;
   width: auto;
   background-color: transparent;
+/* removes padding from infinite pagination containers */
+}
+body div#content-wrapper div#container:nth-child(7) div#content div#content-left,
+body div#content-wrapper div#container:nth-child(9) div#content div#content-left {
+  padding: 0;
+}
+body div#content-wrapper div#container:nth-child(7) div#content div#content-left div#track-list div.section.section-track.first,
+body div#content-wrapper div#container:nth-child(9) div#content div#content-left div#track-list div.section.section-track.first {
+  border-top: 0;
 }
 body div#content-wrapper div#container div#content {
   position: relative;
@@ -694,6 +703,7 @@ body div#content-wrapper div#container div#content div#content-left {
   background-color: transparent;
 /* filter (submenu) */
 /* track list */
+/* pagination */
 }
 body div#content-wrapper div#container div#content div#content-left ul#submenu {
   position: relative;
@@ -1021,4 +1031,7 @@ body div#content-wrapper div#container div#content div#content-left div#track-li
 }
 body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player ul.tools li.favdiv a.haarp-fav-count.favcount-on {
   color: #ed2024;
+}
+body div#content-wrapper div#container div#content div#content-left div.paginator.infinite {
+  display: none;
 }

@@ -461,6 +461,15 @@ body
 
       background-color: transparent
 
+      /* removes padding from infinite pagination containers */
+      &:nth-child(7), &:nth-child(9)
+
+        div#content div#content-left
+          padding: 0
+
+          div#track-list div.section.section-track.first
+            border-top: 0
+
       div#content
         position: relative
 
@@ -766,6 +775,14 @@ body
 
                       &.favcount-on
                         color: fontColorFavorite
+
+          /* pagination */
+          div.paginator
+
+            &.infinite
+              display: none
+
+
 
 
 
