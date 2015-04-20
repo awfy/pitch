@@ -395,8 +395,53 @@ body
               background-color: fontColorLink
               border-radius: 8px
 
-          div#player-time-position, div#player-time-total, div#player-progress-outer
-            display: none
+          div#player-time-position, div#player-time-total
+            position: absolute
+            top: 14px + 28px + 14px
+
+            height: 18px
+            width: 34px
+
+            color: #cacfc4
+            font-size: 13px
+            font-weight: 600
+            line-height: 18px
+            text-align: center
+            vertical-align: middle
+
+          div#player-time-position
+            left: padding
+
+          div#player-time-total
+            left: auto
+            right: padding
+
+          div#player-progress-outer
+            left: padding + 34px + 10px
+            position: absolute
+            right: 10px + 34px + padding
+            top: 14px + 28px + 14px + 5px
+
+            height: 8px
+            overflow: hidden
+            width: auto
+
+            background-color: #4a4d49
+            border: 0
+            border-radius: 8px
+            line-height: normal
+
+            div#player-progress-loading
+              height: 8px
+
+              background-color: fontColorLight
+              border-radius: 8px
+
+            div#player-progress-playing
+              height: 8px
+
+              background-color: fontColorLink
+              border-radius: 8px
 
   /* content */
   div#content-wrapper

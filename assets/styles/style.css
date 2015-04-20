@@ -609,9 +609,50 @@ body div#player-container div#player-inner div#player-controls div#player-timeba
   border-radius: 8px;
 }
 body div#player-container div#player-inner div#player-controls div#player-timebar div#player-time-position,
-body div#player-container div#player-inner div#player-controls div#player-timebar div#player-time-total,
+body div#player-container div#player-inner div#player-controls div#player-timebar div#player-time-total {
+  position: absolute;
+  top: 56px;
+  height: 18px;
+  width: 34px;
+  color: #cacfc4;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+}
+body div#player-container div#player-inner div#player-controls div#player-timebar div#player-time-position {
+  left: 30px;
+}
+body div#player-container div#player-inner div#player-controls div#player-timebar div#player-time-total {
+  left: auto;
+  right: 30px;
+}
 body div#player-container div#player-inner div#player-controls div#player-timebar div#player-progress-outer {
-  display: none;
+  left: 74px;
+  position: absolute;
+  right: 74px;
+  top: 61px;
+  height: 8px;
+  overflow: hidden;
+  width: auto;
+  background-color: #4a4d49;
+  border: 0;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  line-height: normal;
+}
+body div#player-container div#player-inner div#player-controls div#player-timebar div#player-progress-outer div#player-progress-loading {
+  height: 8px;
+  background-color: #666963;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+body div#player-container div#player-inner div#player-controls div#player-timebar div#player-progress-outer div#player-progress-playing {
+  height: 8px;
+  background-color: #83c441;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
 }
 body div#content-wrapper {
   position: relative;
