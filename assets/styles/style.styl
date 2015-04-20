@@ -4,12 +4,13 @@
 @import '_hidden.styl'
 
 /* build */
-body
+html body
   box-sizing: border-box !important
   min-width: minWidth !important
   padding: border !important
 
   background-color: #ffffff !important
+  background-image: none !important
   color: fontColor !important
   font-family: fontFamily !important
   font-size: 400 !important
@@ -235,42 +236,39 @@ body
 
   /* loader */
   div#player-loading
-    bottom: border
-    left: border
+    bottom: auto
+    left: 50%
     position: fixed
-    right: border
-    top: playerHeight
-    z-index: 100
+    right: auto
+    top: 50%
+    z-index: 999
 
     height: auto
-    margin: 0
-    min-width: minWidth
-    width: auto
+    margin: -41px 0 0 -41px
+    padding: 26px 0
+    width: 82px
 
-    background-color: #ffffff
-    border-radius: 0 0 6px 6px
+    background-color: fontColorLink
+    border-radius: 6px
+    opacity: 0.85
 
     span
-      left: 50%
-      position: absolute
-      top: 50%
+      position: relative
 
       display: block
-      margin: -9px 0 0 -100px
+      height: 30px
+      margin: 0 auto
       padding: 0
-      width: 200px
+      width: 30px
 
-      background: transparent
+      background-color: transparent
+      background-image: url('chrome-extension://__MSG_@@extension_id__/assets/imgs/player/loading.gif')
+      background-position: 0 0
+      background-repeat: no-repeat
       border: 0
       border-radius: 0
-      color: fontColor
-      font-family: fontFamily
-      font-size: 18px
-      font-weight: 600
+      font-size: 0
       text-transform: lowercase
-
-      &::after
-        content: '...'
 
   /* player */
   div#player-container
@@ -668,6 +666,9 @@ body
 
             &.first
               border-top: 1px solid #e5e8e1
+
+            &.haarp-active
+              background-color: fontColorLighter
 
             div.section-player
               box-sizing: border-box
