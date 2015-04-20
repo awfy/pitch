@@ -96,8 +96,8 @@ body {
   -moz-box-sizing: border-box !important;
   box-sizing: border-box !important;
   min-width: 800px !important;
-  padding: 6px !important;
-  background-color: #83c441 !important;
+  padding: 0 !important;
+  background-color: #fff !important;
   color: #333631 !important;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif !important;
   font-size: 400 !important;
@@ -124,8 +124,6 @@ body div#header {
   height: auto;
   width: auto;
   background-color: #fff;
-  -webkit-border-radius: 6px 6px 0 0;
-  border-radius: 6px 6px 0 0;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
   line-height: normal;
   text-align: left;
@@ -379,10 +377,10 @@ body div#header div#header-inner form#search-form input#q:focus {
   }
 }
 body div#player-loading {
-  bottom: 6px;
-  left: 6px;
+  bottom: 0;
+  left: 0;
   position: fixed;
-  right: 6px;
+  right: 0;
   top: 82px;
   z-index: 100;
   height: auto;
@@ -415,9 +413,9 @@ body div#player-loading span::after {
   content: '...';
 }
 body div#player-container {
-  left: 6px;
+  left: 0;
   position: absolute;
-  right: 6px;
+  right: 0;
   z-index: 200;
   height: 82px;
   width: auto;
@@ -722,8 +720,6 @@ body div#content-wrapper {
   padding-top: 82px;
   width: 100%;
   background-color: #fff;
-  -webkit-border-radius: 0 0 6px 6px;
-  border-radius: 0 0 6px 6px;
 }
 body div#content-wrapper div#container {
   position: relative;
