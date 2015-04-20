@@ -23,7 +23,6 @@
   "content_scripts": [ {
                                 "matches":            [ "http://*.hypem.com/*", "https://*.hypem.com/*", "http://*.hypemachine.com/*", "https://*.hypemachine.com/*" ],
                                 "css":                [ "assets/styles/style.css" ],
-                                "js":                 [ "assets/scripts/jquery-1.9.1.min.js", "assets/scripts/app-min.js" ],
                                 "run_at":             "document_end"
   }],
 
