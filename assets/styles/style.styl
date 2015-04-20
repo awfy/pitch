@@ -33,7 +33,7 @@ body
 
       height: headerHeight
       margin: 0 auto
-      width: width
+      width: auto
 
       /* logo */
       a#logo-txt
@@ -255,7 +255,7 @@ body
 
       height: auto
       margin: 0 auto
-      width: width
+      width: auto
 
       div#player-controls
         float: none
@@ -475,7 +475,7 @@ body
           box-sizing: border-box
           margin: 0
           min-height: 0
-          padding: padding 0
+          padding: 20px 0 0
           width: auto
 
           background-color: transparent
@@ -484,10 +484,11 @@ body
           ul#submenu
             position: relative
 
-            height: submenuHeight
+            box-sizing: border-box
+            height: submenuHeight + 20px
             margin: 0 auto
-            padding-bottom: 20px
-            width: width - (padding * 2)
+            padding: 0 30px
+            width: 100%
 
             border: 0
             font-size: inherit
@@ -503,6 +504,7 @@ body
 
               &#submenu-filter
                 position: absolute
+                right: padding
 
                 span
 
@@ -614,8 +616,8 @@ body
               box-sizing: border-box
               margin: 0 auto
               min-height: 90px
-              padding: 20px 126px 20px 64px
-              width: width - (padding * 2)
+              padding: 20px (126px + padding) 20px (padding + 64px)
+              width: 100%
 
               &:hover
 
@@ -624,7 +626,7 @@ body
 
               span.rank
                 position: absolute
-                left: 0
+                left: padding
                 top: 46px
 
                 display: block
@@ -641,7 +643,7 @@ body
                 text-align: center
 
               a.thumb
-                left: 0
+                left: padding
                 position: absolute
                 top: 20px
 
@@ -699,7 +701,7 @@ body
 
               ul.tools
                 position: absolute
-                right: 10px
+                right: padding
                 top: 31px
 
                 width: 100px

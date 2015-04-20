@@ -124,7 +124,7 @@ body div#header div#header-inner {
   position: relative;
   height: 64px;
   margin: 0 auto;
-  width: 700px;
+  width: auto;
 /* logo */
 /* navigation */
 /* search field */
@@ -388,7 +388,7 @@ body div#player-container div#player-inner {
   position: relative;
   height: auto;
   margin: 0 auto;
-  width: 700px;
+  width: auto;
 }
 body div#player-container div#player-inner div#player-controls {
   float: none;
@@ -689,7 +689,7 @@ body div#content-wrapper div#container div#content div#content-left {
   box-sizing: border-box;
   margin: 0;
   min-height: 0;
-  padding: 30px 0;
+  padding: 20px 0 0;
   width: auto;
   background-color: transparent;
 /* filter (submenu) */
@@ -697,10 +697,13 @@ body div#content-wrapper div#container div#content div#content-left {
 }
 body div#content-wrapper div#container div#content div#content-left ul#submenu {
   position: relative;
-  height: 31px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 51px;
   margin: 0 auto;
-  padding-bottom: 20px;
-  width: 640px;
+  padding: 0 30px;
+  width: 100%;
   border: 0;
   font-size: inherit;
   line-height: normal;
@@ -713,6 +716,7 @@ body div#content-wrapper div#container div#content div#content-left ul#submenu l
 }
 body div#content-wrapper div#container div#content div#content-left ul#submenu li#submenu-filter {
   position: absolute;
+  right: 30px;
 }
 body div#content-wrapper div#container div#content div#content-left ul#submenu li#submenu-filter span.title {
   color: #666963;
@@ -824,8 +828,8 @@ body div#content-wrapper div#container div#content div#content-left div#track-li
   box-sizing: border-box;
   margin: 0 auto;
   min-height: 90px;
-  padding: 20px 126px 20px 64px;
-  width: 640px;
+  padding: 20px 156px 20px 94px;
+  width: 100%;
 }
 body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player:hover h3.track_name {
   opacity: 1;
@@ -834,7 +838,7 @@ body div#content-wrapper div#container div#content div#content-left div#track-li
 }
 body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player span.rank {
   position: absolute;
-  left: 0;
+  left: 30px;
   top: 46px;
   display: block;
   height: 24px;
@@ -850,7 +854,7 @@ body div#content-wrapper div#container div#content div#content-left div#track-li
   text-align: center;
 }
 body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player a.thumb {
-  left: 0;
+  left: 30px;
   position: absolute;
   top: 20px;
   display: block;
@@ -902,7 +906,7 @@ body div#content-wrapper div#container div#content div#content-left div#track-li
 }
 body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player ul.tools {
   position: absolute;
-  right: 10px;
+  right: 30px;
   top: 31px;
   width: 100px;
 }
