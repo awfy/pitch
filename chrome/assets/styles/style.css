@@ -5,7 +5,8 @@ html body div#footer-menu,
 html body div#footer,
 html body div.ignite-takeover-clickthru,
 html body div#keyboard,
-html body div#toast-prompt {
+html body div#toast-prompt,
+html body div#VIZUSURVEY {
   display: none !important;
 }
 html body div#header div#header-inner a#logo-txt::before {
@@ -422,7 +423,7 @@ html body div#player-container {
   position: absolute;
   right: 0;
   z-index: 200;
-  height: 82px;
+  height: 86px;
   width: auto;
   background-color: #333631;
   border: 0;
@@ -722,7 +723,7 @@ html body div#content-wrapper {
   margin: 0;
   min-height: 0;
   overflow: visible;
-  padding-top: 82px;
+  padding-top: 86px;
   width: 100%;
   background-color: #fff;
 }
