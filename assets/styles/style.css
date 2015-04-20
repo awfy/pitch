@@ -322,12 +322,12 @@ body div#header div#header-inner form#search-form input#q {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  height: 28px;
+  height: 30px;
   margin: 0;
   padding: 0 30px 0 15px;
-  width: 158px;
+  width: 160px;
   background-color: #fff;
-  background-position: 132px 6px;
+  background-position: 132px 7px;
   background-repeat: no-repeat;
   border: 1px solid #d8dbd3;
   -webkit-border-radius: 50px;
@@ -337,7 +337,7 @@ body div#header div#header-inner form#search-form input#q {
   font-size: 13px;
   font-weight: 400;
   background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/search-icon.png");
-  line-height: 28px;
+  line-height: 30px;
   outline: 0;
 /* Chrome + Safari */
 /* Firefox 18- */
@@ -875,7 +875,7 @@ body div#content-wrapper div#container div#content div#content-left div#track-li
   padding: 0;
   background-color: transparent;
   border: 0;
-  border-bottom: 1px solid #f0f2ed;
+  border-top: 1px solid #f0f2ed;
 }
 body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track.first {
   border-top: 1px solid #e5e8e1;
