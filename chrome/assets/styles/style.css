@@ -941,6 +941,7 @@ html body div#content-wrapper div#container div#content div#content-left div#tra
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player h3.track_name {
   position: relative;
+  margin: 0;
   padding-top: 5px;
   color: #fff;
   font-size: 0;
@@ -948,6 +949,10 @@ html body div#content-wrapper div#container div#content div#content-left div#tra
   opacity: 0.75;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
   filter: alpha(opacity=75);
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player h3.track_name a {
+  line-height: normal;
+  margin: 0;
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player h3.track_name a:hover {
   text-decoration: none;
@@ -1093,6 +1098,22 @@ html body div#content-wrapper div#container div#content div#content-left div#tra
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player ul.tools li.favdiv a.haarp-fav-count.favcount-on {
   color: #ed2024;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list h2 {
+  display: block;
+  height: 42px;
+  margin: 0;
+  padding: 0 20px;
+  width: auto;
+  background-color: #f8faf5;
+  border-top: 1px solid #f0f2ed;
+  color: #111;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 42px;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list h2 span.remix-icon {
+  display: none;
 }
 html body div#content-wrapper div#container div#content div#content-left div.paginator.infinite {
   display: none;

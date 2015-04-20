@@ -655,175 +655,197 @@ html body
                   opacity: 1
 
           /* track list */
-          div#track-list div.section.section-track
-            display: block
-            overflow: visible
-            padding: 0
+          div#track-list
 
-            background-color: transparent
-            border: 0
-            border-top: 1px solid #f0f2ed
+            div.section.section-track
+              display: block
+              overflow: visible
+              padding: 0
 
-            &.first
-              border-top: 1px solid #e5e8e1
+              background-color: transparent
+              border: 0
+              border-top: 1px solid #f0f2ed
 
-            &.haarp-active
-              background-color: fontColorLighter
+              &.first
+                border-top: 1px solid #e5e8e1
 
-            div.section-player
-              box-sizing: border-box
-              margin: 0 auto
-              min-height: trackArtwork + (trackPadding * 2)
-              padding: trackPadding (126px + padding) trackPadding (padding + 64px)
-              width: 100%
+              &.haarp-active
+                background-color: fontColorLighter
 
-              &:hover
+              div.section-player
+                box-sizing: border-box
+                margin: 0 auto
+                min-height: trackArtwork + (trackPadding * 2)
+                padding: trackPadding (126px + padding) trackPadding (padding + 64px)
+                width: 100%
+
+                &:hover
+
+                  h3.track_name
+                    opacity: 1
+
+                span.rank
+                  position: absolute
+                  left: padding + (trackArtwork - trackRank)
+                  top: trackPadding + (trackArtwork - trackRank)
+
+                  display: block
+                  height: trackRank
+                  padding: 0
+                  width: trackRank
+
+                  background-color: fontColorLink
+                  border-radius: 4px 0 4px 0
+                  color: #ffffff
+                  font-size: 12px
+                  font-weight: 400
+                  line-height: trackRank
+                  text-align: center
+
+                a.thumb
+                  left: padding
+                  position: absolute
+                  top: trackPadding
+
+                  display: block
+                  height: trackArtwork
+                  width: trackArtwork
+
+                  background-color: fontColorLink !important
+                  border: 0
+                  border-radius: 5px
+                  box-shadow: inset 0 0 0 1px rgba(#000000,0.1)
 
                 h3.track_name
-                  opacity: 1
-
-              span.rank
-                position: absolute
-                left: padding + (trackArtwork - trackRank)
-                top: trackPadding + (trackArtwork - trackRank)
-
-                display: block
-                height: trackRank
-                padding: 0
-                width: trackRank
-
-                background-color: fontColorLink
-                border-radius: 4px 0 4px 0
-                color: #ffffff
-                font-size: 12px
-                font-weight: 400
-                line-height: trackRank
-                text-align: center
-
-              a.thumb
-                left: padding
-                position: absolute
-                top: trackPadding
-
-                display: block
-                height: trackArtwork
-                width: trackArtwork
-
-                background-color: fontColorLink !important
-                border: 0
-                border-radius: 5px
-                box-shadow: inset 0 0 0 1px rgba(#000000,0.1)
-
-              h3.track_name
-                position: relative
-
-                padding-top: 5px
-
-                color: #ffffff
-                font-size: 0
-                line-height: normal
-                opacity: 0.75
-
-                a
-
-                  &:hover
-                    text-decoration: none
-
-                  &.artist
-                    display: block
-
-                    color: fontColorLight
-                    font-size: 13px
-                    font-weight: 600
-
-                  &.track
-                    display: block
-
-                    color: fontColorDark
-                    font-size: 16px
-                    font-weight: 600
-
-                    &:hover
-                      text-decoration: none
-
-                    span
-
-                      &:hover
-                        text-decoration: none
-
-                      &.base-title
-                        text-decoration: none
-
-                      &.remix-link
-                        color: fontColorLink
-
-              ul.tools
-                position: absolute
-                right: padding
-                top: trackPadding + 11px
-
-                width: 100px
-
-                li
-                  float: right
                   position: relative
 
+                  margin: 0
+                  padding-top: 5px
+
+                  color: #ffffff
+                  font-size: 0
+                  line-height: normal
+                  opacity: 0.75
+
                   a
-                    position: relative
-
-                    display: block
-                    height: controlHeight
-                    padding: 0
-                    width: controlWidth
-
-                    background-position: ((controlWidth - 13px)/2) ((controlHeight - 14px)/2)
-                    background-repeat: no-repeat
-                    image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon.png' 13px 14px
-                    font-size: inherit
                     line-height: normal
+                    margin: 0
 
                     &:hover
-                      background-color: transparent
                       text-decoration: none
 
-                  &.playdiv a.play-ctrl
+                    &.artist
+                      display: block
 
-                    &:hover
-                      image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon-hover.png' 13px 14px
-
-                    &.pause
-                      background-position: ((controlWidth - 10px)/2) ((controlHeight - 14px)/2)
-                      image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon.png' 10px 14px
-
-                      &:hover
-                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon-hover.png' 10px 14px
-
-                  &.favdiv
-
-                    a.haarp-fav-ctrl
-                      background-position: ((controlWidth - 15px)/2) ((controlHeight - 14px)/2)
-                      image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon.png' 15px 14px
-
-                      &:hover
-                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon-hover.png' 15px 14px
-
-                      &.fav-on, &.fav-on:hover
-                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon-on.png' 15px 14px
-
-                    a.haarp-fav-count
-                      margin: 0
-                      width: auto
-
-                      background: transparent
-                      color: fontColor
-                      font-size: 14px
+                      color: fontColorLight
+                      font-size: 13px
                       font-weight: 600
-                      line-height: 28px
-                      text-align: right
-                      vertical-align: middle
 
-                      &.favcount-on
-                        color: fontColorFavorite
+                    &.track
+                      display: block
+
+                      color: fontColorDark
+                      font-size: 16px
+                      font-weight: 600
+
+                      &:hover
+                        text-decoration: none
+
+                      span
+
+                        &:hover
+                          text-decoration: none
+
+                        &.base-title
+                          text-decoration: none
+
+                        &.remix-link
+                          color: fontColorLink
+
+                ul.tools
+                  position: absolute
+                  right: padding
+                  top: trackPadding + 11px
+
+                  width: 100px
+
+                  li
+                    float: right
+                    position: relative
+
+                    a
+                      position: relative
+
+                      display: block
+                      height: controlHeight
+                      padding: 0
+                      width: controlWidth
+
+                      background-position: ((controlWidth - 13px)/2) ((controlHeight - 14px)/2)
+                      background-repeat: no-repeat
+                      image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon.png' 13px 14px
+                      font-size: inherit
+                      line-height: normal
+
+                      &:hover
+                        background-color: transparent
+                        text-decoration: none
+
+                    &.playdiv a.play-ctrl
+
+                      &:hover
+                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon-hover.png' 13px 14px
+
+                      &.pause
+                        background-position: ((controlWidth - 10px)/2) ((controlHeight - 14px)/2)
+                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon.png' 10px 14px
+
+                        &:hover
+                          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon-hover.png' 10px 14px
+
+                    &.favdiv
+
+                      a.haarp-fav-ctrl
+                        background-position: ((controlWidth - 15px)/2) ((controlHeight - 14px)/2)
+                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon.png' 15px 14px
+
+                        &:hover
+                          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon-hover.png' 15px 14px
+
+                        &.fav-on, &.fav-on:hover
+                          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon-on.png' 15px 14px
+
+                      a.haarp-fav-count
+                        margin: 0
+                        width: auto
+
+                        background: transparent
+                        color: fontColor
+                        font-size: 14px
+                        font-weight: 600
+                        line-height: 28px
+                        text-align: right
+                        vertical-align: middle
+
+                        &.favcount-on
+                          color: fontColorFavorite
+
+            h2
+              display: block
+              height: 42px
+              margin: 0
+              padding: 0 padding
+              width: auto
+
+              background-color: #f8faf5
+              border-top: 1px solid #f0f2ed
+              color: fontColorDark
+              font-size: 14px
+              font-weight: 600
+              line-height: 42px
+
+              span.remix-icon
+                display: none
 
           /* pagination */
           div.paginator
