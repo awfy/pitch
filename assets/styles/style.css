@@ -53,10 +53,11 @@ html body div#content-wrapper div.tsad-skin {
 html body div#content-wrapper div#container div#ad-breakout {
   display: none !important;
 }
+html body div#content-wrapper div#container div#content div#content-left div#end-of-infinity,
+html body div#content-wrapper div#container div#content div#content-left div.header-box,
 html body div#content-wrapper div#container div#content div#content-left div.locale-blogs-header,
 html body div#content-wrapper div#container div#content div#content-left div#message,
 html body div#content-wrapper div#container div#content div#content-left div#tags,
-html body div#content-wrapper div#container div#content div#content-left div.user,
 html body div#content-wrapper div#container div#content div#content-left hr.space {
   display: none !important;
 }
@@ -91,7 +92,11 @@ html body div#content-wrapper div#container div#content div#time-machine {
 }
 /* build */
 body {
-  background-color: #333631 !important;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  padding: 6px !important;
+  background-color: #83c441 !important;
   color: #333631 !important;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif !important;
   font-size: 400 !important;
@@ -117,6 +122,8 @@ body div#header {
   height: auto;
   width: auto;
   background-color: #fff;
+  -webkit-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
   line-height: normal;
   text-align: left;
@@ -201,8 +208,6 @@ body div#header div#header-inner ul.menu li > a {
   padding: 0 15px;
   background-color: transparent;
   border: 0;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
   color: #111;
   font-size: 15px;
   font-weight: 600;
@@ -234,8 +239,6 @@ body div#header div#header-inner ul.menu li.active > a {
   height: 65px;
   margin-bottom: -1px;
   background-color: #333631;
-  border-left-color: #222422;
-  border-right-color: #222422;
   color: #fff;
   font-weight: 600;
   opacity: 1;
@@ -374,15 +377,13 @@ body div#header div#header-inner form#search-form input#q:focus {
   }
 }
 body div#player-container {
-  left: 0;
+  left: 6px;
   position: absolute;
-  right: 0;
+  right: 6px;
   height: 82px;
   width: auto;
   background-color: #333631;
   border: 0;
-  border-bottom: 1px solid #222422;
-  border-top: 1px solid #222422;
   color: #cacfc4;
   line-height: normal;
 }
@@ -672,9 +673,11 @@ body div#content-wrapper {
   margin: 0;
   min-height: 0;
   overflow: visible;
-  padding-top: 84px;
+  padding-top: 82px;
   width: 100%;
   background-color: #fff;
+  -webkit-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
 }
 body div#content-wrapper div#container {
   position: relative;

@@ -5,7 +5,10 @@
 
 /* build */
 body
-  background-color: fontColor !important
+  box-sizing: border-box !important
+  padding: border !important
+
+  background-color: fontColorLink !important
   color: fontColor !important
   font-family: fontFamily !important
   font-size: 400 !important
@@ -23,6 +26,7 @@ body
     width: auto
 
     background-color: #ffffff
+    border-radius: 6px 6px 0 0
     font-family: fontFamily
     line-height: normal
     text-align: left
@@ -100,8 +104,6 @@ body
 
             background-color: transparent
             border: 0
-            border-left: 1px solid transparent
-            border-right: 1px solid transparent
             color: fontColorDark
             font-size: 15px
             font-weight: 600
@@ -130,8 +132,6 @@ body
               margin-bottom: -1px
 
               background-color: fontColor
-              border-left-color: #222422
-              border-right-color: #222422
               color: #ffffff
               font-weight: 600
               opacity: 1
@@ -236,17 +236,15 @@ body
 
   /* player */
   div#player-container
-    left: 0
+    left: border
     position: absolute
-    right: 0
+    right: border
 
     height: playerHeight
     width: auto
 
     background-color: fontColor
     border: 0
-    border-bottom: 1px solid #222422
-    border-top: 1px solid #222422
     color: #cacfc4
     line-height: normal
 
@@ -451,10 +449,11 @@ body
     margin: 0
     min-height: 0
     overflow: visible
-    padding-top: playerHeight + 2px /* + 2px for border widths */
+    padding-top: playerHeight
     width: 100%
 
     background-color: #ffffff
+    border-radius: 0 0 6px 6px
 
     div#container
       position: relative
