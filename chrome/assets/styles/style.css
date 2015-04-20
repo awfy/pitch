@@ -169,7 +169,7 @@ html body div#header div#header-inner a#logo-txt {
   }
 }
 html body div#header div#header-inner a#logo-txt:hover {
-  background-color: #6bab2b;
+  background-color: #83c441;
   background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/header/logo-hover.png");
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
@@ -909,19 +909,19 @@ html body div#content-wrapper div#container div#content div#content-left div#tra
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player span.rank {
   position: absolute;
-  left: 20px;
-  top: 36px;
+  left: 50px;
+  top: 40px;
   display: block;
-  height: 24px;
+  height: 20px;
   padding: 0;
-  width: 24px;
-  background-color: #fff;
-  -webkit-border-radius: 0 3px 0 0;
-  border-radius: 0 3px 0 0;
-  color: #333631;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 24px;
+  width: 20px;
+  background-color: #83c441;
+  -webkit-border-radius: 4px 0 4px 0;
+  border-radius: 4px 0 4px 0;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
   text-align: center;
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player a.thumb {
