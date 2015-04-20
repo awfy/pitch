@@ -53,8 +53,10 @@ html body div#content-wrapper div.tsad-skin {
 html body div#content-wrapper div#container div#ad-breakout {
   display: none !important;
 }
+html body div#content-wrapper div#container div#content div#content-left div.locale-blogs-header,
 html body div#content-wrapper div#container div#content div#content-left div#message,
 html body div#content-wrapper div#container div#content div#content-left div#tags,
+html body div#content-wrapper div#container div#content div#content-left div.user,
 html body div#content-wrapper div#container div#content div#content-left hr.space {
   display: none !important;
 }
@@ -395,6 +397,12 @@ body div#player-container div#player-inner div#player-controls {
   position: relative;
   height: auto;
   width: auto;
+}
+body div#player-container div#player-inner div#player-controls.disabled {
+  cursor: default;
+  opacity: 0.25;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+  filter: alpha(opacity=25);
 }
 body div#player-container div#player-inner div#player-controls a#playerFav,
 body div#player-container div#player-inner div#player-controls a#playerNext,
