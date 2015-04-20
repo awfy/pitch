@@ -1,0 +1,114 @@
+
+/*
+  This entire section exists to remove a bunch of elements from
+  the page that aren't required as part of this UI concept. Be
+  careful when removing an element from this list as it may break
+  a whole bunch of stuff.
+
+  Try to keep everything in alphabetical order.
+*/
+
+html body
+
+  div#about-site,
+  div#footer-menu,
+  div#footer,
+  div#keyboard,
+  div#toast-prompt
+    display: none !important
+
+  div#header div#header-inner
+
+    a#logo-txt::before
+      display: none !important
+
+    div#hh-header,
+    div#hh-wrap-header,
+    div#stack-menu,
+    div#tv-controls,
+    div#zeitgeist-header-menu
+      display: none !important
+
+    form#search-form
+      a#shuf,
+      input[type="submit"]
+        display: none !important
+
+    ul.menu
+      li#menu-item-directory,
+      li#menu-item-hh,
+      li#menu-item-more,
+      li#menu-item-premiere,
+      li#menu-item-search
+        display: none !important
+
+  div#player-container div#player-inner
+
+    div#filter,
+    div#player-page
+      display: none !important
+
+    div#player-controls
+
+      div#player-nowplaying
+
+        a.store.read-post,
+        div.share-icons
+          display: none !important
+
+      div#player-timebar div#player-volume-mute
+
+        &::before,
+        span
+          display: none !important
+
+  div#content-wrapper
+
+    a#phonograph,
+    div.tsad-skin
+      display: none !important
+
+    div#container
+
+      div#ad-breakout
+        display: none !important
+
+      div#content
+
+        div#content-left
+
+          div#message,
+          div#tags,
+
+          hr.space
+            display: none !important
+
+          div#track-list div.section
+
+            &.section-moreinpost
+              display: none !important
+
+            &.section-track
+
+              div.track-info
+                display: none !important
+
+              div.section-player
+
+                div.act_info,
+                div.meta,
+                p.post_info,
+                span.share-links
+                  display: none !important
+
+                h3.track_name a.track span.remix-count
+                  display: none !important
+
+                ul.tools li.playlist-ctrls
+                  display: none !important
+
+        div#content-right
+          display: none !important
+
+        div#time-machine
+          display: none !important
