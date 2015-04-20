@@ -307,7 +307,7 @@ body div#header div#header-inner ul.menu li ul li > a:hover {
 }
 body div#header div#header-inner form#search-form {
   position: absolute;
-  right: 30px;
+  right: 20px;
   top: 17px;
   display: block;
   height: auto;
@@ -447,7 +447,7 @@ body div#player-container div#player-inner div#player-controls a#playerNext,
 body div#player-container div#player-inner div#player-controls a#playerPlay,
 body div#player-container div#player-inner div#player-controls a#playerPrev {
   float: none;
-  left: 30px;
+  left: 20px;
   position: absolute;
   top: 14px;
   display: block;
@@ -484,7 +484,7 @@ body div#player-container div#player-inner div#player-controls a#playerPrev:hove
   }
 }
 body div#player-container div#player-inner div#player-controls a#playerPlay {
-  left: 58px;
+  left: 48px;
   background-position: 7.5px 7px;
   background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/player/play-icon.png");
 }
@@ -531,7 +531,7 @@ body div#player-container div#player-inner div#player-controls a#playerPlay.paus
   }
 }
 body div#player-container div#player-inner div#player-controls a#playerFav {
-  left: 86px;
+  left: 76px;
   background-position: 6.5px 7px;
   background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/player/favorite-icon.png");
 }
@@ -568,7 +568,7 @@ body div#player-container div#player-inner div#player-controls a#playerFav.fav-o
   }
 }
 body div#player-container div#player-inner div#player-controls a#playerNext {
-  left: 114px;
+  left: 104px;
   background-position: 4.5px 7px;
   background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/player/next-icon.png");
 }
@@ -593,9 +593,9 @@ body div#player-container div#player-inner div#player-controls a#playerNext:hove
 }
 body div#player-container div#player-inner div#player-controls div#player-nowplaying {
   float: none;
-  left: 152px;
+  left: 142px;
   position: absolute;
-  right: 170px;
+  right: 160px;
   top: 18px;
   height: 20px;
   padding: 0;
@@ -630,7 +630,7 @@ body div#player-container div#player-inner div#player-controls div#player-timeba
 }
 body div#player-container div#player-inner div#player-controls div#player-timebar div#player-volume-mute {
   position: absolute;
-  right: 132px;
+  right: 122px;
   top: 14px;
   height: 28px;
   width: 28px;
@@ -650,7 +650,7 @@ body div#player-container div#player-inner div#player-controls div#player-timeba
 }
 body div#player-container div#player-inner div#player-controls div#player-timebar div#player-volume-outer {
   position: absolute;
-  right: 30px;
+  right: 20px;
   top: 24px;
   height: 8px;
   width: 100px;
@@ -680,16 +680,16 @@ body div#player-container div#player-inner div#player-controls div#player-timeba
   vertical-align: middle;
 }
 body div#player-container div#player-inner div#player-controls div#player-timebar div#player-time-position {
-  left: 30px;
+  left: 20px;
 }
 body div#player-container div#player-inner div#player-controls div#player-timebar div#player-time-total {
   left: auto;
-  right: 30px;
+  right: 20px;
 }
 body div#player-container div#player-inner div#player-controls div#player-timebar div#player-progress-outer {
-  left: 74px;
+  left: 64px;
   position: absolute;
-  right: 74px;
+  right: 64px;
   top: 57px;
   height: 8px;
   overflow: hidden;
@@ -765,7 +765,7 @@ body div#content-wrapper div#container div#content div#content-left ul#submenu {
   box-sizing: border-box;
   height: 51px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 20px;
   width: 100%;
   border: 0;
   font-size: inherit;
@@ -779,7 +779,7 @@ body div#content-wrapper div#container div#content div#content-left ul#submenu l
 }
 body div#content-wrapper div#container div#content div#content-left ul#submenu li#submenu-filter {
   position: absolute;
-  right: 30px;
+  right: 20px;
 }
 body div#content-wrapper div#container div#content div#content-left ul#submenu li#submenu-filter span.title {
   color: #666963;
@@ -890,8 +890,8 @@ body div#content-wrapper div#container div#content div#content-left div#track-li
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0 auto;
-  min-height: 90px;
-  padding: 20px 156px 20px 94px;
+  min-height: 70px;
+  padding: 10px 146px 10px 84px;
   width: 100%;
 }
 body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player:hover h3.track_name {
@@ -901,8 +901,8 @@ body div#content-wrapper div#container div#content div#content-left div#track-li
 }
 body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player span.rank {
   position: absolute;
-  left: 30px;
-  top: 46px;
+  left: 20px;
+  top: 36px;
   display: block;
   height: 24px;
   padding: 0;
@@ -917,9 +917,9 @@ body div#content-wrapper div#container div#content div#content-left div#track-li
   text-align: center;
 }
 body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player a.thumb {
-  left: 30px;
+  left: 20px;
   position: absolute;
-  top: 20px;
+  top: 10px;
   display: block;
   height: 50px;
   width: 50px;
@@ -969,8 +969,8 @@ body div#content-wrapper div#container div#content div#content-left div#track-li
 }
 body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player ul.tools {
   position: absolute;
-  right: 30px;
-  top: 31px;
+  right: 20px;
+  top: 21px;
   width: 100px;
 }
 body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player ul.tools li {

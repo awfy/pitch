@@ -544,7 +544,7 @@ body
             box-sizing: border-box
             height: submenuHeight + 20px
             margin: 0 auto
-            padding: 0 30px
+            padding: 0 padding
             width: 100%
 
             border: 0
@@ -672,8 +672,8 @@ body
             div.section-player
               box-sizing: border-box
               margin: 0 auto
-              min-height: 90px
-              padding: 20px (126px + padding) 20px (padding + 64px)
+              min-height: 50px + (trackPadding * 2)
+              padding: trackPadding (126px + padding) trackPadding (padding + 64px)
               width: 100%
 
               &:hover
@@ -684,7 +684,7 @@ body
               span.rank
                 position: absolute
                 left: padding
-                top: 46px
+                top: trackPadding + 26px
 
                 display: block
                 height: 24px
@@ -702,7 +702,7 @@ body
               a.thumb
                 left: padding
                 position: absolute
-                top: 20px
+                top: trackPadding
 
                 display: block
                 height: 50px
@@ -759,7 +759,7 @@ body
               ul.tools
                 position: absolute
                 right: padding
-                top: 31px
+                top: trackPadding + 11px
 
                 width: 100px
 
