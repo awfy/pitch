@@ -233,12 +233,50 @@ body
             color: FontColor
             image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/search-icon-focus.png' 14px 14px
 
+  /* loader */
+  div#player-loading
+    bottom: border
+    left: border
+    position: fixed
+    right: border
+    top: playerHeight
+    z-index: 100
+
+    height: auto
+    margin: 0
+    width: auto
+
+    background-color: #ffffff
+    border-radius: 0 0 6px 6px
+
+    span
+      left: 50%
+      position: absolute
+      top: 50%
+
+      display: block
+      margin: -9px 0 0 -100px
+      padding: 0
+      width: 200px
+
+      background: transparent
+      border: 0
+      border-radius: 0
+      color: fontColor
+      font-family: fontFamily
+      font-size: 18px
+      font-weight: 600
+      text-transform: lowercase
+
+      &::after
+        content: '...'
 
   /* player */
   div#player-container
     left: border
     position: absolute
     right: border
+    z-index: 200
 
     height: playerHeight
     width: auto

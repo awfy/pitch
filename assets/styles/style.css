@@ -102,6 +102,7 @@ body {
   font-size: 400 !important;
   vertical-align: middle !important;
 /* header */
+/* loader */
 /* player */
 /* content */
 }
@@ -376,10 +377,46 @@ body div#header div#header-inner form#search-form input#q:focus {
     background-size: 14px 14px;
   }
 }
+body div#player-loading {
+  bottom: 6px;
+  left: 6px;
+  position: fixed;
+  right: 6px;
+  top: 82px;
+  z-index: 100;
+  height: auto;
+  margin: 0;
+  width: auto;
+  background-color: #fff;
+  -webkit-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+}
+body div#player-loading span {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  display: block;
+  margin: -9px 0 0 -100px;
+  padding: 0;
+  width: 200px;
+  background: transparent;
+  border: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: #333631;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+body div#player-loading span::after {
+  content: '...';
+}
 body div#player-container {
   left: 6px;
   position: absolute;
   right: 6px;
+  z-index: 200;
   height: 82px;
   width: auto;
   background-color: #333631;
