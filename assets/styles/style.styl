@@ -1,6 +1,7 @@
 
 /* helpers */
 @import '_helpers.styl'
+@import '_hidden.styl'
 
 /* build */
 body
@@ -13,145 +14,6 @@ body
   h1, h2, h3, h4, h5, h6,
   a, em, p, strong
     font-family: fontFamily !important
-
-  /*
-    This entire section exists to remove a bunch of elements from
-    the page that aren't required as part of this UI concept. Be
-    careful when removing an element from this list as it may break
-    a whole bunch of stuff.
-
-    Try to keep everything in alphabetical order.
-  */
-
-  div#about-site,
-  div#footer-menu,
-  div#footer,
-  div#keyboard,
-  div#toast-prompt
-    display: none !important
-
-  div#header div#header-inner
-
-    a#logo-txt::before
-      display: none !important
-
-    div#hh-header,
-    div#hh-wrap-header,
-    div#stack-menu,
-    div#tv-controls,
-    div#zeitgeist-header-menu
-      display: none !important
-
-    form#search-form
-      a#shuf,
-      input[type="submit"]
-        display: none !important
-
-    ul.menu
-      li#menu-item-directory,
-      li#menu-item-hh,
-      li#menu-item-more,
-      li#menu-item-premiere,
-      li#menu-item-search
-        display: none !important
-
-  div#player-container div#player-inner
-
-    div#filter,
-    div#player-page
-      display: none !important
-
-    div#player-controls div#player-nowplaying
-
-      a.store.read-post,
-      div.share-icons
-        display: none !important
-
-  div#content-wrapper
-
-    a#phonograph,
-    div.tsad-skin
-      display: none !important
-
-    div#container
-
-      div#ad-breakout
-        display: none !important
-
-      div#content
-
-        div#content-left
-
-          div#message,
-          div#tags,
-
-          hr.space
-            display: none !important
-
-          div#track-list div.section.section-track
-
-            div.track-info
-              display: none !important
-
-            div.section-player
-
-              div.act_info,
-              div.meta,
-              p.post_info,
-              span.share-links
-                display: none !important
-
-              ul.tools li.playlist-ctrls
-                display: none !important
-
-        div#content-right
-          display: none !important
-
-        div#time-machine
-          display: none !important
-
-  /*
-    Back to the fun stuff now, that's all of the things we needed to
-    hide. Here we go!
-
-    .$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$.
-    $$$$$$$ $$$'  '$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$'  '$$$ $$$$$$$
-    $$$$$$$ $$$s__s$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$s__s$$$ $$   $$
-    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$   $$
-    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
-    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
-    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
-    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
-    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
-    $$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$'     `$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
-    $$$$$$$ $$$$$$$$$$$$$$$$$$p'  'q$'       $'      `$$$$$$$$$$$$$$$$$$$ $$$$$$$
-    $$$$$$$ $$$$$$$$$$$p' `q$p      $      .ssSSSSS$$$$$$$$$$$$$$$$$$$$$$ $$$$$$$
-    $$$$$$$ $$$$$$$$$$$     $       $      $'               `$$$$$$$$$$$$ $$$$$$$
-    $$$$$$$ $$$$$$$$$$$     $       $      $                  `$$$$$$$$$$ $$$$$$$
-    $$$$$$$ $$$$$$$$$$$     $       $      $.                  $$$$$$$$$$ $$$$$$$
-    $$$$$$$ $$$$$$$$$$$     $       $      `$.                 $$$$$$$$$$ $$$$$$$
-    $$$$$$$ $$$$$$$$$$$     $       !       `$$$$SSSss.        $$$$$$$$$$ $$$$$$$
-    $$$$$$$ $$$$$$$$$$$b._.d$b._ _.d$b._  _.d$b._  _.d'        $$$$$$$$$$ $$$$$$$
-    $$$$$$$ $$$$$$$$$$$$        "       ""       ""            $$$$$$$$$$ $$$$$$$
-    $$$$$$$ $$$$$$$$$$$$$                                     .$$$$$$$$$$ $$$$$$$
-    $$$$$$$ '$$$$$$$$$$$$                                    .$$$$$$$$$$' $$$$$$$
-    $$$$$$$s._____________                                  ____________.s$$$$$$$
-    $$$$$$$$$$$$$$$$$$$$$$.                                .$$$$$$$$$$$$$$$$$$$$$
-    $$$$$$$$$$$$$$$$$$$$$$$.                              $$$$$$$$$$$$$$$$$$$$$$$
-    $$$$$$$$$$$$$$$$$'  _____                            __   ________   `$$$$$$$
-    $$$$$$$$$$$$$$$$$ .s$$$$$.                          $$$s. $$$$$$$$$s. $$$$$$$
-    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$$$$$
-    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$$$$$
-    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$$$$$
-    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$$$$$
-    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$ $$$
-    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$ $$$
-    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $.   .$
-    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$. .$$
-    $$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$.$$$
-    `$$$$$$$$$$$$$$$$ $$$$$$$$                         $$$$$$ $$$$$$$$$$$ $$$$$$$
-      `$$$$$$$$$$$'   $$$$$$$$                      dp $$$$$$ $$$$$$$$$$$ $$$$$$'
-  */
 
   /* header */
   div#header
@@ -331,7 +193,7 @@ body
       /* search field */
       form#search-form
         position: absolute
-        right: 30px
+        right: padding
         top: 17px
 
         display: block
@@ -402,6 +264,91 @@ body
         height: auto
         width: auto
 
+        a#playerFav,
+        a#playerNext,
+        a#playerPlay,
+        a#playerPrev
+          float: none
+          left: padding
+          position: absolute
+          top: 14px
+
+          display: block
+          height: controlHeight
+          padding: 0
+          width: controlWidth
+
+          background-color: transparent
+          background-repeat: no-repeat
+          border: 0
+          font-size: inherit
+          line-height: normal
+
+          &::before
+            display: none
+
+        a#playerPrev
+          background-position: ((controlWidth - 19px)/2) ((controlHeight - 14px)/2)
+          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/previous-icon.png' 19px 14px
+
+          &:hover
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/previous-icon-hover.png' 15px 14px
+
+        a#playerPlay
+          left: padding + controlWidth
+
+          background-position: ((controlWidth - 13px)/2) ((controlHeight - 14px)/2)
+          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/play-icon.png' 13px 14px
+
+          &:hover
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/play-icon-hover.png' 15px 14px
+
+          &.pause
+            background-position: ((controlWidth - 10px)/2) ((controlHeight - 14px)/2)
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/pause-icon.png' 10px 14px
+
+            &:hover
+              image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/pause-icon-hover.png' 10px 14px
+
+        a#playerFav
+          left: padding + (controlWidth * 2)
+
+          background-position: ((controlWidth - 15px)/2) ((controlHeight - 14px)/2)
+          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/favorite-icon.png' 15px 14px
+
+          &:hover
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/favorite-icon-hover.png' 15px 14px
+
+          &.fav-on, &.fav-on:hover
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/favorite-icon-on.png' 15px 14px
+
+        a#playerNext
+          left: padding + (controlWidth * 3)
+
+          background-position: ((controlWidth - 19px)/2) ((controlHeight - 14px)/2)
+          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/next-icon.png' 19px 14px
+
+          &:hover
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/next-icon-hover.png' 15px 14px
+
+        div#player-nowplaying
+          float: none
+          left: padding + (controlWidth * 4) + 10px
+          position: absolute
+          right: 10px + controlWidth + 2px + 100px + padding
+          top: 18px
+
+          height: 20px
+          padding: 0
+          width: auto
+
+          color: #f7faf2
+          font-size: 15px
+          font-weight: 600
+          line-height: 20px
+          overflow: ellipsis
+          text-align: center
+
         div#player-timebar
           position: relative
           top: auto
@@ -414,6 +361,42 @@ body
           border: 0
           font-size: inherit
           line-height: normal
+
+          div#player-volume-mute
+            position: absolute
+            right: padding + 100px + 2px
+            top: 14px
+
+            height: controlHeight
+            width: controlWidth
+
+            background-color: transparent
+            background-position: ((controlWidth - 15px)/2) ((controlHeight - 14px)/2)
+            background-repeat: no-repeat
+            cursor: default
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/volume-icon.png' 15px 14px
+
+          div#player-volume-outer
+            position: absolute
+            right: padding
+            top: 24px
+
+            height: 8px
+            width: 100px
+
+            background-color: #4a4d49
+            border: 0
+            border-radius: 8px
+            line-height: normal
+
+            div#player-volume-ctrl
+              height: 8px
+
+              background-color: fontColorLink
+              border-radius: 8px
+
+          div#player-time-position, div#player-time-total, div#player-progress-outer
+            display: none
 
   /* content */
   div#content-wrapper
@@ -447,9 +430,10 @@ body
           float: none
           position: relative
 
+          box-sizing: border-box
           margin: 0 auto
           min-height: 0
-          padding-top: 30px
+          padding: padding
           width: width
 
           background-color: transparent
