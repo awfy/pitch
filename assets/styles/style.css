@@ -152,13 +152,13 @@ body div#header div#header-inner a#logo-txt {
   background-position: 20px 23px;
   background-repeat: no-repeat;
   color: #111;
-  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/logo.png");
+  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/header/logo.png");
   font-size: inherit;
   line-height: normal;
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
   body div#header div#header-inner a#logo-txt {
-    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/logo@2x.png");
+    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/header/logo@2x.png");
     -webkit-background-size: 51px 18px;
     -moz-background-size: 51px 18px;
     background-size: 51px 18px;
@@ -166,11 +166,11 @@ body div#header div#header-inner a#logo-txt {
 }
 body div#header div#header-inner a#logo-txt:hover {
   background-color: #6bab2b;
-  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/logo-hover.png");
+  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/header/logo-hover.png");
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
   body div#header div#header-inner a#logo-txt:hover {
-    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/logo-hover@2x.png");
+    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/header/logo-hover@2x.png");
     -webkit-background-size: 51px 18px;
     -moz-background-size: 51px 18px;
     background-size: 51px 18px;
@@ -337,7 +337,7 @@ body div#header div#header-inner form#search-form input#q {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/search-icon.png");
+  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/header/search-icon.png");
   line-height: 30px;
   outline: 0;
 /* Chrome + Safari */
@@ -347,7 +347,7 @@ body div#header div#header-inner form#search-form input#q {
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
   body div#header div#header-inner form#search-form input#q {
-    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/search-icon@2x.png");
+    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/header/search-icon@2x.png");
     -webkit-background-size: 14px 14px;
     -moz-background-size: 14px 14px;
     background-size: 14px 14px;
@@ -368,11 +368,11 @@ body div#header div#header-inner form#search-form input#q:-ms-input-placeholder 
 body div#header div#header-inner form#search-form input#q:focus {
   border-color: #aeb3a6;
   color: FontColor;
-  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/search-icon-focus.png");
+  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/header/search-icon-focus.png");
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
   body div#header div#header-inner form#search-form input#q:focus {
-    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/search-icon-focus@2x.png");
+    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/header/search-icon-focus@2x.png");
     -webkit-background-size: 14px 14px;
     -moz-background-size: 14px 14px;
     background-size: 14px 14px;

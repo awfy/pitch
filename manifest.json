@@ -11,9 +11,9 @@
   },
 
   "icons": {
-                                "16": 		"assets/imgs/icons/small.png",
-                                "48": 		"assets/imgs/icons/medium.png",
-                                "128": 		"assets/imgs/icons/large.png"
+                                "16": 		"assets/imgs/icons/icon16.png",
+                                "48": 		"assets/imgs/icons/icon48.png",
+                                "128": 		"assets/imgs/icons/icon128.png"
   },
 
   "permissions": [
