@@ -6,6 +6,7 @@
 /* build */
 body
   box-sizing: border-box !important
+  min-width: minWidth !important
   padding: border !important
 
   background-color: fontColorLink !important
@@ -244,6 +245,7 @@ body
 
     height: auto
     margin: 0
+    min-width: minWidth
     width: auto
 
     background-color: #ffffff
@@ -379,12 +381,19 @@ body
           padding: 0
           width: auto
 
-          color: #f7faf2
+          color: fontColorLighter
           font-size: 15px
           font-weight: 400
           line-height: 20px
           overflow: ellipsis
           text-align: center
+
+          a
+            color: fontColorLighter
+
+            &:hover
+              color: fontColorLink
+              text-decoration: none
 
         div#player-timebar
           position: relative

@@ -95,6 +95,7 @@ body {
   -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
   box-sizing: border-box !important;
+  min-width: 800px !important;
   padding: 6px !important;
   background-color: #83c441 !important;
   color: #333631 !important;
@@ -386,6 +387,7 @@ body div#player-loading {
   z-index: 100;
   height: auto;
   margin: 0;
+  min-width: 800px;
   width: auto;
   background-color: #fff;
   -webkit-border-radius: 0 0 6px 6px;
@@ -609,6 +611,13 @@ body div#player-container div#player-inner div#player-controls div#player-nowpla
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   text-align: center;
+}
+body div#player-container div#player-inner div#player-controls div#player-nowplaying a {
+  color: #f7faf2;
+}
+body div#player-container div#player-inner div#player-controls div#player-nowplaying a:hover {
+  color: #83c441;
+  text-decoration: none;
 }
 body div#player-container div#player-inner div#player-controls div#player-timebar {
   position: relative;
