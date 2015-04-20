@@ -284,9 +284,6 @@ body
           font-size: inherit
           line-height: normal
 
-          &::before
-            display: none
-
         a#playerPrev
           background-position: ((controlWidth - 19px)/2) ((controlHeight - 14px)/2)
           image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/previous-icon.png' 19px 14px
@@ -344,7 +341,7 @@ body
 
           color: #f7faf2
           font-size: 15px
-          font-weight: 600
+          font-weight: 400
           line-height: 20px
           overflow: ellipsis
           text-align: center
@@ -397,7 +394,7 @@ body
 
           div#player-time-position, div#player-time-total
             position: absolute
-            top: 14px + 28px + 14px
+            top: 14px + 28px + 10px
 
             height: 18px
             width: 34px
@@ -420,7 +417,7 @@ body
             left: padding + 34px + 10px
             position: absolute
             right: 10px + 34px + padding
-            top: 14px + 28px + 14px + 5px
+            top: 14px + 28px + 10px + 5px
 
             height: 8px
             overflow: hidden
@@ -599,6 +596,165 @@ body
                   border: 0
                   color: #ffffff
                   opacity: 1
+
+          /* track list */
+          div#track-list div.section.section-track
+            display: block
+            overflow: visible
+            padding: 0
+
+            background-color: transparent
+            border: 0
+
+            div.section-player
+              min-height: 50px
+              padding: 20px 126px 20px 64px
+
+              border-bottom: 1px solid #f0f2ed
+
+              &:hover
+
+                h3.track_name
+                  opacity: 1
+
+              span.rank
+                position: absolute
+                left: 0
+                top: 46px
+
+                display: block
+                height: 24px
+                padding: 0
+                width: 24px
+
+                background-color: #ffffff
+                border-radius: 0 3px 0 0
+                color: fontColor
+                font-size: 14px
+                font-weight: 600
+                line-height: 24px
+                text-align: center
+
+              a.thumb
+                left: 0
+                position: absolute
+                top: 20px
+
+                display: block
+                height: 50px
+                width: 50px
+
+                background-color: fontColorLink !important
+                border: 0
+                border-radius: 5px
+                box-shadow: inset 0 0 0 1px rgba(#000000,0.1)
+
+              h3.track_name
+                position: relative
+
+                padding-top: 5px
+
+                color: #ffffff
+                font-size: 0
+                line-height: normal
+                opacity: 0.75
+
+                a
+
+                  &:hover
+                    text-decoration: none
+
+                  &.artist
+                    display: block
+
+                    color: fontColorLight
+                    font-size: 13px
+                    font-weight: 600
+
+                  &.track
+                    display: block
+
+                    color: fontColorDark
+                    font-size: 16px
+                    font-weight: 600
+
+                    span
+
+                      &:hover
+                        text-decoration: none
+
+                      &.remix-link
+                        color: fontColorLink
+
+              ul.tools
+                position: absolute
+                right: 10px
+                top: 31px
+
+                width: 100px
+
+                li
+                  float: right
+                  position: relative
+
+                  a
+                    position: relative
+
+                    display: block
+                    height: controlHeight
+                    padding: 0
+                    width: controlWidth
+
+                    background-position: ((controlWidth - 13px)/2) ((controlHeight - 14px)/2)
+                    background-repeat: no-repeat
+                    image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon.png' 13px 14px
+                    font-size: inherit
+                    line-height: normal
+
+                    &:hover
+                      background-color: transparent
+                      text-decoration: none
+
+                  &.playdiv a.play-ctrl
+
+                    &:hover
+                      image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon-hover.png' 13px 14px
+
+                    &.pause
+                      background-position: ((controlWidth - 10px)/2) ((controlHeight - 14px)/2)
+                      image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon.png' 10px 14px
+
+                      &:hover
+                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon-hover.png' 10px 14px
+
+                  &.favdiv
+
+                    a.haarp-fav-ctrl
+                      background-position: ((controlWidth - 15px)/2) ((controlHeight - 14px)/2)
+                      image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon.png' 15px 14px
+
+                      &:hover
+                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon-hover.png' 15px 14px
+
+                      &.fav-on, &.fav-on:hover
+                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon-on.png' 15px 14px
+
+                    a.haarp-fav-count
+                      margin: 0
+                      width: auto
+
+                      background: transparent
+                      color: fontColor
+                      font-size: 14px
+                      font-weight: 600
+                      line-height: 28px
+                      text-align: right
+                      vertical-align: middle
+
+                      &.favcount-on
+                        color: fontColorFavorite
+
+
 
 
 

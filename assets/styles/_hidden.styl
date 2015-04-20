@@ -50,6 +50,14 @@ html body
 
     div#player-controls
 
+      a#playerFav,
+      a#playerNext,
+      a#playerPlay,
+      a#playerPrev
+
+        &::before
+          display: none !important
+
       div#player-nowplaying
 
         a.store.read-post,
@@ -97,6 +105,7 @@ html body
 
                 div.act_info,
                 div.meta,
+                div.sparkdiv,
                 p.post_info,
                 span.share-links
                   display: none !important
@@ -104,8 +113,13 @@ html body
                 h3.track_name a.track span.remix-count
                   display: none !important
 
-                ul.tools li.playlist-ctrls
-                  display: none !important
+                ul.tools li
+
+                  &.playlist-ctrls
+                    display: none !important
+
+                  a::before
+                    display: none !important
 
         div#content-right
           display: none !important
