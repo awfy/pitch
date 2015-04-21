@@ -20,6 +20,9 @@ html body
   a, em, p, strong
     font-family: fontFamily !important
 
+  a
+    color: fontColorLink
+
   /* header */
   div#header
     position: relative
@@ -685,7 +688,7 @@ html body
                 box-sizing: border-box
                 margin: 0 auto
                 min-height: trackArtwork + (trackPadding * 2)
-                padding: trackPadding (126px + padding) trackPadding (padding + 64px)
+                padding: trackPadding (126px + padding) trackPadding (padding + trackArtwork + 14px)
                 width: 100%
 
                 &:hover
@@ -839,6 +842,129 @@ html body
                         &.favcount-on
                           color: fontColorFavorite
 
+                div.tweet-info
+                  overflow: hidden
+
+                  margin: 8px 0 0
+                  padding: 10px 0 4px
+
+                  border-top: 1px solid #f8faf5
+
+                  &::before
+                    display: block
+                    padding-bottom: 6px
+
+                    content: 'Tweets'
+                    color: fontColorLight
+                    font-size: 12px
+                    font-weight: 600
+
+                  div.act_info_tweets
+
+                    p
+                      margin: 0
+
+                      color: fontColorLight
+                      font-size: 12px
+                      font-weight: 400
+                      line-height: 20px
+
+                      a.twitter_user
+                        margin-right: 6px
+
+                    div.twitter_contributors
+                      margin: 0
+
+                      font-size: inherit
+                      line-height: normal
+
+                      a
+
+                        &.twitter_user
+                          float: left
+                          position: relative
+
+                          display: block
+                          height: 20px
+                          margin-right: 2px
+                          width: 20px
+
+                          border: 0
+
+                          img
+                            height: 20px
+                            width: 20px
+
+                            border-radius: 3px
+
+                        &.tweets_extra_toggle
+                          height: 20px
+                          margin: 0 0 0 6px
+                          width: auto
+
+                          border: 0
+                          font-size: 13px
+                          font-weight: 600
+                          line-height: 20px
+
+                    ul.tweets_extra
+                      position: relative
+
+                      clear: both
+                      display: block
+                      margin: 0
+                      max-height: 200px
+                      padding: 0
+
+                      background-color: #f8faf5
+                      border: 1px solid #f0f2ed
+                      border-radius: 5px
+
+                      li
+                        position: relative
+
+                        clear: both
+                        display: block
+                        padding: 6px 10px
+
+                        border-bottom: 1px solid #f0f2ed
+                        color: fontColorLight
+                        font-size: 12px
+                        line-height: 20px
+
+                        a
+
+                          &.twitter_user
+                            float: left
+                            position: relative
+
+                            display: inline-block
+                            height: 20px
+                            margin: 0 10px 0 0
+                            width: auto
+
+                            border: 0
+                            font-size: 12px
+                            font-weight: 600
+                            line-height: 20px
+
+                            img
+                              display: inline-block
+                              height: 20px !important
+                              width: 20px !important
+
+                              border-radius: 3px
+
+                        span.tweet_points_total
+                          top: 6px
+                          position: absolute
+                          right: 10px
+
+                          color: fontColorLight
+                          font-size: 12px
+                          font-weight: 400
+                          line-height: 20px
+
             h2
               display: block
               height: 42px
@@ -858,6 +984,4 @@ html body
 
           /* pagination */
           div.paginator
-
-            &.infinite
-              display: none
+            display: none
