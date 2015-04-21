@@ -4,7 +4,7 @@ A Chrome extension for HypeMachine.
 ## Browser support
 The extension will eventually be available for more than just Chrome but most of the development is focused on Chrome for the moment.
 
-## Development progress & todos
+## Progress & todos
 You can learn a little about what is planned for the extension and request features using our [Trello board](https://trello.com/b/gdrOmLhV/pitch).
 
 ## Issues
