@@ -1,5 +1,7 @@
-// Moving the user menu to the header
+// Moving elements to/around the header
+$('#shuf').insertAfter($('#header ul.menu'));
 $('#filter').insertBefore($('#search-form'));
+
 
 // Runs when site is finished loading
 $( window ).load(function() {

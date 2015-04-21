@@ -1,1 +1,1 @@
-$("#filter").insertBefore($("#search-form")),$(window).load(function(){$("#message-intro-new").find("br").remove()});
+$("#shuf").insertAfter($("#header ul.menu")),$("#filter").insertBefore($("#search-form")),$(window).load(function(){$("#message-intro-new").find("br").remove()});

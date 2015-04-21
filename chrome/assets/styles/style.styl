@@ -13,6 +13,7 @@ html body
   background-image: none !important
   color: fontColor !important
   font-family: fontFamily !important
+  font-smoothing: auto !important
   font-size: 400 !important
   vertical-align: middle !important
 
@@ -197,6 +198,36 @@ html body
                   color: #ffffff
                   text-decoration: none
 
+      /* random button */
+      a#shuf
+        left: 336px
+        position: absolute
+        top: 0
+
+        display: block
+        padding: 0 15px
+
+        background-color: transparent
+        border: 0
+        color: fontColorDark
+        font-size: 15px
+        font-smoothing: auto
+        font-weight: 600
+        line-height: headerHeight
+        opacity: 0.75
+        vertical-align: middle
+
+        &::before
+          color: fontColorDark
+          content: 'Random'
+
+        &:hover
+          background-color: fontColorLink
+          color: #ffffff
+          opacity: 1
+
+          &::before
+            color: #ffffff
 
       /* usermenu */
       div#filter
