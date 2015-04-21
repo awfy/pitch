@@ -23,12 +23,12 @@ html body
   /* header */
   div#header
     position: relative
+    z-index: 100
 
     height: auto
     width: auto
 
     background-color: #ffffff
-    border-bottom: 1px solid #f0f2ed
     font-family: fontFamily
     line-height: normal
     text-align: left
@@ -146,6 +146,7 @@ html body
             left: 15px
             position: absolute
             top: headerHeight - 10px
+            z-index: 500
 
             padding: 10px 0
             width: 180px
@@ -277,7 +278,7 @@ html body
     position: absolute
     right: border
     top: headerHeight
-    z-index: 300
+    z-index: 90
 
     height: playerHeight
     width: auto
@@ -290,6 +291,7 @@ html body
     &.stick
       position: fixed
       top: 0
+      z-index: 998
 
     div#player-inner
       position: relative
@@ -503,6 +505,7 @@ html body
     width: 100%
 
     background-color: #ffffff
+    border-top: 1px solid #f0f2ed
 
     div#container
       position: relative

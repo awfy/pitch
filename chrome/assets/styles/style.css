@@ -128,10 +128,10 @@ html body strong {
 }
 html body div#header {
   position: relative;
+  z-index: 100;
   height: auto;
   width: auto;
   background-color: #fff;
-  border-bottom: 1px solid #f0f2ed;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
   line-height: normal;
   text-align: left;
@@ -261,6 +261,7 @@ html body div#header div#header-inner ul.menu li ul {
   left: 15px;
   position: absolute;
   top: 54px;
+  z-index: 500;
   padding: 10px 0;
   width: 180px;
   background-color: #fff;
@@ -424,7 +425,7 @@ html body div#player-container {
   position: absolute;
   right: 0;
   top: 64px;
-  z-index: 300;
+  z-index: 90;
   height: 86px;
   width: auto;
   background-color: #333631;
@@ -435,6 +436,7 @@ html body div#player-container {
 html body div#player-container.stick {
   position: fixed;
   top: 0;
+  z-index: 998;
 }
 html body div#player-container div#player-inner {
   position: relative;
@@ -732,6 +734,7 @@ html body div#content-wrapper {
   padding-top: 86px;
   width: 100%;
   background-color: #fff;
+  border-top: 1px solid #f0f2ed;
 }
 html body div#content-wrapper div#container {
   position: relative;
