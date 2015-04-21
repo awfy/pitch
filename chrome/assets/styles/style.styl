@@ -47,25 +47,25 @@ html body
       /* logo */
       a#logo-txt
         float: none
-        left: 10px
+        left: 0
         position: absolute
         top: 0
         z-index: 5
 
         height: headerHeight
         padding: 0
-        width: 91px
+        width: padding + logoWidth + padding
 
-        background-position: 20px 23px
+        background-position: padding 23px
         background-repeat: no-repeat
         color: fontColorDark
-        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/header/logo.png' 51px 18px
+        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/header/logo.png' logoWidth 18px
         font-size: inherit
         line-height: normal
 
         &:hover
           background-color: fontColorLink
-          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/header/logo-hover.png' 51px 18px
+          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/header/logo-hover.png' logoWidth 18px
 
           &::after
             display: none
@@ -84,7 +84,7 @@ html body
 
       /* navigation */
       ul.menu
-        left: 100px
+        left: padding + logoWidth + padding - 1px
         position: absolute
         top: 0
         z-index: 10
