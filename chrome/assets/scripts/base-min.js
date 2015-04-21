@@ -1,0 +1,1 @@
+$("#filter").insertBefore($("#search-form")),$(window).load(function(){$("#message-intro-new").find("br").remove()});

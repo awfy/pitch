@@ -197,6 +197,145 @@ html body
                   color: #ffffff
                   text-decoration: none
 
+
+      /* usermenu */
+      div#filter
+        position: absolute
+        right: padding + 160px + padding
+        top: 0
+        z-index: 50
+
+        div
+          display: block
+
+          vertical-align: middle
+
+          &#menu-out a
+            float: left
+
+            display: block
+            height: headerHeight
+            margin: 0
+            padding: 0 15px
+            width: auto
+
+            background-color: transparent
+            border: 0
+            color: fontColorDark
+            font-size: 15px
+            font-weight: 600
+            line-height: headerHeight
+            opacity: 0.75
+            vertical-align: middle
+
+            &:hover
+              background-color: fontColorLink
+              color: #ffffff
+              opacity: 1
+              text-decoration: none
+
+          &#menu-friends
+            display: none
+
+          &#menu-username
+            width: auto
+
+            cursor: pointer
+            text-align: left
+
+            a#menu-item-username
+              display: block
+              height: headerHeight
+              padding: 0 15px
+              width: auto
+
+              background-color: transparent
+              border: 0
+              color: fontColorDark
+              font-size: 15px
+              font-weight: 600
+              line-height: headerHeight
+              opacity: 0.75
+              vertical-align: middle
+
+              img#avatar-mini
+                height: 24px
+                margin: -4px 0 0 6px
+                width: 24px
+
+                border-radius: 4px
+                vertical-align: middle
+
+              &:hover
+                background-color: fontColorLink
+                color: #ffffff
+                opacity: 1
+
+            ul
+              left: auto
+              position: absolute
+              right: 0
+              top: headerHeight
+              z-index: 500
+
+              padding: 10px 0
+              width: 180px
+
+              background-color: fontColorLink
+              border-radius: 0 0 6px 6px
+
+              li
+                float: none
+
+                margin: 0
+
+                font-size: inherit
+                line-height: normal
+
+                > a
+                  position: relative
+
+                  display: block
+                  height: 30px
+                  padding: 0 15px
+                  width: auto
+
+                  background-color: transparent
+                  border: 0
+                  color: #f3f7f0
+                  font-size: 14px
+                  font-weight: 600
+                  line-height: 30px
+
+                  span.unread-notification-icon
+                    position: absolute
+                    right: 15px
+                    top: 11px
+
+                    display: block
+                    height: 8px
+                    width: 8px
+
+                    background-color: fontColorFavorite
+                    border-radius: 8px
+                    color: fontColor
+                    font-size: 0
+
+                  &:hover
+                    background-color: #6da831
+                    color: #ffffff
+                    text-decoration: none
+
+            &:hover
+
+              a#menu-item-username
+                background-color: fontColorLink
+                color: #ffffff
+                opacity: 1
+
+              ul
+                display: block
+
       /* search field */
       form#search-form
         position: absolute
@@ -505,7 +644,7 @@ html body
     margin: 0
     min-height: 0
     overflow: visible
-    padding-top: playerHeight
+    padding-top: playerHeight - 1px
     width: 100%
 
     background-color: #ffffff
