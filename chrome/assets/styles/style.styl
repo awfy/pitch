@@ -28,6 +28,7 @@ html body
     width: auto
 
     background-color: #ffffff
+    border-bottom: 1px solid #f0f2ed
     font-family: fontFamily
     line-height: normal
     text-align: left
@@ -275,7 +276,8 @@ html body
     left: border
     position: absolute
     right: border
-    z-index: 200
+    top: headerHeight
+    z-index: 300
 
     height: playerHeight
     width: auto
@@ -284,6 +286,10 @@ html body
     border: 0
     color: #cacfc4
     line-height: normal
+
+    &.stick
+      position: fixed
+      top: 0
 
     div#player-inner
       position: relative

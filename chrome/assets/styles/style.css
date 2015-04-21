@@ -131,6 +131,7 @@ html body div#header {
   height: auto;
   width: auto;
   background-color: #fff;
+  border-bottom: 1px solid #f0f2ed;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
   line-height: normal;
   text-align: left;
@@ -422,13 +423,18 @@ html body div#player-container {
   left: 0;
   position: absolute;
   right: 0;
-  z-index: 200;
+  top: 64px;
+  z-index: 300;
   height: 86px;
   width: auto;
   background-color: #333631;
   border: 0;
   color: #cacfc4;
   line-height: normal;
+}
+html body div#player-container.stick {
+  position: fixed;
+  top: 0;
 }
 html body div#player-container div#player-inner {
   position: relative;
