@@ -11,7 +11,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/logo-hover.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/chrome\/assets\/imgs\/header\/logo-hover@2x.png": {
 		"fileType": 32768,
@@ -22,7 +22,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/logo-hover@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/chrome\/assets\/imgs\/header\/logo.png": {
 		"fileType": 32768,
@@ -33,7 +33,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/chrome\/assets\/imgs\/header\/logo@2x.png": {
 		"fileType": 32768,
@@ -44,7 +44,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/logo@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/chrome\/assets\/imgs\/header\/search-icon-focus.png": {
 		"fileType": 32768,
