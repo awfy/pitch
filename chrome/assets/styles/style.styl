@@ -667,270 +667,256 @@ html body
                   opacity: 1
 
           /* track list */
-          div#track-list
+          div#track-list, div#loved-tracks
 
-            div.section.section-track
-              display: block
-              overflow: visible
-              padding: 0
+            div.section
 
-              background-color: transparent
-              border: 0
-              border-top: 1px solid #f0f2ed
+              &.artist
+                border: 0
 
-              &.first
-                border-top: 1px solid #e5e8e1
-
-              &.haarp-active
-                background-color: fontColorLighter
-
-              div.section-player
-                box-sizing: border-box
-                margin: 0 auto
-                min-height: trackArtwork + (trackPadding * 2)
-                padding: trackPadding (126px + padding) trackPadding (padding + trackArtwork + 14px)
-                width: 100%
-
-                &:hover
-
-                  h3.track_name
-                    opacity: 1
-
-                span.rank
-                  position: absolute
-                  left: padding + (trackArtwork - trackRank)
-                  top: trackPadding + (trackArtwork - trackRank)
-
-                  display: block
-                  height: trackRank
-                  padding: 0
-                  width: trackRank
-
-                  background-color: fontColorLink
-                  border-radius: 4px 0 4px 0
-                  color: #ffffff
-                  font-size: 12px
-                  font-weight: 400
-                  line-height: trackRank
-                  text-align: center
-
-                a.thumb
-                  left: padding
-                  position: absolute
-                  top: trackPadding
-
-                  display: block
-                  height: trackArtwork
-                  width: trackArtwork
-
-                  background-color: fontColorLink !important
-                  border: 0
-                  border-radius: 5px
-                  box-shadow: inset 0 0 0 1px rgba(#000000,0.1)
-
-                h3.track_name
+                h2
                   position: relative
 
                   margin: 0
-                  padding-top: 5px
+                  height: 0
+                  padding: 0
+                  width: 0
 
-                  color: #ffffff
-                  font-size: 0
-                  line-height: normal
-                  opacity: 0.75
+                  border: 0
+                  background: transparent
+                  line-height: 0
+
+                  div.rank
+                    float: none
+                    position: absolute
+                    left: padding + (trackArtwork - trackRank)
+                    top: trackPadding + (trackArtwork - trackRank) + 1px
+
+                    display: block
+                    height: trackRank
+                    margin: 0
+                    padding: 0
+                    width: trackRank
+
+                    background-color: fontColorLink
+                    border-radius: 4px 0 4px 0
+                    color: #ffffff
+                    font-size: 12px
+                    font-weight: 400
+                    line-height: trackRank
+                    text-align: center
 
                   a
-                    line-height: normal
-                    margin: 0
+                    font-size: 0
 
-                    &:hover
-                      text-decoration: none
+              &.section-track
+                display: block
+                overflow: visible
+                padding: 0
 
-                    &.artist
-                      display: block
+                background-color: transparent
+                border: 0
+                border-top: 1px solid #f0f2ed
 
-                      color: fontColorLight
-                      font-size: 13px
-                      font-weight: 600
+                &.first
+                  border-top: 1px solid #e5e8e1
 
-                    &.track
-                      display: block
+                &.haarp-active
+                  background-color: fontColorLighter
 
-                      color: fontColorDark
-                      font-size: 16px
-                      font-weight: 600
+                div.section-player
+                  box-sizing: border-box
+                  margin: 0 auto
+                  min-height: trackArtwork + (trackPadding * 2)
+                  padding: trackPadding (126px + padding) trackPadding (padding + trackArtwork + 14px)
+                  width: 100%
 
-                      &:hover
-                        text-decoration: none
+                  &:hover
 
-                      span
+                    h3.track_name
+                      opacity: 1
 
-                        &:hover
-                          text-decoration: none
+                  span.rank
+                    position: absolute
+                    left: padding + (trackArtwork - trackRank)
+                    top: trackPadding + (trackArtwork - trackRank)
 
-                        &.base-title
-                          text-decoration: none
+                    display: block
+                    height: trackRank
+                    padding: 0
+                    width: trackRank
 
-                        &.remix-link
-                          color: fontColorLink
+                    background-color: fontColorLink
+                    border-radius: 4px 0 4px 0
+                    color: #ffffff
+                    font-size: 12px
+                    font-weight: 400
+                    line-height: trackRank
+                    text-align: center
 
-                ul.tools
-                  position: absolute
-                  right: padding
-                  top: trackPadding + 11px
+                  a.thumb
+                    left: padding
+                    position: absolute
+                    top: trackPadding
 
-                  width: 100px
+                    display: block
+                    height: trackArtwork
+                    width: trackArtwork
 
-                  li
-                    float: right
+                    background-color: fontColorLink !important
+                    border: 0
+                    border-radius: 5px
+                    box-shadow: inset 0 0 0 1px rgba(#000000,0.1)
+
+                  h3.track_name
                     position: relative
 
+                    margin: 0
+                    padding-top: 5px
+
+                    color: #ffffff
+                    font-size: 0
+                    line-height: normal
+                    opacity: 0.75
+
                     a
-                      position: relative
-
-                      display: block
-                      height: controlHeight
-                      padding: 0
-                      width: controlWidth
-
-                      background-position: ((controlWidth - 13px)/2) ((controlHeight - 14px)/2)
-                      background-repeat: no-repeat
-                      image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon.png' 13px 14px
-                      font-size: inherit
                       line-height: normal
+                      margin: 0
 
                       &:hover
-                        background-color: transparent
                         text-decoration: none
 
-                    &.playdiv a.play-ctrl
+                      &.artist
+                        display: block
 
-                      &:hover
-                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon-hover.png' 13px 14px
-
-                      &.pause
-                        background-position: ((controlWidth - 10px)/2) ((controlHeight - 14px)/2)
-                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon.png' 10px 14px
-
-                        &:hover
-                          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon-hover.png' 10px 14px
-
-                    &.favdiv
-
-                      a.haarp-fav-ctrl
-                        background-position: ((controlWidth - 15px)/2) ((controlHeight - 14px)/2)
-                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon.png' 15px 14px
-
-                        &:hover
-                          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon-hover.png' 15px 14px
-
-                        &.fav-on, &.fav-on:hover
-                          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon-on.png' 15px 14px
-
-                      a.haarp-fav-count
-                        margin: 0
-                        width: auto
-
-                        background: transparent
-                        color: fontColor
-                        font-size: 14px
+                        color: fontColorLight
+                        font-size: 13px
                         font-weight: 600
-                        line-height: 28px
-                        text-align: right
-                        vertical-align: middle
 
-                        &.favcount-on
-                          color: fontColorFavorite
+                      &.track
+                        display: block
 
-                div.tweet-info
-                  overflow: hidden
+                        color: fontColorDark
+                        font-size: 16px
+                        font-weight: 600
 
-                  margin: 8px 0 0
-                  padding: 10px 0 4px
+                        &:hover
+                          text-decoration: none
 
-                  border-top: 1px solid #f8faf5
+                        span
 
-                  &::before
-                    display: block
-                    padding-bottom: 6px
+                          &:hover
+                            text-decoration: none
 
-                    content: 'Tweets'
-                    color: fontColorLight
-                    font-size: 12px
-                    font-weight: 600
+                          &.base-title
+                            text-decoration: none
 
-                  div.act_info_tweets
+                          &.remix-link
+                            color: fontColorLink
 
-                    p
-                      margin: 0
+                  ul.tools
+                    position: absolute
+                    right: padding
+                    top: trackPadding + 11px
 
-                      color: fontColorLight
-                      font-size: 12px
-                      font-weight: 400
-                      line-height: 20px
+                    width: 100px
 
-                      a.twitter_user
-                        margin-right: 6px
-
-                    div.twitter_contributors
-                      margin: 0
-
-                      font-size: inherit
-                      line-height: normal
-
-                      a
-
-                        &.twitter_user
-                          float: left
-                          position: relative
-
-                          display: block
-                          height: 20px
-                          margin-right: 2px
-                          width: 20px
-
-                          border: 0
-
-                          img
-                            height: 20px
-                            width: 20px
-
-                            border-radius: 3px
-
-                        &.tweets_extra_toggle
-                          height: 20px
-                          margin: 0 0 0 6px
-                          width: auto
-
-                          border: 0
-                          font-size: 13px
-                          font-weight: 600
-                          line-height: 20px
-
-                    ul.tweets_extra
+                    li
+                      float: right
                       position: relative
 
-                      clear: both
-                      display: block
-                      margin: 0
-                      max-height: 200px
-                      padding: 0
-
-                      background-color: #f8faf5
-                      border: 1px solid #f0f2ed
-                      border-radius: 5px
-
-                      li
+                      a
                         position: relative
 
-                        clear: both
                         display: block
-                        padding: 6px 10px
+                        height: controlHeight
+                        padding: 0
+                        width: controlWidth
 
-                        border-bottom: 1px solid #f0f2ed
+                        background-position: ((controlWidth - 13px)/2) ((controlHeight - 14px)/2)
+                        background-repeat: no-repeat
+                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon.png' 13px 14px
+                        font-size: inherit
+                        line-height: normal
+
+                        &:hover
+                          background-color: transparent
+                          text-decoration: none
+
+                      &.playdiv a.play-ctrl
+
+                        &:hover
+                          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon-hover.png' 13px 14px
+
+                        &.pause
+                          background-position: ((controlWidth - 10px)/2) ((controlHeight - 14px)/2)
+                          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon.png' 10px 14px
+
+                          &:hover
+                            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon-hover.png' 10px 14px
+
+                      &.favdiv
+
+                        a.haarp-fav-ctrl
+                          background-position: ((controlWidth - 15px)/2) ((controlHeight - 14px)/2)
+                          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon.png' 15px 14px
+
+                          &:hover
+                            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon-hover.png' 15px 14px
+
+                          &.fav-on, &.fav-on:hover
+                            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon-on.png' 15px 14px
+
+                        a.haarp-fav-count
+                          margin: 0
+                          width: auto
+
+                          background: transparent
+                          color: fontColor
+                          font-size: 14px
+                          font-weight: 600
+                          line-height: 28px
+                          text-align: right
+                          vertical-align: middle
+
+                          &.favcount-on
+                            color: fontColorFavorite
+
+                  div.tweet-info
+                    overflow: hidden
+
+                    margin: 8px 0 0
+                    padding: 10px 0 4px
+
+                    border-top: 1px solid #f8faf5
+
+                    &::before
+                      display: block
+                      padding-bottom: 6px
+
+                      content: 'Tweets'
+                      color: fontColorLight
+                      font-size: 12px
+                      font-weight: 600
+
+                    div.act_info_tweets
+
+                      p
+                        margin: 0
+
                         color: fontColorLight
                         font-size: 12px
+                        font-weight: 400
                         line-height: 20px
+
+                        a.twitter_user
+                          margin-right: 6px
+
+                      div.twitter_contributors
+                        margin: 0
+
+                        font-size: inherit
+                        line-height: normal
 
                         a
 
@@ -938,32 +924,86 @@ html body
                             float: left
                             position: relative
 
-                            display: inline-block
+                            display: block
                             height: 20px
-                            margin: 0 10px 0 0
-                            width: auto
+                            margin-right: 2px
+                            width: 20px
 
                             border: 0
-                            font-size: 12px
-                            font-weight: 600
-                            line-height: 20px
 
                             img
-                              display: inline-block
-                              height: 20px !important
-                              width: 20px !important
+                              height: 20px
+                              width: 20px
 
                               border-radius: 3px
 
-                        span.tweet_points_total
-                          top: 6px
-                          position: absolute
-                          right: 10px
+                          &.tweets_extra_toggle
+                            height: 20px
+                            margin: 0 0 0 6px
+                            width: auto
 
+                            border: 0
+                            font-size: 13px
+                            font-weight: 600
+                            line-height: 20px
+
+                      ul.tweets_extra
+                        position: relative
+
+                        clear: both
+                        display: block
+                        margin: 0
+                        max-height: 200px
+                        padding: 0
+
+                        background-color: #f8faf5
+                        border: 1px solid #f0f2ed
+                        border-radius: 5px
+
+                        li
+                          position: relative
+
+                          clear: both
+                          display: block
+                          padding: 6px 10px
+
+                          border-bottom: 1px solid #f0f2ed
                           color: fontColorLight
                           font-size: 12px
-                          font-weight: 400
                           line-height: 20px
+
+                          a
+
+                            &.twitter_user
+                              float: left
+                              position: relative
+
+                              display: inline-block
+                              height: 20px
+                              margin: 0 10px 0 0
+                              width: auto
+
+                              border: 0
+                              font-size: 12px
+                              font-weight: 600
+                              line-height: 20px
+
+                              img
+                                display: inline-block
+                                height: 20px !important
+                                width: 20px !important
+
+                                border-radius: 3px
+
+                          span.tweet_points_total
+                            top: 6px
+                            position: absolute
+                            right: 10px
+
+                            color: fontColorLight
+                            font-size: 12px
+                            font-weight: 400
+                            line-height: 20px
 
             h2
               display: block
