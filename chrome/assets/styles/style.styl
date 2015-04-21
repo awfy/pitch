@@ -116,12 +116,13 @@ html body
             opacity: 0.75
             vertical-align: middle
 
-            &:hover
-              background-color: transparent
-              opacity: 1
-
           &:hover
             background-color: transparent
+
+            a
+              background-color: fontColorLink
+              color: #ffffff
+              opacity: 1
 
             ul
               display: block
@@ -136,46 +137,46 @@ html body
               height: headerHeight + 1px
               margin-bottom: -1px
 
-              background-color: fontColor
+              background-color: darkBg
               color: #ffffff
               font-weight: 600
               opacity: 1
               text-decoration: none
 
               &:hover
-                background-color: fontColor
+                background-color: darkBg
+
+            &:hover
+
+              > a
+                background-color: #444742
+                opacity: 1
+
+              ul
+                background-color: #444742
+
+                li a
+                  background-color: #444742
+
+                  &:hover
+                    background-color: #393b38
 
           ul
-            left: 15px
+            left: 0
             position: absolute
-            top: headerHeight - 10px
+            top: headerHeight
             z-index: 500
 
             padding: 10px 0
             width: 180px
 
-            background-color: #ffffff
-            border-radius: 4px
-            box-shadow: 0 0 0 1px rgba(#abb3a1,0.4), 0 3px 9px rgba(#000000,0.1)
-
-            &::before
-              left: 15px
-              position: absolute
-              top: -10px
-
-              arrow(top, rgba(#abb3a1,0.4), 10px)
-              content: ''
-
-            &::after
-              left: 15px
-              position: absolute
-              top: -9px
-
-              arrow(top, #ffffff, 10px)
-              content: ''
+            background-color: fontColorLink
+            border-radius: 0 0 6px 6px
 
             li
               float: none
+
+              margin: 0
 
               font-size: inherit
               line-height: normal
@@ -186,13 +187,13 @@ html body
                 padding: 0 15px
                 width: auto
 
-                color: fontColorDark
+                color: #f3f7f0
                 font-size: 14px
                 font-weight: 600
                 line-height: 30px
 
                 &:hover
-                  background-color: fontColorLink
+                  background-color: #6da831
                   color: #ffffff
                   text-decoration: none
 
@@ -286,7 +287,7 @@ html body
     height: playerHeight
     width: auto
 
-    background-color: fontColor
+    background-color: darkBg
     border: 0
     color: #cacfc4
     line-height: normal
