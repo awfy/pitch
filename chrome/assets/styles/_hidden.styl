@@ -45,6 +45,7 @@ html body
 
   div#player-container div#player-inner
 
+    div#filter,
     div#player-page
       display: none !important
 
@@ -112,18 +113,22 @@ html body
 
               div.section-player
 
+                > div.meta,
+                > span.share-links,
+                > ul.tools,
+
                 div.act_info,
-                div.meta,
                 div.sparkdiv,
 
                 p.post_info,
-
-                span.share-links,
 
                 ul.tags
                   display: none !important
 
                 h3.track_name a.track span.remix-count
+                  display: none !important
+
+                div.meta span.buy a.toggle-reposts
                   display: none !important
 
                 ul.tools li
