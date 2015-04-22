@@ -1,0 +1,1 @@
+$(function(){var e=document.createElement("script");e.src=chrome.extension.getURL("assets/scripts/base-min.js"),(document.head||document.documentElement).appendChild(e),e.onload=function(){e.parentNode.removeChild(e)}});

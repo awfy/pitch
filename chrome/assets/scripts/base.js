@@ -1,6 +1,6 @@
 $(function(){
 
-  var do_stuff = function() {
+  var hypem = function() {
 
     // header
     $('a#shuf').insertAfter($('div#header ul.menu'));
@@ -28,8 +28,8 @@ $(function(){
 
   };
 
-  do_stuff();
+  hypem();
 
-  $(document).on('ajaxComplete', do_stuff());
+  $(document).on('ajaxComplete', hypem);
 
 });
