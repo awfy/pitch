@@ -902,6 +902,8 @@ html body
                   background-color: #f0f5eb
 
                   div.section-player ul.playpause li a
+                    display: block
+
                     image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon.png' 30px 30px
 
                     &:hover
@@ -944,7 +946,7 @@ html body
                       font-size: normal
 
                       background-color: rgba(#30332e,0.5)
-                      background-position: ((trackArtwork - 30px)/2) ((trackArtwork - 30px)/2)
+                      background-position: ((trackArtwork - 30px)/2 + 1px) ((trackArtwork - 30px)/2)
                       background-repeat: no-repeat
                       border-radius: trackRadius
                       image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon.png' 30px 30px
