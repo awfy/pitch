@@ -8,7 +8,13 @@
     "48": "assets/imgs/icons/icon48.png",
     "128": "assets/imgs/icons/icon128.png"
   },
+  "background": {
+    "scripts": [
+      "assets/scripts/base-min.js"
+    ]
+  },
   "permissions": [
+    "tabs",
     "http://*/*",
     "https://*/*"
   ],
