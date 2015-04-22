@@ -2,50 +2,6 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "18493",
 "files": {
-	"\/chrome\/assets\/imgs\/header\/logo-hover.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 706,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/logo-hover.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/logo-hover.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/header\/logo-hover@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1451,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/logo-hover@2x.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/logo-hover@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/header\/logo.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 749,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/logo.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/logo.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/header\/logo@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1490,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/logo@2x.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/logo@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/chrome\/assets\/imgs\/header\/search-icon-focus.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -420,50 +376,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/chrome\/assets\/imgs\/track\/download-icon-hover.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 908,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/download-icon-hover.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/download-icon-hover.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/download-icon-hover@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3351,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/download-icon-hover@2x.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/download-icon-hover@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/download-icon.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 305,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/download-icon.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/download-icon.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/download-icon@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 547,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/download-icon@2x.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/download-icon@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/chrome\/assets\/imgs\/track\/favorite-icon-hover.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -473,18 +385,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/favorite-icon-hover.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/favorite-icon-hover@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 825,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/favorite-icon-hover@2x.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/favorite-icon-hover@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/favorite-icon-on.png": {
 		"fileType": 32768,
@@ -495,172 +396,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/favorite-icon-on.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/favorite-icon-on@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 781,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/favorite-icon-on@2x.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/favorite-icon-on@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/favorite-icon.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 419,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/favorite-icon.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/favorite-icon.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/favorite-icon@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 821,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/favorite-icon@2x.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/favorite-icon@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/pause-icon-hover.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 128,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/pause-icon-hover.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/pause-icon-hover.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/pause-icon-hover@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 171,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/pause-icon-hover@2x.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/pause-icon-hover@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/pause-icon.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 129,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/pause-icon.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/pause-icon.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/pause-icon@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 174,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/pause-icon@2x.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/pause-icon@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/play-icon-hover.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 316,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/play-icon-hover.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/play-icon-hover.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/play-icon-hover@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 619,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/play-icon-hover@2x.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/play-icon-hover@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/play-icon.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 318,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/play-icon.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/play-icon.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/play-icon@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 629,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/play-icon@2x.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/play-icon@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/share-icon-hover.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 303,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/share-icon-hover.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/share-icon-hover.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/share-icon-hover@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 557,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/share-icon-hover@2x.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/share-icon-hover@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/share-icon.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 445,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/share-icon.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/share-icon.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/chrome\/assets\/imgs\/track\/share-icon@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 853,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/share-icon@2x.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/share-icon@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/scripts\/base-min.js": {
 		"fileType": 64,
