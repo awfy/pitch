@@ -1,35 +1,35 @@
 {
-
-  "manifest_version":           2,
-
-  "name":                       "Pitch",
-  "description":                "A Chrome extension for HypeMachine.",
-  "version":                    "1.0.1",
-
-  "background": {
-                                "scripts": [ "assets/scripts/jquery-2.1.3.min.js", "assets/scripts/base-min.js" ]
-  },
-
+  "manifest_version": 2,
+  "name": "Pitch",
+  "description": "A Chrome extension for HypeMachine.",
+  "version": "1.0.1",
   "icons": {
-                                "16": 		"assets/imgs/icons/icon16.png",
-                                "48": 		"assets/imgs/icons/icon48.png",
-                                "128": 		"assets/imgs/icons/icon128.png"
+    "16": "assets/imgs/icons/icon16.png",
+    "48": "assets/imgs/icons/icon48.png",
+    "128": "assets/imgs/icons/icon128.png"
   },
-
   "permissions": [
-                                "http://*/*", "https://*/*"
+    "http://*/*",
+    "https://*/*"
   ],
-
   "content_scripts": [ {
-                                "matches":            [ "http://*.hypem.com/*", "https://*.hypem.com/*", "http://*.hypemachine.com/*", "https://*.hypemachine.com/*" ],
-                                "css":                [ "assets/styles/style.css" ],
-                                "run_at":             "document_end"
+      "matches": [
+        "http://*.hypem.com/*",
+        "https://*.hypem.com/*",
+        "http://*.hypemachine.com/*",
+        "https://*.hypemachine.com/*"
+      ],
+      "css": [
+        "assets/styles/style.css"
+      ],
+      "js": [
+        "assets/scripts/jquery-2.1.3.min.js",
+        "assets/scripts/base-min.js"
+      ],
+      "run_at": "document_end"
   }],
-
   "web_accessible_resources": [
-                                "assets/*"
+    "assets/*"
   ],
-
   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'"
-
 }
