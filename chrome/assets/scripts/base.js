@@ -6,6 +6,27 @@ $(function(){
     $('a#shuf').insertAfter($('div#header ul.menu'));
     $('div#filter').insertBefore($('form#search-form'));
 
+    // play/pause consistancy
+    $('a#playerPlay').click(function () {
+
+      if ($('a#playerPlay').hasClass('play')) {
+
+        $('div.section-track').removeClass('content-paused').removeClass('content-playing');
+        $('div.section-track.haarp-active').addClass('content-paused');
+        $('div.section-track.content-paused > a.play-ctrl').removeClass('pause').addClass('play');
+
+      }
+
+      if ($('a#playerPlay').hasClass('pause')) {
+
+        $('div.section-track').removeClass('content-paused').removeClass('content-playing');
+        $('div.section-track.haarp-active').addClass('content-playing');
+        $('div.section-track.content-paused > a.play-ctrl').removeClass('play').addClass('pause');
+
+      }
+
+    });
+
     // track
     $('div.section-player').each(function () {
 
@@ -21,8 +42,8 @@ $(function(){
       });
 
       // moves play/pause control
-      $(this).find('li.playdiv').detach().appendTo(this);
-      $(this).find('li.playdiv').wrapAll('<ul class="playpause">');
+      $(this).find('ul.tools li.playdiv').detach().appendTo(this);
+      $(this).find('> li.playdiv').wrapAll('<ul class="playpause">');
 
     });
 
