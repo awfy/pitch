@@ -469,6 +469,7 @@ html body
 
     div#player-inner
       position: relative
+      z-index: 50
 
       height: auto
       margin: 0 auto
@@ -484,6 +485,7 @@ html body
         &.disabled
           cursor: default
           opacity: 0.25
+          pointer-events: none
 
         a#playerFav,
         a#playerNext,
@@ -667,6 +669,23 @@ html body
 
               background-color: fontColorLink
               border-radius: 8px
+
+  /* change notice */
+  div#flash-message
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 100
+
+    display: none
+
+    background-color: fontColorLink
+    color: #ffffff
+    font-size: 12px
+    font-weight: 600
+    text-align: center
+    line-height: 50px
 
   /* content */
   div#content-wrapper
