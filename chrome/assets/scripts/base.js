@@ -14,9 +14,9 @@ $(function(){
       $(this).find('> .control-latch').wrapAll('<div class="controls">');
 
       // tidies up the sharing elements
-      $(this).find('span.share-links').each(function () {
+      $(this).find('.controls span.share-links').each(function () {
 
-        $(this).find('.twitter-share, .facebook-share').wrapAll('<ul class="sharemenu">');
+        $(this).find('> .twitter-share, > .facebook-share').wrapAll('<ul class="sharemenu">');
 
       });
 
