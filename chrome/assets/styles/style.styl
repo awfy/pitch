@@ -24,6 +24,9 @@ html body
   a
     color: fontColorLink
 
+    &:active
+      top: auto
+
   /* header */
   div#header
     position: relative
@@ -861,6 +864,9 @@ html body
 
             div.section
 
+              a:active
+                top: auto
+
               &.artist
                 border: 0
 
@@ -963,6 +969,7 @@ html body
                       image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon.png' 30px 30px
 
                       &:hover
+                        background-color: rgba(#30332e,0.75)
                         image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon-hover.png' 30px 30px
 
                       &.pause
