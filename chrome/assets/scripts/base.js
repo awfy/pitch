@@ -86,6 +86,9 @@ $(function(){
     // submenu
     $('ul#submenu').each(function () {
 
+      // move
+      $(this).prependTo($('div#content-wrapper'));
+
       // favorite selection fix
       if ($('li#nav-playlist-1 a, li#nav-playlist-2 a, li#nav-playlist-3 a').hasClass('selected')) {
 

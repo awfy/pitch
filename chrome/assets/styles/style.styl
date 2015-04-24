@@ -854,20 +854,177 @@ html body
     &.scrolling
       padding-top: playerHeight + 8px + submenuHeight + 8px + 1px
 
-      div#container div#content div#content-left
+      ul#submenu
+        left: 0
+        position: fixed
+        right: 0
+        top: playerHeight
+        z-index: 80
 
-        ul#submenu
-          left: 0
-          position: fixed
-          right: 0
-          top: playerHeight
-          z-index: 80
+        background-color: #ffffff
+        border-bottom: 1px solid #f0f2ed
 
-          background-color: #ffffff
-          border-bottom: 1px solid #f0f2ed
+    /* filter (submenu) */
+    ul#submenu
+      position: relative
+
+      height: submenuHeight
+      margin: 0 auto
+      padding: 8px padding
+      width: auto
+
+      border: 0
+      font-size: inherit
+      line-height: normal
+
+      > li
+        float: left
+        position: relative
+
+        display: block
+
+        vertical-align: middle
+
+        &#submenu-filter
+          position: absolute
+          right: padding
+          top: 8px
+
+          &:hover
+
+            span#submenu-filter-title
+              background-color: fontColorLink
+              border-radius: 4px 4px 0 0
+              color: #ffffff
+
+            ul
+              display: block
+
+          a#shuffle-songs
+            background: transparent
+
+          span
+
+            &.title
+              color: fontColorLight
+              font-size: 12px
+              font-weight: 600
+              text-align: right
+
+            &#submenu-filter-title
+              box-sizing: border-box
+              display: inline-block
+              margin: 0 0 0 6px
+              height: submenuHeight
+              padding: 0 13px
+
+              background-color: transparent
+              border: 1px solid fontColorLink
+              border-radius: submenuHeight
+              color: fontColorLink
+              font-size: 12px
+              font-weight: 600
+              line-height: submenuHeight - 2px
+
+          ul
+            position: absolute
+            right: 0
+            top: submenuHeight
+
+            display: none
+            padding: 10px 0
+            width: 180px
+
+            background-color: fontColorLink
+            border: 0
+            border-radius: 6px 0 6px 6px
+
+            li
+              float: none
+
+              font-size: inherit
+              line-height: normal
+
+              > a
+                display: block
+                height: 30px
+                padding: 0 15px
+                width: auto
+
+                border: 0
+                color: #f3f7f0
+                font-size: 13px
+                font-weight: 600
+                line-height: 30px
+
+                span.checkmark
+                  float: right
+
+                  font-weight: 600
+                  font-size: 14px
+
+                &:hover
+                  background-color: #6da831
+                  color: #ffffff
+                  text-decoration: none
+
+        > a
+          position: relative
+
+          box-sizing: border-box
+          display: block
+          height: submenuHeight
+          padding: 0 13px
+
+          background-color: transparent
+          border: 1px solid transparent
+          border-radius: submenuHeight
+          color: fontColorLight
+          font-size: 12px
+          font-weight: 600
+          line-height: submenuHeight - 2px
+          opacity: 0.75
+          text-align: center
+
+          &:hover
+            opacity: 1
+            text-decoration: none
+
+          &.selected
+            border-color: fontColorLink
+            color: fontColorLink
+            opacity: 1
+
+        /* playlists */
+        &#nav-playlist-1
+
+          > a
+            color: #e17b3f
+
+            &.selected
+              border-color: #e17b3f
+              color: #e17b3f
+
+        &#nav-playlist-2
+
+          > a
+            color: #6f4094
+
+            &.selected
+              border-color: #6f4094
+              color: #6f4094
+
+        &#nav-playlist-3
+
+          > a
+            color: #cc3da8
+
+            &.selected
+              border-color: #cc3da8
+              color: #cc3da8
 
     div#container
-      position: relative
+      position: static
 
       display: block
       margin: 0
@@ -885,7 +1042,7 @@ html body
             border-top: 1px solid #f0f2ed
 
       div#content
-        position: relative
+        position: static
 
         margin: 0
         padding: 0
@@ -893,7 +1050,6 @@ html body
 
         div#content-left
           float: none
-          position: relative
 
           box-sizing: border-box
           margin: 0
@@ -902,165 +1058,6 @@ html body
           width: auto
 
           background-color: transparent
-
-          /* filter (submenu) */
-          ul#submenu
-            position: relative
-
-            height: submenuHeight
-            margin: 0 auto
-            padding: 8px padding
-            width: auto
-
-            border: 0
-            font-size: inherit
-            line-height: normal
-
-            > li
-              float: left
-              position: relative
-
-              display: block
-
-              vertical-align: middle
-
-              &#submenu-filter
-                position: absolute
-                right: padding
-                top: 8px
-
-                &:hover
-
-                  span#submenu-filter-title
-                    background-color: fontColorLink
-                    border-radius: 4px 4px 0 0
-                    color: #ffffff
-
-                  ul
-                    display: block
-
-                a#shuffle-songs
-                  background: transparent
-
-                span
-
-                  &.title
-                    color: fontColorLight
-                    font-size: 12px
-                    font-weight: 600
-                    text-align: right
-
-                  &#submenu-filter-title
-                    box-sizing: border-box
-                    display: inline-block
-                    margin: 0 0 0 6px
-                    height: submenuHeight
-                    padding: 0 13px
-
-                    background-color: transparent
-                    border: 1px solid fontColorLink
-                    border-radius: submenuHeight
-                    color: fontColorLink
-                    font-size: 12px
-                    font-weight: 600
-                    line-height: submenuHeight - 2px
-
-                ul
-                  position: absolute
-                  right: 0
-                  top: submenuHeight
-
-                  display: none
-                  padding: 10px 0
-                  width: 180px
-
-                  background-color: fontColorLink
-                  border: 0
-                  border-radius: 6px 0 6px 6px
-
-                  li
-                    float: none
-
-                    font-size: inherit
-                    line-height: normal
-
-                    > a
-                      display: block
-                      height: 30px
-                      padding: 0 15px
-                      width: auto
-
-                      border: 0
-                      color: #f3f7f0
-                      font-size: 13px
-                      font-weight: 600
-                      line-height: 30px
-
-                      span.checkmark
-                        float: right
-
-                        font-weight: 600
-                        font-size: 14px
-
-                      &:hover
-                        background-color: #6da831
-                        color: #ffffff
-                        text-decoration: none
-
-              > a
-                position: relative
-
-                box-sizing: border-box
-                display: block
-                height: submenuHeight
-                padding: 0 13px
-
-                background-color: transparent
-                border: 1px solid transparent
-                border-radius: submenuHeight
-                color: fontColorLight
-                font-size: 12px
-                font-weight: 600
-                line-height: submenuHeight - 2px
-                opacity: 0.75
-                text-align: center
-
-                &:hover
-                  opacity: 1
-                  text-decoration: none
-
-                &.selected
-                  border-color: fontColorLink
-                  color: fontColorLink
-                  opacity: 1
-
-              /* playlists */
-              &#nav-playlist-1
-
-                > a
-                  color: #e17b3f
-
-                  &.selected
-                    border-color: #e17b3f
-                    color: #e17b3f
-
-              &#nav-playlist-2
-
-                > a
-                  color: #6f4094
-
-                  &.selected
-                    border-color: #6f4094
-                    color: #6f4094
-
-              &#nav-playlist-3
-
-                > a
-                  color: #cc3da8
-
-                  &.selected
-                    border-color: #cc3da8
-                    color: #cc3da8
 
           /* track list & loved tracks */
           div#track-list, div#loved-tracks
@@ -1644,7 +1641,7 @@ html body
               border: 0
 
           /* pagination */
-          div.paginator
+          div.paginator, div#end-of-infinity
             margin: 0
             overflow: hidden
             padding: 0 padding
@@ -1680,4 +1677,28 @@ html body
               &:hover
                 opacity: 1
                 text-decoration: none
+
+          /* end of infinity */
+          div#end-of-infinity
+            display: block
+            margin: 0
+            padding: 14px padding
+
+            background-color: transparent
+            border: 0
+            border-top: 1px solid #f0f2ed
+            font-size: 14px
+            font-weight: 600
+            text-align: center
+
+
+
+
+
+
+
+
+
+
+
 
