@@ -847,6 +847,21 @@ html body
 
     background-color: #ffffff
 
+    &.scrolling
+      padding-top: playerHeight + 8px + submenuHeight + 8px + 1px
+
+      div#container div#content div#content-left
+
+        ul#submenu
+          left: 0
+          position: fixed
+          right: 0
+          top: playerHeight
+          z-index: 80
+
+          background-color: #ffffff
+          border-bottom: 1px solid #f0f2ed
+
     div#container
       position: relative
 

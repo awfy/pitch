@@ -2,6 +2,24 @@ $(function(){
 
   var hypem = function() {
 
+    $(window).scroll(function() {
+
+      var scroll = $(window).scrollTop();
+
+      if (scroll <= 54) {
+
+        $("div#content-wrapper").removeClass('scrolling');
+
+      }
+
+      if (scroll >= 54) {
+
+        $("div#content-wrapper").addClass('scrolling');
+
+      }
+
+    });
+
     // header
     $('a#shuf').insertAfter($('div#header ul.menu'));
     $('div#filter').insertBefore($('form#search-form'));
@@ -29,6 +47,12 @@ $(function(){
 
     // player
     $('div#player-container').each(function () {
+
+      if ($(this).hasClass('stick')) {
+
+        $('div#content-wrapper').addClass('scrolling');
+
+      }
 
       // moves sharing controls
       $(this).find('#player-nowplaying > div.share-icons').insertAfter($('a#playerFav'));
