@@ -35,7 +35,7 @@ html body
     height: auto
     width: auto
 
-    background-color: #ffffff
+    background-color: darkBg
     font-family: fontFamily
     line-height: normal
     text-align: left
@@ -60,7 +60,7 @@ html body
         padding: 0
         width: padding + logoWidth + padding
 
-        background-position: padding 23px
+        background-position: padding 18px
         background-repeat: no-repeat
         color: fontColorDark
         image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/header/logo.png' logoWidth 18px
@@ -77,13 +77,13 @@ html body
         &::after
           position: absolute
           right: 0
-          top: 15px
+          top: ((headerHeight - 24px)/2)
 
           display: block
-          height: 34px
+          height: 24px
           width: 1px
 
-          background-color: #e5e8e1
+          background-color: darkerBg
           content: ''
 
       /* navigation */
@@ -113,8 +113,8 @@ html body
 
             background-color: transparent
             border: 0
-            color: fontColorDark
-            font-size: 15px
+            color: #ffffff
+            font-size: 14px
             font-weight: 600
             line-height: headerHeight
             opacity: 0.75
@@ -138,32 +138,19 @@ html body
             background-color: transparent
 
             > a
-              height: headerHeight + 1px
-              margin-bottom: -1px
+              height: headerHeight
 
-              background-color: darkBg
+              background-color: darkerBg
               color: #ffffff
               font-weight: 600
               opacity: 1
               text-decoration: none
 
-              &:hover
-                background-color: darkBg
-
             &:hover
 
               > a
-                background-color: #444742
+                background-color: fontColorLink
                 opacity: 1
-
-              ul
-                background-color: #444742
-
-                li a
-                  background-color: #444742
-
-                  &:hover
-                    background-color: #393b38
 
           ul
             left: 0
@@ -203,7 +190,7 @@ html body
 
       /* random button */
       a#shuf
-        left: 336px
+        left: padding + logoWidth + padding + 230px /* 230 is the width of the menu */
         position: absolute
         top: 0
 
@@ -212,8 +199,8 @@ html body
 
         background-color: transparent
         border: 0
-        color: fontColorDark
-        font-size: 15px
+        color: #ffffff
+        font-size: 14px
         font-smoothing: auto
         font-weight: 600
         line-height: headerHeight
@@ -221,7 +208,7 @@ html body
         vertical-align: middle
 
         &::before
-          color: fontColorDark
+          color: #ffffff
           content: 'Random'
 
         &:hover
@@ -255,8 +242,8 @@ html body
 
             background-color: transparent
             border: 0
-            color: fontColorDark
-            font-size: 15px
+            color: #ffffff
+            font-size: 14px
             font-weight: 600
             line-height: headerHeight
             opacity: 0.75
@@ -285,19 +272,19 @@ html body
 
               background-color: transparent
               border: 0
-              color: fontColorDark
-              font-size: 15px
+              color: #ffffff
+              font-size: 14px
               font-weight: 600
               line-height: headerHeight
               opacity: 0.75
               vertical-align: middle
 
               img#avatar-mini
-                height: 24px
-                margin: -4px 0 0 6px
-                width: 24px
+                height: 20px
+                margin: -3px 0 0 5px
+                width: 20px
 
-                border-radius: 4px
+                border-radius: 3px
                 vertical-align: middle
 
               &:hover
@@ -374,7 +361,7 @@ html body
       form#search-form
         position: absolute
         right: padding
-        top: 17px
+        top: ((headerHeight - 30px)/2)
 
         display: block
         height: auto
@@ -393,12 +380,12 @@ html body
           padding: 0 30px 0 15px
           width: 160px
 
-          background-color: #ffffff
+          background-color: darkBg
           background-position: 132px 7px
           background-repeat: no-repeat
-          border: 1px solid #d8dbd3
+          border: 1px solid darkerBg
           border-radius: 50px
-          color: FontColorLight
+          color: rgba(#ffffff,0.75)
           font-family: fontFamily
           font-size: 13px
           font-weight: 400
@@ -408,9 +395,17 @@ html body
 
           placeholder(FontColorLight)
 
+          &:hover
+            background-color: #383b37
+            border-color: darkerBg
+            color: #ffffff
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/header/search-icon-hover.png' 14px 14px
+
           &:focus
-            border-color: #aeb3a6
-            color: FontColor
+            background-color: darkerBg
+            border-color: darkerBg
+            box-shadow: 0 0 5px 1px #4a4d49
+            color: #ffffff
             image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/header/search-icon-focus.png' 14px 14px
 
   /* loader */
@@ -460,7 +455,7 @@ html body
     height: playerHeight
     width: auto
 
-    background-color: darkBg
+    background-color: darkerBg
     border: 0
     color: #cacfc4
     line-height: normal

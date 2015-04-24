@@ -11,7 +11,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/logo-hover.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/header\/logo-hover@2x.png": {
 		"fileType": 32768,
@@ -22,7 +22,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/logo-hover@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/header\/logo.png": {
 		"fileType": 32768,
@@ -33,7 +33,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/header\/logo@2x.png": {
 		"fileType": 32768,
@@ -44,7 +44,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/logo@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/header\/search-icon-focus.png": {
 		"fileType": 32768,
@@ -64,6 +64,28 @@
 		"initialSize": 1014,
 		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/search-icon-focus@2x.png",
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/search-icon-focus@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/chrome\/assets\/imgs\/header\/search-icon-hover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 352,
+		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/search-icon-hover.png",
+		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/search-icon-hover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/chrome\/assets\/imgs\/header\/search-icon-hover@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 690,
+		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/search-icon-hover@2x.png",
+		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/header\/search-icon-hover@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
@@ -429,7 +451,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/download-icon-hover.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/download-icon-hover@2x.png": {
 		"fileType": 32768,
@@ -440,7 +462,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/download-icon-hover@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/download-icon.png": {
 		"fileType": 32768,
@@ -451,7 +473,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/download-icon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/download-icon@2x.png": {
 		"fileType": 32768,
@@ -462,7 +484,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/download-icon@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/favorite-icon-hover.png": {
 		"fileType": 32768,
@@ -484,7 +506,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/favorite-icon-hover@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/favorite-icon-on.png": {
 		"fileType": 32768,
@@ -506,7 +528,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/favorite-icon-on@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/favorite-icon.png": {
 		"fileType": 32768,
@@ -517,7 +539,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/favorite-icon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/favorite-icon@2x.png": {
 		"fileType": 32768,
@@ -528,7 +550,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/favorite-icon@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/pause-icon-hover.png": {
 		"fileType": 32768,
@@ -539,7 +561,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/pause-icon-hover.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/pause-icon-hover@2x.png": {
 		"fileType": 32768,
@@ -550,7 +572,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/pause-icon-hover@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/pause-icon.png": {
 		"fileType": 32768,
@@ -561,7 +583,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/pause-icon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/pause-icon@2x.png": {
 		"fileType": 32768,
@@ -572,7 +594,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/pause-icon@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/play-icon-hover.png": {
 		"fileType": 32768,
@@ -583,7 +605,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/play-icon-hover.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/play-icon-hover@2x.png": {
 		"fileType": 32768,
@@ -594,7 +616,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/play-icon-hover@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/play-icon.png": {
 		"fileType": 32768,
@@ -605,7 +627,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/play-icon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/play-icon@2x.png": {
 		"fileType": 32768,
@@ -616,7 +638,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/play-icon@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/share-icon-hover.png": {
 		"fileType": 32768,
@@ -627,7 +649,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/share-icon-hover.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/share-icon-hover@2x.png": {
 		"fileType": 32768,
@@ -638,7 +660,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/share-icon-hover@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/share-icon.png": {
 		"fileType": 32768,
@@ -649,7 +671,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/share-icon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/imgs\/track\/share-icon@2x.png": {
 		"fileType": 32768,
@@ -660,7 +682,7 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/track\/share-icon@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/chrome\/assets\/scripts\/base-min.js": {
 		"fileType": 64,
