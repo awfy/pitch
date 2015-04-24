@@ -1,22 +1,29 @@
 {
+
   "manifest_version": 2,
-  "name": "Pitch",
+
+  "name": "Pitch for HypeMachine",
+  "short_name": "Pitch",
   "description": "A Chrome extension for HypeMachine.",
-  "version": "1.2.0",
+  "version": "1.1.4",
+
   "icons": {
     "16": "assets/imgs/icons/icon16.png",
     "48": "assets/imgs/icons/icon48.png",
     "128": "assets/imgs/icons/icon128.png"
   },
+
   "background": {
     "scripts": [
       "assets/scripts/base-min.js"
     ]
   },
+
   "permissions": [
     "http://*/*",
     "https://*/*"
   ],
+
   "content_scripts": [ {
       "matches": [
         "http://*.hypem.com/*",
@@ -32,8 +39,11 @@
         "assets/scripts/inject-min.js"
       ]
   }],
+
   "web_accessible_resources": [
     "assets/*"
   ],
+
   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'"
+
 }

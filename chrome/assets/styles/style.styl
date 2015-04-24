@@ -9,7 +9,7 @@ html body
   min-width: minWidth !important
   padding: border !important
 
-  background-color: #ffffff !important
+  background-color: darkBg !important
   background-image: none !important
   color: fontColor !important
   font-family: fontFamily !important
@@ -920,6 +920,9 @@ html body
                   ul
                     display: block
 
+                a#shuffle-songs
+                  background: transparent
+
                 span
 
                   &.title
@@ -1579,4 +1582,38 @@ html body
 
           /* pagination */
           div.paginator
-            display: none
+            margin: 0
+            padding: 8px padding
+
+            border: 0
+            border-top: 1px solid #f0f2ed
+            text-align: center
+
+            a#infinite-tracks-button
+              display: block
+              margin: 0
+              padding: 0
+              width: auto
+
+              background-color: fontColorLink
+              border: 0
+              border-radius: 5px
+              color: fontColorLink
+              font-size: 0
+              line-height: normal
+              opacity: 0.9
+              vertical-align: middle
+
+              &::before
+                display: block
+                height: 38px
+
+                color: #ffffff
+                content: 'Load more...'
+                font-size: 14px
+                line-height: 38px
+
+              &:hover
+                opacity: 1
+                text-decoration: none
+
