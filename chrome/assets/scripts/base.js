@@ -59,6 +59,18 @@ $(function(){
 
     });
 
+    // submenu
+    $('ul#submenu').each(function () {
+
+      // favorite selection fix
+      if ($('li#nav-playlist-1 a, li#nav-playlist-2 a, li#nav-playlist-3 a').hasClass('selected')) {
+
+        $(this).find('li#nav-favorites a').removeClass('selected');
+
+      }
+
+    });
+
   };
 
   hypem();
