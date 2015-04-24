@@ -890,10 +890,10 @@
 		"outputAbbreviatedPath": "\/chrome\/assets\/styles\/style.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"resolveRelativeURLS": 0,
 		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 1
+		"shouldRunBless": 0
 		},
 	"\/chrome\/background.html": {
 		"fileType": 8192,
