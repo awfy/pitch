@@ -105,45 +105,50 @@ html body
           hr.space
             display: none !important
 
-          div#loved-tracks div.section,
-          div#track-list div.section
+          div#loved-tracks,
+          div#track-list
 
-            &.section-moreinpost
+            div.no-search-results img
               display: none !important
 
-            &.section-track, &.artist
+            div.section
 
-              div.track-info
+              &.section-moreinpost
                 display: none !important
 
-              div.section-player
+              &.section-track, &.artist
 
-                > div.meta,
-                > span.share-links,
-                > ul.tools,
-
-                div.act_info,
-                div.sparkdiv,
-                div.tweet-info,
-
-                p.post_info,
-
-                ul.tags
+                div.track-info
                   display: none !important
 
-                h3.track_name a.track span.remix-count
-                  display: none !important
+                div.section-player
 
-                div.meta span.buy a.toggle-reposts
-                  display: none !important
+                  > div.meta,
+                  > span.share-links,
+                  > ul.tools,
 
-                ul.tools li
+                  div.act_info,
+                  div.sparkdiv,
+                  div.tweet-info,
 
-                  &.playlist-ctrls
+                  p.post_info,
+
+                  ul.tags
                     display: none !important
 
-                  a::before
+                  h3.track_name a.track span.remix-count
                     display: none !important
+
+                  div.meta span.buy a.toggle-reposts
+                    display: none !important
+
+                  ul.tools li
+
+                    &.playlist-ctrls
+                      display: none !important
+
+                    a::before
+                      display: none !important
 
           div.paginator
 
