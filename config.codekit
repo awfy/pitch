@@ -123,17 +123,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/chrome\/assets\/imgs\/icons\/icon128@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 6576,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/icons\/icon128@2x.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/icons\/icon128@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 1
-		},
 	"\/chrome\/assets\/imgs\/icons\/icon16.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -145,17 +134,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/chrome\/assets\/imgs\/icons\/icon16@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 699,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/icons\/icon16@2x.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/icons\/icon16@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 1
-		},
 	"\/chrome\/assets\/imgs\/icons\/icon48.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -163,17 +141,6 @@
 		"initialSize": 1164,
 		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/icons\/icon48.png",
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/icons\/icon48.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 1
-		},
-	"\/chrome\/assets\/imgs\/icons\/icon48@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2410,
-		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/icons\/icon48@2x.png",
-		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/icons\/icon48@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
