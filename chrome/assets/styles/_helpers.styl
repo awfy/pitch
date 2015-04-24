@@ -6,13 +6,14 @@ global-reset()
 
 /* dimensions */
 border              = 0
-minWidth            = 800px
+minWidth            = 0
 mobile              = 320px
 padding             = 20px
 headerHeight        = 54px
 logoWidth           = 52px
 playerHeight        = 44px
-submenuHeight       = 31px
+playerPadding       = 8px
+submenuHeight       = 29px
 controlHeight       = 28px
 controlWidth        = 28px
 
@@ -61,7 +62,7 @@ arrow(direction, color, size)
   else if direction == "left"
     border-bottom: size solid transparent
     border-right: size solid color
-    border-top: size solid transparent
+    border-top: size solid transparentske
 
   else if direction == "top-left"
     border-right: size solid transparent

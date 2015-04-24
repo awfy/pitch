@@ -473,9 +473,41 @@ html body
       margin: 0 auto
       width: auto
 
+      /* return */
+      div#player-page
+        left: mobile
+        position: absolute
+        right: auto
+        top: playerPadding
+        z-index: 55
+
+        visibilty: visible
+        width: auto
+
+        background-color: transparent
+
+        a
+          display: block
+          height: controlHeight
+          width: controlWidth
+
+          background-position: ((controlWidth - 14px)/2) ((controlHeight - 14px)/2)
+          background-repeat: no-repeat
+          font-size: 0
+          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/return-icon.png' 14px 14px
+
+          &:hover
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/return-icon-hover.png' 14px 14px
+
+          img
+            display: none
+            margin: 0
+
+      /* global controls */
       div#player-controls
         float: none
         position: relative
+        z-index: 50
 
         height: auto
         width: auto
@@ -493,7 +525,7 @@ html body
           float: none
           left: padding
           position: absolute
-          top: 8px
+          top: playerPadding
 
           display: block
           height: controlHeight
@@ -565,7 +597,7 @@ html body
           float: none
           left: padding + (controlWidth * 3)
           position: absolute
-          top: 8px
+          top: playerPadding
 
           border-radius: 3px 3px 0 0
           cursor: pointer
@@ -643,7 +675,7 @@ html body
           left: padding + (controlWidth * 5) + 12px
           position: absolute
           right: auto
-          top: 8px
+          top: playerPadding
 
           display: block
           height: controlHeight
@@ -659,7 +691,7 @@ html body
           left: padding + (controlWidth * 6) + 12px
           position: absolute
           right: auto
-          top: 18px
+          top: playerPadding + ((controlHeight - 8px)/2)
 
           display: block
           height: 8px
@@ -683,7 +715,7 @@ html body
           left: mobile
           position: absolute
           right: mobile
-          top: 8px
+          top: playerPadding
 
           height: 28px
           padding: 0 (8px + controlWidth)
@@ -702,39 +734,6 @@ html body
             &:hover
               color: fontColorLink
               text-decoration: none
-
-          /* return */
-          div#player-page
-            left: 0
-            position: absolute
-            right: auto
-            top: 0
-
-            visibilty: visible
-            width: auto
-
-            background-color: transparent
-
-            a
-              position: absolute
-              right: 0
-              top: 0
-
-              display: block
-              height: controlHeight
-              margin: 0
-              width: controlWidth
-
-              background-position: ((controlWidth - 14px)/2) ((controlHeight - 14px)/2)
-              background-repeat: no-repeat
-              font-size: 0
-              image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/return-icon.png' 14px 14px
-
-              &:hover
-                image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/return-icon-hover.png' 14px 14px
-
-              img
-                display: none
 
           /* blog post */
           a.store.read-post
@@ -773,7 +772,7 @@ html body
 
           div#player-time-position, div#player-time-total
             position: absolute
-            top: 8px
+            top: playerPadding
 
             height: 28px
             width: 34px
@@ -796,7 +795,7 @@ html body
             left: 34px + 10px
             position: absolute
             right: 10px + 34px
-            top: 18px
+            top: playerPadding + ((controlHeight - 8)/2)
 
             height: 8px
             overflow: hidden
@@ -843,7 +842,7 @@ html body
     margin: 0
     min-height: 0
     overflow: visible
-    padding-top: playerHeight - 1px
+    padding-top: playerHeight
     width: 100%
 
     background-color: #ffffff
@@ -881,7 +880,7 @@ html body
           box-sizing: border-box
           margin: 0
           min-height: 0
-          padding: 20px 0 0
+          padding: 0
           width: auto
 
           background-color: transparent
@@ -891,7 +890,7 @@ html body
             position: relative
 
             box-sizing: border-box
-            height: submenuHeight + 20px
+            height: 8px + submenuHeight + 8px
             margin: 0 auto
             padding: 0 padding
             width: 100%
