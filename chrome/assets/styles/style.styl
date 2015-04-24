@@ -846,7 +846,6 @@ html body
     width: 100%
 
     background-color: #ffffff
-    border-top: 1px solid #f0f2ed
 
     div#container
       position: relative
@@ -889,17 +888,16 @@ html body
           ul#submenu
             position: relative
 
-            box-sizing: border-box
-            height: 8px + submenuHeight + 8px
+            height: submenuHeight
             margin: 0 auto
-            padding: 0 padding
-            width: 100%
+            padding: 8px padding
+            width: auto
 
             border: 0
             font-size: inherit
             line-height: normal
 
-            li
+            > li
               float: left
               position: relative
 
@@ -910,49 +908,53 @@ html body
               &#submenu-filter
                 position: absolute
                 right: padding
+                top: 8px
+
+                &:hover
+
+                  span#submenu-filter-title
+                    background-color: fontColorLink
+                    border-radius: 4px 4px 0 0
+                    color: #ffffff
+
+                  ul
+                    display: block
 
                 span
 
                   &.title
                     color: fontColorLight
+                    font-size: 12px
+                    font-weight: 600
                     text-align: right
 
                   &#submenu-filter-title
+                    box-sizing: border-box
                     display: inline-block
+                    margin: 0 0 0 6px
                     height: submenuHeight
-                    padding: 0 10px
+                    padding: 0 13px
 
-                    background-color: fontColorLink
-                    border: 0
-                    border-radius: 5px
-                    color: #ffffff
-                    font-size: 14px
+                    background-color: transparent
+                    border: 1px solid fontColorLink
+                    border-radius: submenuHeight
+                    color: fontColorLink
+                    font-size: 12px
                     font-weight: 600
-                    line-height: submenuHeight
+                    line-height: submenuHeight - 2px
 
                 ul
                   position: absolute
                   right: 0
-                  top: submenuHeight + 4px
+                  top: submenuHeight
 
+                  display: none
                   padding: 10px 0
                   width: 180px
 
-                  background-color: #ffffff
+                  background-color: fontColorLink
                   border: 0
-                  border-radius: 4px
-                  box-shadow: 0 0 0 1px rgba(#abb3a1,0.4), 0 3px 9px rgba(#000000,0.1)
-
-                  &::before
-                    left: 0
-                    position: absolute
-                    right: 0
-                    top: -10px
-
-                    display: block
-                    height: 10px
-
-                    content: ''
+                  border-radius: 6px 0 6px 6px
 
                   li
                     float: none
@@ -966,48 +968,55 @@ html body
                       padding: 0 15px
                       width: auto
 
-                      border-radius: 0
-                      color: fontColorDark
-                      font-size: 14px
+                      border: 0
+                      color: #f3f7f0
+                      font-size: 13px
                       font-weight: 600
                       line-height: 30px
 
+                      span.checkmark
+                        float: right
+
+                        font-weight: 600
+                        font-size: 14px
+
                       &:hover
-                        background-color: fontColorLink
+                        background-color: #6da831
                         color: #ffffff
                         text-decoration: none
 
-              a
+              > a
                 position: relative
 
+                box-sizing: border-box
                 display: block
                 height: submenuHeight
-                padding: 0 10px
+                padding: 0 13px
 
                 background-color: transparent
-                border: 0
-                border-radius: 5px
-                color: fontColorDark
-                font-size: 14px
+                border: 1px solid transparent
+                border-radius: submenuHeight
+                color: fontColorLight
+                font-size: 12px
                 font-weight: 600
-                line-height: submenuHeight
+                line-height: submenuHeight - 2px
                 opacity: 0.75
+                text-align: center
 
                 &:hover
-                  border: 0
                   opacity: 1
                   text-decoration: none
 
                 &.selected
-                  background-color: fontColorLink
-                  border: 0
-                  color: #ffffff
+                  border-color: fontColorLink
+                  color: fontColorLink
                   opacity: 1
 
-          /* track list */
+          /* track list & loved tracks */
           div#track-list, div#loved-tracks
 
             div.section
+              border: 0
 
               a:active
                 top: auto
@@ -1050,7 +1059,7 @@ html body
                   a
                     font-size: 0
 
-              &.section-track
+              &.section
                 display: block
                 overflow: visible
                 padding: 0
@@ -1561,6 +1570,12 @@ html body
 
               span.remix-icon
                 display: none
+
+          /* loved tracks only */
+          div#loved-tracks
+
+            div.section div.section.first
+              border: 0
 
           /* pagination */
           div.paginator
