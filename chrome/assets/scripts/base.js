@@ -98,6 +98,15 @@ $(function(){
 
     });
 
+    // popups
+    $('body#box-inner').each(function() {
+
+      $(this).find('form#defaultform').prev().addClass('login');
+      $(this).find('div#loginsignup').prev().addClass('forgot');
+      $(this).find('div#signup').prev().addClass('signup');
+
+    });
+
   };
 
   hypem();

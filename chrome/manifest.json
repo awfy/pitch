@@ -37,7 +37,8 @@
       "js": [
         "assets/scripts/jquery-2.1.3.min.js",
         "assets/scripts/inject-min.js"
-      ]
+      ],
+      "all_frames": true
   }],
 
   "web_accessible_resources": [
