@@ -178,6 +178,50 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
+	"\/chrome\/assets\/imgs\/player\/blog-icon-hover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 175,
+		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/blog-icon-hover.png",
+		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/blog-icon-hover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/chrome\/assets\/imgs\/player\/blog-icon-hover@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 283,
+		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/blog-icon-hover@2x.png",
+		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/blog-icon-hover@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/chrome\/assets\/imgs\/player\/blog-icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 181,
+		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/blog-icon.png",
+		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/blog-icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/chrome\/assets\/imgs\/player\/blog-icon@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 286,
+		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/blog-icon@2x.png",
+		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/blog-icon@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
 	"\/chrome\/assets\/imgs\/player\/favorite-icon-hover.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -416,6 +460,94 @@
 		"initialSize": 974,
 		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/previous-icon@2x.png",
 		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/previous-icon@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/chrome\/assets\/imgs\/player\/return-icon-hover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 124,
+		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/return-icon-hover.png",
+		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/return-icon-hover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/chrome\/assets\/imgs\/player\/return-icon-hover@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 188,
+		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/return-icon-hover@2x.png",
+		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/return-icon-hover@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/chrome\/assets\/imgs\/player\/return-icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 125,
+		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/return-icon.png",
+		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/return-icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/chrome\/assets\/imgs\/player\/return-icon@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 187,
+		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/return-icon@2x.png",
+		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/return-icon@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/chrome\/assets\/imgs\/player\/share-icon-hover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 430,
+		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/share-icon-hover.png",
+		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/share-icon-hover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/chrome\/assets\/imgs\/player\/share-icon-hover@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 875,
+		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/share-icon-hover@2x.png",
+		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/share-icon-hover@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/chrome\/assets\/imgs\/player\/share-icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 467,
+		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/share-icon.png",
+		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/share-icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/chrome\/assets\/imgs\/player\/share-icon@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 882,
+		"inputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/share-icon@2x.png",
+		"outputAbbreviatedPath": "\/chrome\/assets\/imgs\/player\/share-icon@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1

@@ -60,16 +60,22 @@ html body
         &::before
           display: none !important
 
+      div#player-volume-mute
+
+        &::before,
+        span
+          display: none !important
+
       div#player-nowplaying
 
         a.store.read-post,
         div.share-icons
           display: none !important
 
-      div#player-timebar div#player-volume-mute
+      div#player-timebar
 
-        &::before,
-        span
+        div#player-volume-mute,
+        div#player-volume-outer
           display: none !important
 
   div#content-wrapper

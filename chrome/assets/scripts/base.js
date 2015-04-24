@@ -6,7 +6,7 @@ $(function(){
     $('a#shuf').insertAfter($('div#header ul.menu'));
     $('div#filter').insertBefore($('form#search-form'));
 
-    // play/pause consistancy
+    // player & track control consistancy
     $('a#playerPlay').click(function () {
 
       if ($('a#playerPlay').hasClass('play')) {
@@ -24,6 +24,18 @@ $(function(){
         $('div.section-track.content-paused > a.play-ctrl').removeClass('play').addClass('pause');
 
       }
+
+    });
+
+    // player
+    $('div#player-container').each(function () {
+
+      // moves sharing controls
+      $(this).find('#player-nowplaying > div.share-icons').insertAfter($('a#playerFav'));
+      $(this).find('#player-controls > div.share-icons > a').wrapAll('<div class="playersharemenu">');
+
+      // moves volume controls
+      $(this).find('#player-timebar > div#player-volume-mute, #player-timebar > div#player-volume-outer').insertAfter($('a#playerNext'));
 
     });
 

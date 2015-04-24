@@ -485,6 +485,7 @@ html body
           opacity: 0.25
           pointer-events: none
 
+        /* icons (excluding sharing) */
         a#playerFav,
         a#playerNext,
         a#playerPlay,
@@ -492,7 +493,7 @@ html body
           float: none
           left: padding
           position: absolute
-          top: 14px
+          top: 8px
 
           display: block
           height: controlHeight
@@ -506,20 +507,25 @@ html body
           line-height: normal
 
         a#playerPrev
-          background-position: ((controlWidth - 19px)/2) ((controlHeight - 14px)/2)
-          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/previous-icon.png' 19px 14px
+          background-position: ((controlWidth - 16px)/2) ((controlHeight - 12px)/2)
+          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/previous-icon.png' 16px 12px
 
           &:hover
-            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/previous-icon-hover.png' 19px 14px
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/previous-icon-hover.png' 16px 12px
+
+          &.playerPrev-inactive
+            display: block
+            opacity: 0.3
+            pointer-events: none
 
         a#playerPlay
           left: padding + controlWidth
 
-          background-position: ((controlWidth - 13px)/2) ((controlHeight - 14px)/2)
-          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/play-icon.png' 13px 14px
+          background-position: ((controlWidth - 12px)/2) ((controlHeight - 14px)/2)
+          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/play-icon.png' 12px 14px
 
           &:hover
-            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/play-icon-hover.png' 13px 14px
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/play-icon-hover.png' 12px 14px
 
           &.pause
             background-position: ((controlWidth - 10px)/2) ((controlHeight - 14px)/2)
@@ -531,39 +537,162 @@ html body
         a#playerFav
           left: padding + (controlWidth * 2)
 
-          background-position: ((controlWidth - 15px)/2) ((controlHeight - 14px)/2)
-          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/favorite-icon.png' 15px 14px
+          background-position: ((controlWidth - 16px)/2) ((controlHeight - 14px)/2)
+          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/favorite-icon.png' 16px 14px
 
           &:hover
-            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/favorite-icon-hover.png' 15px 14px
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/favorite-icon-hover.png' 16px 14px
 
           &.fav-on, &.fav-on:hover
-            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/favorite-icon-on.png' 15px 14px
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/favorite-icon-on.png' 16px 14px
 
         a#playerNext
-          left: padding + (controlWidth * 3)
+          left: padding + (controlWidth * 4)
 
-          background-position: ((controlWidth - 19px)/2) ((controlHeight - 14px)/2)
-          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/next-icon.png' 19px 14px
+          background-position: ((controlWidth - 16px)/2) ((controlHeight - 12px)/2)
+          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/next-icon.png' 16px 12px
 
           &:hover
-            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/next-icon-hover.png' 19px 14px
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/next-icon-hover.png' 16px 12px
 
-        div#player-nowplaying
+          &.playerNext-inactive
+            display: block
+            opacity: 0.3
+            pointer-events: none
+
+        /* sharing menu */
+        div.share-icons
           float: none
-          left: padding + (controlWidth * 4) + 10px
+          left: padding + (controlWidth * 3)
           position: absolute
-          right: 10px + controlWidth + 2px + 100px + padding
+          top: 8px
+
+          border-radius: 3px 3px 0 0
+          cursor: pointer
+
+          &::before
+            display: block
+            height: controlHeight
+            padding: 0
+            width: controlWidth
+
+            background-color: transparent
+            background-position: ((controlWidth - 18px)/2) ((controlHeight - 14px)/2)
+            background-repeat: no-repeat
+            content: ''
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/share-icon.png' 18px 14px
+            border: 0
+            font-size: inherit
+            line-height: normal
+
+          &:hover
+            background-color: #515450
+
+            &::before
+              image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/share-icon-hover.png' 18px 14px
+
+            div.playersharemenu
+              display: block
+
+          div.playersharemenu
+            left: 0
+            position: absolute
+            right: auto
+            top: controlHeight
+            z-index: 500
+
+            display: none
+            padding: 10px 0
+            width: 180px
+
+            background-color: #515450
+            border-radius: 0 6px 6px 6px
+
+            > a
+              display: block
+              height: 30px
+              padding: 0 15px
+              width: auto
+
+              color: #f3f7f0
+              font-size: 14px
+              font-weight: 600
+              line-height: 30px
+
+              &:hover
+                background-color: #393b38
+                color: #ffffff
+                text-decoration: none
+
+              &::before
+                content: ''
+                font-smoothing: auto
+
+              &.icon-sc::before
+                content: 'SoundCloud'
+
+              &.icon-twitter::before
+                content: 'Twitter'
+
+              &.icon-facebook::before
+                content: 'Facebook'
+
+
+        /* volume controls */
+        div#player-volume-mute
+          left: padding + (controlWidth * 5) + 12px
+          position: absolute
+          right: auto
+          top: 8px
+
+          display: block
+          height: controlHeight
+          width: controlWidth
+
+          background-color: transparent
+          background-position: ((controlWidth - 12px)/2) ((controlHeight - 14px)/2)
+          background-repeat: no-repeat
+          cursor: default
+          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/volume-icon.png' 12px 14px
+
+        div#player-volume-outer
+          left: padding + (controlWidth * 6) + 12px
+          position: absolute
+          right: auto
           top: 18px
 
-          height: 20px
-          padding: 0
+          display: block
+          height: 8px
+          width: 100px
+
+          background-color: #4a4d49
+          border: 0
+          border-radius: 8px
+          cursor: pointer
+          line-height: normal
+
+          div#player-volume-ctrl
+            height: 8px
+
+            background-color: fontColorLink
+            border-radius: 8px
+
+        /* song artist & title */
+        div#player-nowplaying
+          float: none
+          left: mobile
+          position: absolute
+          right: mobile
+          top: 8px
+
+          height: 28px
+          padding: 0 (8px + controlWidth)
           width: auto
 
           color: fontColorLighter
           font-size: 15px
           font-weight: 400
-          line-height: 20px
+          line-height: 28px
           overflow: ellipsis
           text-align: center
 
@@ -574,78 +703,100 @@ html body
               color: fontColorLink
               text-decoration: none
 
+          /* return */
+          div#player-page
+            left: 0
+            position: absolute
+            right: auto
+            top: 0
+
+            visibilty: visible
+            width: auto
+
+            background-color: transparent
+
+            a
+              position: absolute
+              right: 0
+              top: 0
+
+              display: block
+              height: controlHeight
+              margin: 0
+              width: controlWidth
+
+              background-position: ((controlWidth - 14px)/2) ((controlHeight - 14px)/2)
+              background-repeat: no-repeat
+              font-size: 0
+              image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/return-icon.png' 14px 14px
+
+              &:hover
+                image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/return-icon-hover.png' 14px 14px
+
+              img
+                display: none
+
+          /* blog post */
+          a.store.read-post
+            position: absolute
+            right: 0
+            top: 0
+
+            display: block
+            height: controlHeight
+            margin: 0
+            width: controlWidth
+
+            background-position: ((controlWidth - 12px)/2) ((controlHeight - 14px)/2)
+            background-repeat: no-repeat
+            font-size: 0
+            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/blog-icon.png' 12px 14px
+
+            &:hover
+              image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/blog-icon-hover.png' 12px 14px
+
+
+        /* time & position */
         div#player-timebar
-          position: relative
+          position: absolute
+          right: padding
           top: auto
 
           display: block
           height: auto
-          width: auto
+          width: mobile - (padding*2)
 
           background-color: transparent
           border: 0
           font-size: inherit
           line-height: normal
 
-          div#player-volume-mute
-            position: absolute
-            right: padding + 100px + 2px
-            top: 14px
-
-            height: controlHeight
-            width: controlWidth
-
-            background-color: transparent
-            background-position: ((controlWidth - 15px)/2) ((controlHeight - 14px)/2)
-            background-repeat: no-repeat
-            cursor: default
-            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/volume-icon.png' 15px 14px
-
-          div#player-volume-outer
-            position: absolute
-            right: padding
-            top: 24px
-
-            height: 8px
-            width: 100px
-
-            background-color: #4a4d49
-            border: 0
-            border-radius: 8px
-            line-height: normal
-
-            div#player-volume-ctrl
-              height: 8px
-
-              background-color: fontColorLink
-              border-radius: 8px
-
           div#player-time-position, div#player-time-total
             position: absolute
-            top: 14px + 28px + 10px
+            top: 8px
 
-            height: 18px
+            height: 28px
             width: 34px
 
             color: #cacfc4
             font-size: 13px
             font-weight: 600
-            line-height: 18px
+            line-height: 28px
             text-align: center
             vertical-align: middle
 
           div#player-time-position
-            left: padding
+            left: 0
 
           div#player-time-total
             left: auto
-            right: padding
+            right: 0
 
           div#player-progress-outer
-            left: padding + 34px + 10px
+            left: 34px + 10px
             position: absolute
-            right: 10px + 34px + padding
-            top: 14px + 28px + 10px + 5px
+            right: 10px + 34px
+            top: 18px
 
             height: 8px
             overflow: hidden
