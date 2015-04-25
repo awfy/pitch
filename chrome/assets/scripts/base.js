@@ -83,11 +83,11 @@ $(function(){
 
     });
 
+    // move submenu
+    $('div#content-left ul#submenu').prependTo($('div#content-wrapper')).wrapAll('<div id="submenu-container">');
+
     // submenu
     $('ul#submenu').each(function () {
-
-      // move
-      $(this).prependTo($('div#content-wrapper'));
 
       // favorite selection fix
       if ($('li#nav-playlist-1 a, li#nav-playlist-2 a, li#nav-playlist-3 a').hasClass('selected')) {
@@ -95,6 +95,13 @@ $(function(){
         $(this).find('li#nav-favorites a').removeClass('selected');
 
       }
+
+    });
+
+    // pagination
+    $('div.paginator').each(function () {
+
+      $(this).find('> a#infinite-tracks-button').wrapAll('<div class="paginator-inner">');
 
     });
 

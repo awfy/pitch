@@ -50,6 +50,7 @@ html body
 
       height: headerHeight
       margin: 0 auto
+      max-width: maxWidth
       width: auto
 
       /* logo */
@@ -464,6 +465,9 @@ html body
     color: #cacfc4
     line-height: normal
 
+    @media (max-width: mobile * 3)
+      height: playerHeight + controlHeight + playerPadding
+
     &.stick
       position: fixed
       top: 0
@@ -475,6 +479,7 @@ html body
 
       height: auto
       margin: 0 auto
+      max-width: maxWidth
       width: auto
 
       /* return */
@@ -489,6 +494,9 @@ html body
         width: auto
 
         background-color: transparent
+
+        @media (max-width: mobile * 3)
+          left: padding
 
         a
           display: block
@@ -541,6 +549,9 @@ html body
           border: 0
           font-size: inherit
           line-height: normal
+
+          @media (max-width: mobile * 3)
+            top: playerPaddingMini
 
         a#playerPrev
           background-position: ((controlWidth - 16px)/2) ((controlHeight - 12px)/2)
@@ -605,6 +616,9 @@ html body
 
           border-radius: 3px 3px 0 0
           cursor: pointer
+
+          @media (max-width: mobile * 3)
+            top: playerPaddingMini
 
           &::before
             display: block
@@ -691,6 +705,9 @@ html body
           cursor: default
           image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/volume-icon.png' 12px 14px
 
+          @media (max-width: mobile * 3)
+            top: playerPaddingMini
+
         div#player-volume-outer
           left: padding + (controlWidth * 6) + 12px
           position: absolute
@@ -706,6 +723,9 @@ html body
           border-radius: 8px
           cursor: pointer
           line-height: normal
+
+          @media (max-width: mobile * 3)
+            top: playerPaddingMini + ((controlHeight - 8px)/2)
 
           div#player-volume-ctrl
             height: 8px
@@ -731,6 +751,10 @@ html body
           line-height: 28px
           overflow: ellipsis
           text-align: center
+
+          @media (max-width: mobile * 3)
+            left: 20px
+            right: 20px
 
           a
             color: fontColorLighter
@@ -763,7 +787,7 @@ html body
         div#player-timebar
           position: absolute
           right: padding
-          top: auto
+          top: playerPadding
 
           display: block
           height: auto
@@ -774,9 +798,15 @@ html body
           font-size: inherit
           line-height: normal
 
+          @media (max-width: mobile * 3)
+            left: mobile
+            top: playerPaddingMini
+
+            width: auto
+
           div#player-time-position, div#player-time-total
             position: absolute
-            top: playerPadding
+            top: 0
 
             height: 28px
             width: 34px
@@ -799,7 +829,7 @@ html body
             left: 34px + 10px
             position: absolute
             right: 10px + 34px
-            top: playerPadding + ((controlHeight - 8)/2)
+            top: (controlHeight - 8)/2
 
             height: 8px
             overflow: hidden
@@ -851,10 +881,13 @@ html body
 
     background-color: #ffffff
 
+    @media (max-width: mobile * 3)
+      padding-top: playerHeight + playerPadding + controlHeight
+
     &.scrolling
       padding-top: playerHeight + 8px + submenuHeight + 8px + 1px
 
-      ul#submenu
+      div#submenu-container
         left: 0
         position: fixed
         right: 0
@@ -864,164 +897,180 @@ html body
         background-color: #ffffff
         border-bottom: 1px solid #f0f2ed
 
+        @media (max-width: mobile * 3)
+          top: playerHeight + playerPadding + controlHeight
+
     /* filter (submenu) */
-    ul#submenu
+    div#submenu-container
       position: relative
 
-      height: submenuHeight
+      height: submenuHeight + (submenuPadding * 2)
       margin: 0 auto
-      padding: 8px padding
       width: auto
 
       border: 0
       font-size: inherit
       line-height: normal
 
-      > li
-        float: left
+      ul#submenu
         position: relative
 
-        display: block
+        box-sizing: border-box
+        height: submenuHeight
+        margin: 0 auto
+        max-width: maxWidth
+        padding: submenuPadding padding
+        width: auto
 
-        vertical-align: middle
+        border: 0
+        font-size: inherit
+        line-height: normal
 
-        &#submenu-filter
-          position: absolute
-          right: padding
-          top: 8px
-
-          &:hover
-
-            span#submenu-filter-title
-              background-color: fontColorLink
-              border-radius: 4px 4px 0 0
-              color: #ffffff
-
-            ul
-              display: block
-
-          a#shuffle-songs
-            background: transparent
-
-          span
-
-            &.title
-              color: fontColorLight
-              font-size: 12px
-              font-weight: 600
-              text-align: right
-
-            &#submenu-filter-title
-              box-sizing: border-box
-              display: inline-block
-              margin: 0 0 0 6px
-              height: submenuHeight
-              padding: 0 13px
-
-              background-color: transparent
-              border: 1px solid fontColorLink
-              border-radius: submenuHeight
-              color: fontColorLink
-              font-size: 12px
-              font-weight: 600
-              line-height: submenuHeight - 2px
-
-          ul
-            position: absolute
-            right: 0
-            top: submenuHeight
-
-            display: none
-            padding: 10px 0
-            width: 180px
-
-            background-color: fontColorLink
-            border: 0
-            border-radius: 6px 0 6px 6px
-
-            li
-              float: none
-
-              font-size: inherit
-              line-height: normal
-
-              > a
-                display: block
-                height: 30px
-                padding: 0 15px
-                width: auto
-
-                border: 0
-                color: #f3f7f0
-                font-size: 13px
-                font-weight: 600
-                line-height: 30px
-
-                span.checkmark
-                  float: right
-
-                  font-weight: 600
-                  font-size: 14px
-
-                &:hover
-                  background-color: #6da831
-                  color: #ffffff
-                  text-decoration: none
-
-        > a
+        > li
+          float: left
           position: relative
 
-          box-sizing: border-box
           display: block
-          height: submenuHeight
-          padding: 0 13px
 
-          background-color: transparent
-          border: 1px solid transparent
-          border-radius: submenuHeight
-          color: fontColorLight
-          font-size: 12px
-          font-weight: 600
-          line-height: submenuHeight - 2px
-          opacity: 0.75
-          text-align: center
+          vertical-align: middle
 
-          &:hover
-            opacity: 1
-            text-decoration: none
+          &#submenu-filter
+            position: absolute
+            right: padding
+            top: submenuPadding
 
-          &.selected
-            border-color: fontColorLink
-            color: fontColorLink
-            opacity: 1
+            &:hover
 
-        /* playlists */
-        &#nav-playlist-1
+              span#submenu-filter-title
+                background-color: fontColorLink
+                border-radius: 4px 4px 0 0
+                color: #ffffff
+
+              ul
+                display: block
+
+            a#shuffle-songs
+              background: transparent
+
+            span
+
+              &.title
+                color: fontColorLight
+                font-size: 12px
+                font-weight: 600
+                text-align: right
+
+              &#submenu-filter-title
+                box-sizing: border-box
+                display: inline-block
+                margin: 0 0 0 6px
+                height: submenuHeight
+                padding: 0 13px
+
+                background-color: transparent
+                border: 1px solid fontColorLink
+                border-radius: submenuHeight
+                color: fontColorLink
+                font-size: 12px
+                font-weight: 600
+                line-height: submenuHeight - 2px
+
+            ul
+              position: absolute
+              right: 0
+              top: submenuHeight
+
+              display: none
+              padding: 10px 0
+              width: 180px
+
+              background-color: fontColorLink
+              border: 0
+              border-radius: 6px 0 6px 6px
+
+              li
+                float: none
+
+                font-size: inherit
+                line-height: normal
+
+                > a
+                  display: block
+                  height: 30px
+                  padding: 0 15px
+                  width: auto
+
+                  border: 0
+                  color: #f3f7f0
+                  font-size: 13px
+                  font-weight: 600
+                  line-height: 30px
+
+                  span.checkmark
+                    float: right
+
+                    font-weight: 600
+                    font-size: 14px
+
+                  &:hover
+                    background-color: #6da831
+                    color: #ffffff
+                    text-decoration: none
 
           > a
-            color: #e17b3f
+            position: relative
+
+            box-sizing: border-box
+            display: block
+            height: submenuHeight
+            padding: 0 13px
+
+            background-color: transparent
+            border: 1px solid transparent
+            border-radius: submenuHeight
+            color: fontColorLight
+            font-size: 12px
+            font-weight: 600
+            line-height: submenuHeight - 2px
+            opacity: 0.75
+            text-align: center
+
+            &:hover
+              opacity: 1
+              text-decoration: none
 
             &.selected
-              border-color: #e17b3f
+              border-color: fontColorLink
+              color: fontColorLink
+              opacity: 1
+
+          /* playlists */
+          &#nav-playlist-1
+
+            > a
               color: #e17b3f
 
-        &#nav-playlist-2
+              &.selected
+                border-color: #e17b3f
+                color: #e17b3f
 
-          > a
-            color: #6f4094
+          &#nav-playlist-2
 
-            &.selected
-              border-color: #6f4094
+            > a
               color: #6f4094
 
-        &#nav-playlist-3
+              &.selected
+                border-color: #6f4094
+                color: #6f4094
 
-          > a
-            color: #cc3da8
+          &#nav-playlist-3
 
-            &.selected
-              border-color: #cc3da8
+            > a
               color: #cc3da8
+
+              &.selected
+                border-color: #cc3da8
+                color: #cc3da8
 
     div#container
       position: static
@@ -1151,9 +1200,10 @@ html body
                 div.section-player
                   box-sizing: border-box
                   margin: 0 auto
+                  max-width: maxWidth
                   min-height: trackArtwork + (trackPadding * 2)
                   padding: trackPadding (126px + padding) trackPadding (padding + trackArtwork + 14px)
-                  width: 100%
+                  width: auto
 
                   &:hover
 
@@ -1644,39 +1694,45 @@ html body
           div.paginator, div#end-of-infinity
             margin: 0
             overflow: hidden
-            padding: 0 padding
+            padding: 0
 
             border: 0
             border-top: 1px solid #f0f2ed
             text-align: center
 
-            a#infinite-tracks-button
-              display: block
-              margin: 8px 0
-              padding: 0
-              width: auto
+            div.paginator-inner
+              box-sizing: border-box
+              margin: 0 auto
+              max-width: maxWidth
+              padding: 0 padding
 
-              background-color: fontColorLink
-              border: 0
-              border-radius: 5px
-              color: fontColorLink
-              font-size: 0
-              line-height: normal
-              opacity: 0.9
-              vertical-align: middle
-
-              &::before
+              a#infinite-tracks-button
                 display: block
-                height: 38px
+                margin: 8px 0
+                padding: 0
+                width: auto
 
-                color: #ffffff
-                content: 'Load more...'
-                font-size: 14px
-                line-height: 38px
+                background-color: fontColorLink
+                border: 0
+                border-radius: 5px
+                color: fontColorLink
+                font-size: 0
+                line-height: normal
+                opacity: 0.9
+                vertical-align: middle
 
-              &:hover
-                opacity: 1
-                text-decoration: none
+                &::before
+                  display: block
+                  height: 38px
+
+                  color: #ffffff
+                  content: 'Load more...'
+                  font-size: 14px
+                  line-height: 38px
+
+                &:hover
+                  opacity: 1
+                  text-decoration: none
 
           /* end of infinity */
           div#end-of-infinity
@@ -1690,8 +1746,6 @@ html body
             font-size: 14px
             font-weight: 600
             text-align: center
-
-
 
 
 

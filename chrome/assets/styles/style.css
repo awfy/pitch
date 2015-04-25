@@ -161,7 +161,7 @@ html body {
   -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
   box-sizing: border-box !important;
-  min-width: 800px !important;
+  min-width: 760px !important;
   padding: 0 !important;
   background-color: #fff !important;
   background-image: none !important;
@@ -213,6 +213,7 @@ html body div#header div#header-inner {
   position: relative;
   height: 54px;
   margin: 0 auto;
+  max-width: 1240px;
   width: auto;
 /* logo */
 /* navigation */
@@ -668,6 +669,11 @@ html body div#player-container {
   color: #cacfc4;
   line-height: normal;
 }
+@media (max-width: 960px) {
+  html body div#player-container {
+    height: 80px;
+  }
+}
 html body div#player-container.stick {
   position: fixed;
   top: 0;
@@ -678,6 +684,7 @@ html body div#player-container div#player-inner {
   z-index: 50;
   height: auto;
   margin: 0 auto;
+  max-width: 1240px;
   width: auto;
 /* return */
 /* global controls */
@@ -691,6 +698,11 @@ html body div#player-container div#player-inner div#player-page {
   visibilty: visible;
   width: auto;
   background-color: transparent;
+}
+@media (max-width: 960px) {
+  html body div#player-container div#player-inner div#player-page {
+    left: 20px;
+  }
 }
 html body div#player-container div#player-inner div#player-page a {
   display: block;
@@ -760,6 +772,14 @@ html body div#player-container div#player-inner div#player-controls a#playerPrev
   border: 0;
   font-size: inherit;
   line-height: normal;
+}
+@media (max-width: 960px) {
+  html body div#player-container div#player-inner div#player-controls a#playerFav,
+  html body div#player-container div#player-inner div#player-controls a#playerNext,
+  html body div#player-container div#player-inner div#player-controls a#playerPlay,
+  html body div#player-container div#player-inner div#player-controls a#playerPrev {
+    top: 44px;
+  }
 }
 html body div#player-container div#player-inner div#player-controls a#playerPrev {
   background-position: 6px 8px;
@@ -915,6 +935,11 @@ html body div#player-container div#player-inner div#player-controls div.share-ic
   border-radius: 3px 3px 0 0;
   cursor: pointer;
 }
+@media (max-width: 960px) {
+  html body div#player-container div#player-inner div#player-controls div.share-icons {
+    top: 44px;
+  }
+}
 html body div#player-container div#player-inner div#player-controls div.share-icons::before {
   display: block;
   height: 28px;
@@ -1017,6 +1042,11 @@ html body div#player-container div#player-inner div#player-controls div#player-v
     background-size: 12px 14px;
   }
 }
+@media (max-width: 960px) {
+  html body div#player-container div#player-inner div#player-controls div#player-volume-mute {
+    top: 44px;
+  }
+}
 html body div#player-container div#player-inner div#player-controls div#player-volume-outer {
   left: 200px;
   position: absolute;
@@ -1031,6 +1061,11 @@ html body div#player-container div#player-inner div#player-controls div#player-v
   border-radius: 8px;
   cursor: pointer;
   line-height: normal;
+}
+@media (max-width: 960px) {
+  html body div#player-container div#player-inner div#player-controls div#player-volume-outer {
+    top: 54px;
+  }
 }
 html body div#player-container div#player-inner div#player-controls div#player-volume-outer div#player-volume-ctrl {
   height: 8px;
@@ -1057,6 +1092,12 @@ html body div#player-container div#player-inner div#player-controls div#player-n
   text-overflow: ellipsis;
   text-align: center;
 /* blog post */
+}
+@media (max-width: 960px) {
+  html body div#player-container div#player-inner div#player-controls div#player-nowplaying {
+    left: 20px;
+    right: 20px;
+  }
 }
 html body div#player-container div#player-inner div#player-controls div#player-nowplaying a {
   color: #f7faf2;
@@ -1100,7 +1141,7 @@ html body div#player-container div#player-inner div#player-controls div#player-n
 html body div#player-container div#player-inner div#player-controls div#player-timebar {
   position: absolute;
   right: 20px;
-  top: auto;
+  top: 8px;
   display: block;
   height: auto;
   width: 280px;
@@ -1109,10 +1150,17 @@ html body div#player-container div#player-inner div#player-controls div#player-t
   font-size: inherit;
   line-height: normal;
 }
+@media (max-width: 960px) {
+  html body div#player-container div#player-inner div#player-controls div#player-timebar {
+    left: 320px;
+    top: 44px;
+    width: auto;
+  }
+}
 html body div#player-container div#player-inner div#player-controls div#player-timebar div#player-time-position,
 html body div#player-container div#player-inner div#player-controls div#player-timebar div#player-time-total {
   position: absolute;
-  top: 8px;
+  top: 0;
   height: 28px;
   width: 34px;
   color: #cacfc4;
@@ -1133,7 +1181,7 @@ html body div#player-container div#player-inner div#player-controls div#player-t
   left: 44px;
   position: absolute;
   right: 44px;
-  top: 18px;
+  top: 20px/2;
   height: 8px;
   overflow: hidden;
   width: auto;
@@ -1179,10 +1227,15 @@ html body div#content-wrapper {
   background-color: #fff;
 /* filter (submenu) */
 }
+@media (max-width: 960px) {
+  html body div#content-wrapper {
+    padding-top: 80px;
+  }
+}
 html body div#content-wrapper.scrolling {
   padding-top: 90px;
 }
-html body div#content-wrapper.scrolling ul#submenu {
+html body div#content-wrapper.scrolling div#submenu-container {
   left: 0;
   position: fixed;
   right: 0;
@@ -1191,47 +1244,65 @@ html body div#content-wrapper.scrolling ul#submenu {
   background-color: #fff;
   border-bottom: 1px solid #f0f2ed;
 }
-html body div#content-wrapper ul#submenu {
+@media (max-width: 960px) {
+  html body div#content-wrapper.scrolling div#submenu-container {
+    top: 80px;
+  }
+}
+html body div#content-wrapper div#submenu-container {
   position: relative;
+  height: 45px;
+  margin: 0 auto;
+  width: auto;
+  border: 0;
+  font-size: inherit;
+  line-height: normal;
+}
+html body div#content-wrapper div#submenu-container ul#submenu {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   height: 29px;
   margin: 0 auto;
+  max-width: 1240px;
   padding: 8px 20px;
   width: auto;
   border: 0;
   font-size: inherit;
   line-height: normal;
 }
-html body div#content-wrapper ul#submenu > li {
+html body div#content-wrapper div#submenu-container ul#submenu > li {
   float: left;
   position: relative;
   display: block;
   vertical-align: middle;
 /* playlists */
 }
-html body div#content-wrapper ul#submenu > li#submenu-filter {
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter {
   position: absolute;
   right: 20px;
   top: 8px;
 }
-html body div#content-wrapper ul#submenu > li#submenu-filter:hover span#submenu-filter-title {
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter:hover span#submenu-filter-title {
   background-color: #83c441;
   -webkit-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
   color: #fff;
 }
-html body div#content-wrapper ul#submenu > li#submenu-filter:hover ul {
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter:hover ul {
   display: block;
 }
-html body div#content-wrapper ul#submenu > li#submenu-filter a#shuffle-songs {
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter a#shuffle-songs {
   background: transparent;
 }
-html body div#content-wrapper ul#submenu > li#submenu-filter span.title {
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter span.title {
   color: #666963;
   font-size: 12px;
   font-weight: 600;
   text-align: right;
 }
-html body div#content-wrapper ul#submenu > li#submenu-filter span#submenu-filter-title {
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter span#submenu-filter-title {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1248,7 +1319,7 @@ html body div#content-wrapper ul#submenu > li#submenu-filter span#submenu-filter
   font-weight: 600;
   line-height: 27px;
 }
-html body div#content-wrapper ul#submenu > li#submenu-filter ul {
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter ul {
   position: absolute;
   right: 0;
   top: 29px;
@@ -1260,12 +1331,12 @@ html body div#content-wrapper ul#submenu > li#submenu-filter ul {
   -webkit-border-radius: 6px 0 6px 6px;
   border-radius: 6px 0 6px 6px;
 }
-html body div#content-wrapper ul#submenu > li#submenu-filter ul li {
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter ul li {
   float: none;
   font-size: inherit;
   line-height: normal;
 }
-html body div#content-wrapper ul#submenu > li#submenu-filter ul li > a {
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter ul li > a {
   display: block;
   height: 30px;
   padding: 0 15px;
@@ -1276,17 +1347,17 @@ html body div#content-wrapper ul#submenu > li#submenu-filter ul li > a {
   font-weight: 600;
   line-height: 30px;
 }
-html body div#content-wrapper ul#submenu > li#submenu-filter ul li > a span.checkmark {
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter ul li > a span.checkmark {
   float: right;
   font-weight: 600;
   font-size: 14px;
 }
-html body div#content-wrapper ul#submenu > li#submenu-filter ul li > a:hover {
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter ul li > a:hover {
   background-color: #6da831;
   color: #fff;
   text-decoration: none;
 }
-html body div#content-wrapper ul#submenu > li > a {
+html body div#content-wrapper div#submenu-container ul#submenu > li > a {
   position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1307,37 +1378,37 @@ html body div#content-wrapper ul#submenu > li > a {
   filter: alpha(opacity=75);
   text-align: center;
 }
-html body div#content-wrapper ul#submenu > li > a:hover {
+html body div#content-wrapper div#submenu-container ul#submenu > li > a:hover {
   opacity: 1;
   -ms-filter: none;
   filter: none;
   text-decoration: none;
 }
-html body div#content-wrapper ul#submenu > li > a.selected {
+html body div#content-wrapper div#submenu-container ul#submenu > li > a.selected {
   border-color: #83c441;
   color: #83c441;
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
-html body div#content-wrapper ul#submenu > li#nav-playlist-1 > a {
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-playlist-1 > a {
   color: #e17b3f;
 }
-html body div#content-wrapper ul#submenu > li#nav-playlist-1 > a.selected {
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-playlist-1 > a.selected {
   border-color: #e17b3f;
   color: #e17b3f;
 }
-html body div#content-wrapper ul#submenu > li#nav-playlist-2 > a {
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-playlist-2 > a {
   color: #6f4094;
 }
-html body div#content-wrapper ul#submenu > li#nav-playlist-2 > a.selected {
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-playlist-2 > a.selected {
   border-color: #6f4094;
   color: #6f4094;
 }
-html body div#content-wrapper ul#submenu > li#nav-playlist-3 > a {
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-playlist-3 > a {
   color: #cc3da8;
 }
-html body div#content-wrapper ul#submenu > li#nav-playlist-3 > a.selected {
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-playlist-3 > a.selected {
   border-color: #cc3da8;
   color: #cc3da8;
 }
@@ -1476,9 +1547,10 @@ html body div#content-wrapper div#container div#content div#content-left div#lov
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0 auto;
+  max-width: 1240px;
   min-height: 70px;
   padding: 10px 146px 10px 84px;
-  width: 100%;
+  width: auto;
 /* artist & title */
 /* controls */
 /* twitter */
@@ -2131,13 +2203,22 @@ html body div#content-wrapper div#container div#content div#content-left div.pag
 html body div#content-wrapper div#container div#content div#content-left div#end-of-infinity {
   margin: 0;
   overflow: hidden;
-  padding: 0 20px;
+  padding: 0;
   border: 0;
   border-top: 1px solid #f0f2ed;
   text-align: center;
 }
-html body div#content-wrapper div#container div#content div#content-left div.paginator a#infinite-tracks-button,
-html body div#content-wrapper div#container div#content div#content-left div#end-of-infinity a#infinite-tracks-button {
+html body div#content-wrapper div#container div#content div#content-left div.paginator div.paginator-inner,
+html body div#content-wrapper div#container div#content div#content-left div#end-of-infinity div.paginator-inner {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 0 20px;
+}
+html body div#content-wrapper div#container div#content div#content-left div.paginator div.paginator-inner a#infinite-tracks-button,
+html body div#content-wrapper div#container div#content div#content-left div#end-of-infinity div.paginator-inner a#infinite-tracks-button {
   display: block;
   margin: 8px 0;
   padding: 0;
@@ -2154,8 +2235,8 @@ html body div#content-wrapper div#container div#content div#content-left div#end
   filter: alpha(opacity=90);
   vertical-align: middle;
 }
-html body div#content-wrapper div#container div#content div#content-left div.paginator a#infinite-tracks-button::before,
-html body div#content-wrapper div#container div#content div#content-left div#end-of-infinity a#infinite-tracks-button::before {
+html body div#content-wrapper div#container div#content div#content-left div.paginator div.paginator-inner a#infinite-tracks-button::before,
+html body div#content-wrapper div#container div#content div#content-left div#end-of-infinity div.paginator-inner a#infinite-tracks-button::before {
   display: block;
   height: 38px;
   color: #fff;
@@ -2163,8 +2244,8 @@ html body div#content-wrapper div#container div#content div#content-left div#end
   font-size: 14px;
   line-height: 38px;
 }
-html body div#content-wrapper div#container div#content div#content-left div.paginator a#infinite-tracks-button:hover,
-html body div#content-wrapper div#container div#content div#content-left div#end-of-infinity a#infinite-tracks-button:hover {
+html body div#content-wrapper div#container div#content div#content-left div.paginator div.paginator-inner a#infinite-tracks-button:hover,
+html body div#content-wrapper div#container div#content div#content-left div#end-of-infinity div.paginator-inner a#infinite-tracks-button:hover {
   opacity: 1;
   -ms-filter: none;
   filter: none;
