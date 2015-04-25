@@ -1102,8 +1102,8 @@ html body div#player-container div#player-inner div#player-controls div#player-n
 }
 @media (max-width: 960px) {
   html body div#player-container div#player-inner div#player-controls div#player-nowplaying {
-    left: 20px;
-    right: 20px;
+    left: 12px;
+    right: 12px;
   }
 }
 html body div#player-container div#player-inner div#player-controls div#player-nowplaying a {
