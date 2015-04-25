@@ -55,11 +55,11 @@ $(function(){
       }
 
       // moves sharing controls
-      $(this).find('#player-nowplaying > div.share-icons').insertAfter($('a#playerFav'));
-      $(this).find('#player-controls > div.share-icons > a').wrapAll('<div class="playersharemenu">');
+      $(this).find('div#player-nowplaying > div.share-icons').insertAfter($('a#playerFav'));
+      $(this).find('div#player-controls > div.share-icons > a').wrapAll('<div class="playersharemenu">');
 
       // moves volume controls
-      $(this).find('#player-timebar > div#player-volume-mute, #player-timebar > div#player-volume-outer').insertAfter($('a#playerNext'));
+      $(this).find('div#player-timebar > div#player-volume-mute, div#player-timebar > div#player-volume-outer').insertAfter($('a#playerNext'));
 
     });
 

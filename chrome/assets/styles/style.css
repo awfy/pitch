@@ -39,6 +39,9 @@ html body div#player-container div#player-inner div#player-controls a#playerPlay
 html body div#player-container div#player-inner div#player-controls a#playerPrev::before {
   display: none !important;
 }
+html body div#player-container div#player-inner div#player-controls div.share-icons > a {
+  display: none !important;
+}
 html body div#player-container div#player-inner div#player-controls div#player-volume-mute::before,
 html body div#player-container div#player-inner div#player-controls div#player-volume-mute span {
   display: none !important;
@@ -217,7 +220,7 @@ html body div#header div#header-inner {
   position: relative;
   height: 44px;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1080px;
   width: auto;
 /* logo */
 /* navigation */
@@ -688,7 +691,7 @@ html body div#player-container div#player-inner {
   z-index: 50;
   height: auto;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1080px;
   width: auto;
 /* return */
 /* global controls */
@@ -1114,6 +1117,7 @@ html body div#player-container div#player-inner div#player-controls div#player-n
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 60;
   display: block;
   height: 28px;
   margin: 0;
@@ -1269,7 +1273,7 @@ html body div#content-wrapper div#submenu-container ul#submenu {
   box-sizing: border-box;
   height: 29px;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1080px;
   padding: 8px 12px;
   width: auto;
   border: 0;
@@ -1555,7 +1559,7 @@ html body div#content-wrapper div#container div#content div#content-left div#lov
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1080px;
   min-height: 44px;
   padding: 8px 138px 8px 52px;
   width: auto;
@@ -2233,7 +2237,7 @@ html body div#content-wrapper div#container div#content div#content-left div#end
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1080px;
   padding: 0 12px;
 }
 html body div#content-wrapper div#container div#content div#content-left div.paginator div.paginator-inner a#infinite-tracks-button,
