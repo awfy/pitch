@@ -1232,20 +1232,21 @@ html body
                       font-size: normal
 
                       background-color: rgba(#30332e,0.5)
-                      background-position: ((trackArtwork - 30px)/2) ((trackArtwork - 30px)/2 + 1px)
+                      background-position: ((trackArtwork - 14px)/2 + 1px) ((trackArtwork - 16px)/2 + 1px)
                       background-repeat: no-repeat
                       border-radius: trackRadius
-                      image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon.png' 30px 30px
+                      image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon.png' 14px 16px
 
                       &:hover
                         background-color: rgba(#30332e,0.75)
-                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon-hover.png' 30px 30px
+                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon-hover.png' 14px 16px
 
                       &.pause
-                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon.png' 30px 30px
+                        background-position: ((trackArtwork - 12px)/2) ((trackArtwork - 16px)/2 + 1px)
+                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon.png' 12px 16px
 
                         &:hover
-                          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon-hover.png' 30px 30px
+                          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon-hover.png' 12px 16px
 
                   a.thumb
                     left: padding

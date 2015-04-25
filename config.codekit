@@ -838,17 +838,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/chrome\/assets\/scripts\/jquery.marquee.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 1,
-		"inputAbbreviatedPath": "\/chrome\/assets\/scripts\/jquery.marquee.min.js",
-		"outputAbbreviatedPath": "\/chrome\/assets\/scripts\/min\/jquery.marquee.min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/chrome\/assets\/styles\/_helpers.styl": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
