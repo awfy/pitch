@@ -65,7 +65,7 @@ html body
         padding: 0
         width: padding + logoWidth + padding
 
-        background-position: padding 18px
+        background-position: padding ((headerHeight - 18px)/2)
         background-repeat: no-repeat
         color: fontColorDark
         image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/header/logo.png' logoWidth 18px
@@ -114,13 +114,13 @@ html body
 
           > a
             display: block
-            padding: 0 15px
+            padding: 0 menuPadding
 
             background-color: transparent
             border: 0
             color: #ffffff
-            font-size: 14px
-            font-weight: 600
+            font-size: 13px
+            font-weight: 400
             line-height: headerHeight
             opacity: 0.75
             vertical-align: middle
@@ -147,7 +147,7 @@ html body
 
               background-color: darkerBg
               color: #ffffff
-              font-weight: 600
+              font-weight: 400
               opacity: 1
               text-decoration: none
 
@@ -180,12 +180,12 @@ html body
               > a
                 display: block
                 height: 30px
-                padding: 0 15px
+                padding: 0 menuPadding
                 width: auto
 
                 color: #f3f7f0
-                font-size: 14px
-                font-weight: 600
+                font-size: 13px
+                font-weight: 400
                 line-height: 30px
 
                 &:hover
@@ -195,19 +195,19 @@ html body
 
       /* random button */
       a#shuf
-        left: padding + logoWidth + padding + 230px /* 230 is the width of the menu */
+        left: padding + logoWidth + padding + 197px /* 197 is the width of the menu */
         position: absolute
         top: 0
 
         display: block
-        padding: 0 15px
+        padding: 0 menuPadding
 
         background-color: transparent
         border: 0
         color: #ffffff
-        font-size: 14px
+        font-size: 13px
         font-smoothing: auto
-        font-weight: 600
+        font-weight: 400
         line-height: headerHeight
         opacity: 0.75
         vertical-align: middle
@@ -242,14 +242,14 @@ html body
             display: block
             height: headerHeight
             margin: 0
-            padding: 0 15px
+            padding: 0 menuPadding
             width: auto
 
             background-color: transparent
             border: 0
             color: #ffffff
-            font-size: 14px
-            font-weight: 600
+            font-size: 13px
+            font-weight: 400
             line-height: headerHeight
             opacity: 0.75
             vertical-align: middle
@@ -272,14 +272,14 @@ html body
             a#menu-item-username
               display: block
               height: headerHeight
-              padding: 0 15px
+              padding: 0 menuPadding
               width: auto
 
               background-color: transparent
               border: 0
               color: #ffffff
-              font-size: 14px
-              font-weight: 600
+              font-size: 13px
+              font-weight: 400
               line-height: headerHeight
               opacity: 0.75
               vertical-align: middle
@@ -323,19 +323,19 @@ html body
 
                   display: block
                   height: 30px
-                  padding: 0 15px
+                  padding: 0 menuPadding
                   width: auto
 
                   background-color: transparent
                   border: 0
                   color: #f3f7f0
-                  font-size: 14px
-                  font-weight: 600
+                  font-size: 13px
+                  font-weight: 400
                   line-height: 30px
 
                   span.unread-notification-icon
                     position: absolute
-                    right: 15px
+                    right: menuPadding
                     top: 11px
 
                     display: block
@@ -382,7 +382,7 @@ html body
           box-sizing: border-box
           height: 30px
           margin: 0
-          padding: 0 30px 0 15px
+          padding: 0 30px 0 menuPadding
           width: 160px
 
           background-color: darkBg
@@ -392,7 +392,7 @@ html body
           border-radius: 50px
           color: rgba(#ffffff,0.75)
           font-family: fontFamily
-          font-size: 13px
+          font-size: 12px
           font-weight: 400
           image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/header/search-icon.png' 14px 14px
           line-height: 30px
@@ -666,7 +666,7 @@ html body
 
               color: #f3f7f0
               font-size: 14px
-              font-weight: 600
+              font-weight: 400
               line-height: 30px
 
               &:hover
@@ -808,13 +808,13 @@ html body
             position: absolute
             top: 0
 
-            height: 28px
+            height: controlHeight
             width: 34px
 
             color: #cacfc4
-            font-size: 13px
-            font-weight: 600
-            line-height: 28px
+            font-size: 12px
+            font-weight: 400
+            line-height: controlHeight
             text-align: center
             vertical-align: middle
 
@@ -829,7 +829,7 @@ html body
             left: 34px + 10px
             position: absolute
             right: 10px + 34px
-            top: (controlHeight - 8)/2
+            top: ((controlHeight - playerPadding)/2)
 
             height: 8px
             overflow: hidden
@@ -1192,6 +1192,7 @@ html body
                     display: block
 
                 &.same
+                  min-height: 0
 
                   div.section-player ul.playpause
                     background-color: fontColorLink
@@ -1202,7 +1203,7 @@ html body
                   margin: 0 auto
                   max-width: maxWidth
                   min-height: trackArtwork + (trackPadding * 2)
-                  padding: trackPadding (126px + padding) trackPadding (padding + trackArtwork + 14px)
+                  padding: trackPadding (126px + padding) trackPadding (padding + trackArtwork + 12px)
                   width: auto
 
                   &:hover
@@ -1245,25 +1246,6 @@ html body
                         &:hover
                           image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon-hover.png' 30px 30px
 
-                  span.rank
-                    position: absolute
-                    left: padding + (trackArtwork - trackRank)
-                    top: trackPadding + (trackArtwork - trackRank)
-                    z-index: 40
-
-                    display: block
-                    height: trackRank
-                    padding: 0
-                    width: trackRank
-
-                    background-color: fontColorLink
-                    border-radius: (trackRadius - 1px) 0 (trackRadius - 1px) 0
-                    color: #ffffff
-                    font-size: 12px
-                    font-weight: 400
-                    line-height: trackRank
-                    text-align: center
-
                   a.thumb
                     left: padding
                     position: absolute
@@ -1275,6 +1257,9 @@ html body
                     width: trackArtwork
 
                     background-color: fontColorLink !important
+                    background-position: 0 0 !important
+                    background-repeat: no-repeat !important
+                    background-size: trackArtwork trackArtwork !important
                     border: 0
                     border-radius: trackRadius
                     box-shadow: inset 0 0 0 1px rgba(#000000,0.1)
@@ -1284,12 +1269,34 @@ html body
                     position: relative
 
                     margin: 0
-                    padding-top: 5px
+                    padding: 0
 
-                    color: #ffffff
-                    font-size: 0
-                    line-height: normal
+                    color: fontColorLight
+                    font-size: 14px
+                    line-height: trackArtwork
                     opacity: 0.75
+                    overflow: ellipsis
+
+                    span.rank
+                      left: auto
+                      position: static
+                      top: auto
+
+                      box-sizing: border-box
+                      display: inline-block
+                      height: trackArtwork
+                      margin: 0 10px 0 0
+                      padding: 0
+                      width: trackArtwork
+
+                      background-color: transparent
+                      border: 1px solid rgba(fontColorLight,0.5)
+                      border-radius: trackRadius
+                      color: fontColorLight
+                      font-size: 13px
+                      font-weight: 400
+                      line-height: trackArtwork - 2px
+                      text-align: center
 
                     a
                       line-height: normal
@@ -1299,17 +1306,13 @@ html body
                         text-decoration: none
 
                       &.artist
-                        display: block
-
                         color: fontColorLight
-                        font-size: 13px
+                        font-size: 14px
                         font-weight: 600
 
                       &.track
-                        display: block
-
                         color: fontColorDark
-                        font-size: 16px
+                        font-size: 14px
                         font-weight: 600
 
                         &:hover
@@ -1329,8 +1332,8 @@ html body
                   /* controls */
                   div.controls
                     position: absolute
-                    right: padding + 6px
-                    top: trackPadding + 11px
+                    right: padding
+                    top: trackPadding + ((trackArtwork - controlHeight)/2)
 
                     /* sharing options */
                     span.share-links

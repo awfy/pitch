@@ -70,6 +70,9 @@ $(function(){
       $(this).find('span.share-links, div.meta, ul.tools').addClass('control-latch');
       $(this).find('> .control-latch').wrapAll('<div class="controls">');
 
+      // moves rank
+      $(this).find('> span.rank').insertBefore($(this).find('> h3.track_name a.artist'));
+
       // tidies up the sharing elements
       $(this).find('.controls span.share-links').each(function () {
 
