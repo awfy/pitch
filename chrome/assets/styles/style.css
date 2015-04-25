@@ -135,6 +135,12 @@ html body div#content-wrapper div#container div#content div#content-left div#lov
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.artist div.section-player h3.track_name a.track span.remix-count {
   display: none !important;
 }
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section-track div.section-player h3.track_name + p,
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player h3.track_name + p,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.artist div.section-player h3.track_name + p,
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.artist div.section-player h3.track_name + p {
+  display: none !important;
+}
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section-track div.section-player div.meta span.buy a.toggle-reposts,
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.section-player div.meta span.buy a.toggle-reposts,
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.artist div.section-player div.meta span.buy a.toggle-reposts,
