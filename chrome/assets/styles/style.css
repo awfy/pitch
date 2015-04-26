@@ -367,13 +367,13 @@ html body div#header div#header-inner ul.menu li ul li {
 }
 html body div#header div#header-inner ul.menu li ul li > a {
   display: block;
-  height: 30px;
+  height: 28px;
   padding: 0 12px;
   width: auto;
   color: #f3f7f0;
   font-size: 13px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 28px;
 }
 html body div#header div#header-inner ul.menu li ul li > a:hover {
   background-color: #6da831;
@@ -508,7 +508,7 @@ html body div#header div#header-inner div#filter div#menu-username ul li {
 html body div#header div#header-inner div#filter div#menu-username ul li > a {
   position: relative;
   display: block;
-  height: 30px;
+  height: 28px;
   padding: 0 12px;
   width: auto;
   background-color: transparent;
@@ -516,7 +516,7 @@ html body div#header div#header-inner div#filter div#menu-username ul li > a {
   color: #f3f7f0;
   font-size: 13px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 28px;
 }
 html body div#header div#header-inner div#filter div#menu-username ul li > a span.unread-notification-icon {
   position: absolute;
@@ -976,7 +976,7 @@ html body div#player-container div#player-inner div#player-controls div.share-ic
   }
 }
 html body div#player-container div#player-inner div#player-controls div.share-icons:hover {
-  background-color: #515450;
+  background-color: #83c441;
 }
 html body div#player-container div#player-inner div#player-controls div.share-icons:hover::before {
   background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/player/share-icon-hover.png");
@@ -1001,22 +1001,22 @@ html body div#player-container div#player-inner div#player-controls div.share-ic
   display: none;
   padding: 10px 0;
   width: 180px;
-  background-color: #515450;
+  background-color: #83c441;
   -webkit-border-radius: 0 6px 6px 6px;
   border-radius: 0 6px 6px 6px;
 }
 html body div#player-container div#player-inner div#player-controls div.share-icons div.playersharemenu > a {
   display: block;
-  height: 30px;
+  height: 28px;
   padding: 0 15px;
   width: auto;
   color: #f3f7f0;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 28px;
 }
 html body div#player-container div#player-inner div#player-controls div.share-icons div.playersharemenu > a:hover {
-  background-color: #393b38;
+  background-color: #6da831;
   color: #fff;
   text-decoration: none;
 }
@@ -1352,19 +1352,19 @@ html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filt
 }
 html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter ul li > a {
   display: block;
-  height: 30px;
-  padding: 0 15px;
+  height: 28px;
+  padding: 0 12px;
   width: auto;
   border: 0;
   color: #f3f7f0;
   font-size: 13px;
-  font-weight: 600;
-  line-height: 30px;
+  font-weight: 400;
+  line-height: 28px;
 }
 html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter ul li > a span.checkmark {
   float: right;
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 13px;
 }
 html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter ul li > a:hover {
   background-color: #6da831;
@@ -1527,11 +1527,17 @@ html body div#content-wrapper div#container div#content div#content-left div#lov
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section,
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section {
+  position: relative;
+  z-index: 50;
   display: block;
   overflow: visible;
   padding: 0;
   background-color: transparent;
   border: 0;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section:hover,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section:hover {
+  z-index: 60;
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section.first,
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section.first {
@@ -1579,6 +1585,12 @@ html body div#content-wrapper div#container div#content div#content-left div#lov
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player:hover h3.track_name,
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player:hover h3.track_name {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player:hover div.controls,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player:hover div.controls {
   opacity: 1;
   -ms-filter: none;
   filter: none;
@@ -1678,7 +1690,7 @@ html body div#content-wrapper div#container div#content div#content-left div#lov
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player h3.track_name,
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player h3.track_name {
-  position: relative;
+  position: static;
   margin: 0;
   padding: 0;
   color: #666963;
@@ -1757,196 +1769,227 @@ html body div#content-wrapper div#container div#content div#content-left div#lov
   position: absolute;
   right: 12px;
   top: 8px;
-/* sharing options */
-/* download */
+  z-index: 50;
+  opacity: 0.75;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+  filter: alpha(opacity=75);
+/* options */
 /* favorite */
 }
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls span.share-links,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls span.share-links {
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls:hover,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls:hover {
+  z-index: 90;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options {
   float: right;
   position: relative;
-  right: auto;
-  top: auto;
-  display: block;
-  width: auto;
-}
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls span.share-links::before,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls span.share-links::before {
-  display: block;
   height: 28px;
   width: 28px;
-  background-position: 5px 7.5px;
+  background-position: 6px 6px;
   background-repeat: no-repeat;
   -webkit-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
   content: '';
-  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/track/share-icon.png");
-  font-size: inherit;
-  line-height: normal;
+  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/track/options-icon.png");
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
-  html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls span.share-links::before,
-  html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls span.share-links::before {
-    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/track/share-icon@2x.png");
-    -webkit-background-size: 18px 13px;
-    -moz-background-size: 18px 13px;
-    background-size: 18px 13px;
+  html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options,
+  html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options {
+    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/track/options-icon@2x.png");
+    -webkit-background-size: 16px 16px;
+    -moz-background-size: 16px 16px;
+    background-size: 16px 16px;
   }
 }
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls span.share-links:hover::before,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls span.share-links:hover::before {
-  background-color: #444742;
-  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/track/share-icon-hover.png");
-  text-decoration: none;
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options:hover,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options:hover {
+  background-color: #83c441;
+  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/track/options-icon-hover.png");
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
-  html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls span.share-links:hover::before,
-  html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls span.share-links:hover::before {
-    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/track/share-icon-hover@2x.png");
-    -webkit-background-size: 18px 13px;
-    -moz-background-size: 18px 13px;
-    background-size: 18px 13px;
+  html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options:hover,
+  html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options:hover {
+    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/track/options-icon-hover@2x.png");
+    -webkit-background-size: 16px 16px;
+    -moz-background-size: 16px 16px;
+    background-size: 16px 16px;
   }
 }
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls span.share-links:hover ul.sharemenu,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls span.share-links:hover ul.sharemenu {
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options:hover div.options-dropdown,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options:hover div.options-dropdown {
   display: block;
 }
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls span.share-links ul.sharemenu,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls span.share-links ul.sharemenu {
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown {
   position: absolute;
   right: 0;
   top: 28px;
-  z-index: 500;
   display: none;
   padding: 10px 0;
   width: 180px;
-  background-color: #444742;
+  background-color: #83c441;
   -webkit-border-radius: 6px 0 6px 6px;
   border-radius: 6px 0 6px 6px;
+/* playlists */
+/* download */
+/* sharing */
 }
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls span.share-links ul.sharemenu > a,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls span.share-links ul.sharemenu > a {
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown ul.playlistcontrols li.playlist-ctrls::before,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown ul.playlistcontrols li.playlist-ctrls::before {
   display: block;
-  height: 30px;
+  padding: 0 12px 3px;
+  color: rgba(243,247,240,0.8);
+  content: 'Add to playlist...';
+  font-sise: 12px;
+  font-weight: 400;
+  line-height: 17px;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown ul.playlistcontrols li.playlist-ctrls a,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown ul.playlistcontrols li.playlist-ctrls a {
+  display: block;
+  height: 28px;
   margin: 0;
-  padding: 0 15px;
+  padding: 0 12px;
   width: auto;
 }
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls span.share-links ul.sharemenu > a::before,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls span.share-links ul.sharemenu > a::before {
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown ul.playlistcontrols li.playlist-ctrls a.active::after,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown ul.playlistcontrols li.playlist-ctrls a.active::after {
+  float: right;
+  display: block;
+  height: 28px;
   color: #f3f7f0;
-  content: 'Twitter';
-  font-size: 14px;
+  content: '✓';
+  font-size: 13px;
   -webkit-font-smoothing: auto;
-  font-weight: 600;
-  line-height: 30px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: right;
 }
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls span.share-links ul.sharemenu > a.facebook-share::before,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls span.share-links ul.sharemenu > a.facebook-share::before {
-  content: 'Facebook';
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown ul.playlistcontrols li.playlist-ctrls a.active:hover::after,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown ul.playlistcontrols li.playlist-ctrls a.active:hover::after {
+  color: #fff;
 }
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls span.share-links ul.sharemenu > a:hover,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls span.share-links ul.sharemenu > a:hover {
-  background-color: #393b38;
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown ul.playlistcontrols li.playlist-ctrls a.playlist-selected,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown ul.playlistcontrols li.playlist-ctrls a.playlist-selected {
+  display: none;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown ul.playlistcontrols li.playlist-ctrls a::before,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown ul.playlistcontrols li.playlist-ctrls a::before {
+  color: #f3f7f0;
+  content: attr(title);
+  font-size: 13px;
+  -webkit-font-smoothing: auto;
+  font-weight: 400;
+  line-height: 28px;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown ul.playlistcontrols li.playlist-ctrls a:hover,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown ul.playlistcontrols li.playlist-ctrls a:hover {
+  background-color: #6da831;
   opacity: 1;
   -ms-filter: none;
   filter: none;
   text-decoration: none;
 }
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls span.share-links ul.sharemenu > a:hover::before,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls span.share-links ul.sharemenu > a:hover::before {
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown ul.playlistcontrols li.playlist-ctrls a:hover::before,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown ul.playlistcontrols li.playlist-ctrls a:hover::before {
   color: #fff;
 }
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.meta,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.meta {
-  float: right;
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown div.meta,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown div.meta {
   position: relative;
   display: block;
   margin: 0;
-  padding: 0;
+  padding: 10px 0;
 }
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.meta span.buy,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.meta span.buy {
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown div.meta::before,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown div.meta::before {
+  display: block;
+  padding: 0 12px 3px;
+  color: rgba(243,247,240,0.8);
+  content: 'Download from...';
+  font-sise: 12px;
+  font-weight: 400;
+  line-height: 17px;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown div.meta span.buy,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown div.meta span.buy {
   display: block;
   font-size: 0;
 }
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.meta span.buy::before,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.meta span.buy::before {
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown div.meta span.buy span.download,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown div.meta span.buy span.download {
+  left: auto;
+  position: static;
+  right: auto;
+  top: auto;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown div.meta span.buy span.download > a,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown div.meta span.buy span.download > a {
   display: block;
   height: 28px;
-  width: 28px;
-  background-position: 6px 6px;
-  background-repeat: no-repeat;
-  content: '';
-  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/track/download-icon.png");
-  font-size: inherit;
-  line-height: normal;
-}
-@media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
-  html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.meta span.buy::before,
-  html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.meta span.buy::before {
-    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/track/download-icon@2x.png");
-    -webkit-background-size: 16px 16px;
-    -moz-background-size: 16px 16px;
-    background-size: 16px 16px;
-  }
-}
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.meta span.buy:hover,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.meta span.buy:hover {
-  background-color: #444742;
-  -webkit-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0;
-}
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.meta span.buy:hover::before,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.meta span.buy:hover::before {
-  background-color: transparent;
-  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/track/download-icon-hover.png");
-  text-decoration: none;
-}
-@media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
-  html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.meta span.buy:hover::before,
-  html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.meta span.buy:hover::before {
-    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/track/download-icon-hover@2x.png");
-    -webkit-background-size: 16px 16px;
-    -moz-background-size: 16px 16px;
-    background-size: 16px 16px;
-  }
-}
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.meta span.buy:hover span.download,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.meta span.buy:hover span.download {
-  display: block;
-}
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.meta span.buy span.download,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.meta span.buy span.download {
-  left: auto;
-  position: absolute;
-  right: 0;
-  top: 28px;
-  z-index: 500;
-  display: none;
-  padding: 10px 0;
-  width: 180px;
-  background-color: #444742;
-  -webkit-border-radius: 6px 0 6px 6px;
-  border-radius: 6px 0 6px 6px;
-}
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.meta span.buy span.download > a,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.meta span.buy span.download > a {
-  display: block;
-  height: 30px;
-  padding: 0 15px;
+  padding: 0 12px;
   width: auto;
   color: #f3f7f0;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 30px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 28px;
 }
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.meta span.buy span.download > a:hover,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.meta span.buy span.download > a:hover {
-  background-color: #393b38;
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown div.meta span.buy span.download > a:hover,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown div.meta span.buy span.download > a:hover {
+  background-color: #6da831;
   color: #fff;
   text-decoration: none;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown span.share-links,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown span.share-links {
+  position: static;
+  right: auto;
+  top: auto;
+  width: auto;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown span.share-links::before,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown span.share-links::before {
+  display: block;
+  padding: 0 12px 3px;
+  color: rgba(243,247,240,0.8);
+  content: 'Share to...';
+  font-sise: 12px;
+  font-weight: 400;
+  line-height: 17px;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown span.share-links a,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown span.share-links a {
+  display: block;
+  height: 28px;
+  margin: 0;
+  padding: 0 12px;
+  width: auto;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown span.share-links a::before,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown span.share-links a::before {
+  color: #f3f7f0;
+  content: 'Twitter';
+  font-size: 13px;
+  -webkit-font-smoothing: auto;
+  font-weight: 400;
+  line-height: 28px;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown span.share-links a.facebook-share::before,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown span.share-links a.facebook-share::before {
+  content: 'Facebook';
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown span.share-links a:hover,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown span.share-links a:hover {
+  background-color: #6da831;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  text-decoration: none;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls div.options div.options-dropdown span.share-links a:hover::before,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls div.options div.options-dropdown span.share-links a:hover::before {
+  color: #fff;
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools,
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools {
@@ -1956,94 +1999,48 @@ html body div#content-wrapper div#container div#content div#content-left div#lov
   top: 0;
   width: 100px;
 }
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li {
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.favdiv,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.favdiv {
   float: right;
   position: relative;
 }
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li a,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li a {
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.favdiv:hover a.haarp-fav-ctrl,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.favdiv:hover a.haarp-fav-ctrl {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon-hover.png");
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
+  html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.favdiv:hover a.haarp-fav-ctrl,
+  html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.favdiv:hover a.haarp-fav-ctrl {
+    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/track/favorite-icon-hover@2x.png");
+    -webkit-background-size: 16px 14px;
+    -moz-background-size: 16px 14px;
+    background-size: 16px 14px;
+  }
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.favdiv:hover a.haarp-fav-count,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.favdiv:hover a.haarp-fav-count {
+  color: #111;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-ctrl,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-ctrl {
   position: relative;
   display: block;
   height: 28px;
   padding: 0;
   width: 28px;
-  background-position: 7.5px 7px;
+  background-position: 6px 7px;
   background-repeat: no-repeat;
-  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon.png");
+  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon.png");
   font-size: inherit;
   line-height: normal;
-}
-@media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
-  html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li a,
-  html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li a {
-    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/track/play-icon@2x.png");
-    -webkit-background-size: 13px 14px;
-    -moz-background-size: 13px 14px;
-    background-size: 13px 14px;
-  }
-}
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li a:hover,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li a:hover {
-  background-color: transparent;
-  text-decoration: none;
-}
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.playdiv a.play-ctrl,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.playdiv a.play-ctrl {
-  display: none;
-}
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.playdiv a.play-ctrl:hover,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.playdiv a.play-ctrl:hover {
-  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon-hover.png");
-}
-@media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
-  html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.playdiv a.play-ctrl:hover,
-  html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.playdiv a.play-ctrl:hover {
-    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/track/play-icon-hover@2x.png");
-    -webkit-background-size: 13px 14px;
-    -moz-background-size: 13px 14px;
-    background-size: 13px 14px;
-  }
-}
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.playdiv a.play-ctrl.pause,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.playdiv a.play-ctrl.pause {
-  background-position: 9px 7px;
-  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon.png");
-}
-@media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
-  html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.playdiv a.play-ctrl.pause,
-  html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.playdiv a.play-ctrl.pause {
-    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/track/pause-icon@2x.png");
-    -webkit-background-size: 10px 14px;
-    -moz-background-size: 10px 14px;
-    background-size: 10px 14px;
-  }
-}
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.playdiv a.play-ctrl.pause:hover,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.playdiv a.play-ctrl.pause:hover {
-  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon-hover.png");
-}
-@media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
-  html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.playdiv a.play-ctrl.pause:hover,
-  html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.playdiv a.play-ctrl.pause:hover {
-    background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/track/pause-icon-hover@2x.png");
-    -webkit-background-size: 10px 14px;
-    -moz-background-size: 10px 14px;
-    background-size: 10px 14px;
-  }
-}
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-ctrl,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-ctrl {
-  background-position: 5px 6px;
-  background-image: url("chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon.png");
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
   html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-ctrl,
   html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-ctrl {
     background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/track/favorite-icon@2x.png");
-    -webkit-background-size: 18px 16px;
-    -moz-background-size: 18px 16px;
-    background-size: 18px 16px;
+    -webkit-background-size: 16px 14px;
+    -moz-background-size: 16px 14px;
+    background-size: 16px 14px;
   }
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-ctrl:hover,
@@ -2054,9 +2051,9 @@ html body div#content-wrapper div#container div#content div#content-left div#lov
   html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-ctrl:hover,
   html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-ctrl:hover {
     background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/track/favorite-icon-hover@2x.png");
-    -webkit-background-size: 18px 16px;
-    -moz-background-size: 18px 16px;
-    background-size: 18px 16px;
+    -webkit-background-size: 16px 14px;
+    -moz-background-size: 16px 14px;
+    background-size: 16px 14px;
   }
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-ctrl.fav-on,
@@ -2071,22 +2068,28 @@ html body div#content-wrapper div#container div#content div#content-left div#lov
   html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-ctrl.fav-on:hover,
   html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-ctrl.fav-on:hover {
     background-image: url("chrome-extension:/__MSG_@@extension_id__/assets/imgs/track/favorite-icon-on@2x.png");
-    -webkit-background-size: 18px 16px;
-    -moz-background-size: 18px 16px;
-    background-size: 18px 16px;
+    -webkit-background-size: 16px 14px;
+    -moz-background-size: 16px 14px;
+    background-size: 16px 14px;
   }
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-count,
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-count {
-  margin: 0 1px 0 0;
+  margin: 0;
+  padding: 0 1px 0 0;
   width: auto;
   background: transparent;
   color: #76806c;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 28px;
   text-align: right;
   vertical-align: middle;
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-count:hover,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-count:hover {
+  color: #111;
+  text-decoration: none;
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-count.favcount-on,
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls ul.tools li.favdiv a.haarp-fav-count.favcount-on {

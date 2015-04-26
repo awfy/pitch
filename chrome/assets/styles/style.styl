@@ -179,14 +179,14 @@ html body
 
               > a
                 display: block
-                height: 30px
+                height: controlHeight
                 padding: 0 menuPadding
                 width: auto
 
                 color: #f3f7f0
                 font-size: 13px
                 font-weight: 400
-                line-height: 30px
+                line-height: controlHeight
 
                 &:hover
                   background-color: #6da831
@@ -322,7 +322,7 @@ html body
                   position: relative
 
                   display: block
-                  height: 30px
+                  height: controlHeight
                   padding: 0 menuPadding
                   width: auto
 
@@ -331,7 +331,7 @@ html body
                   color: #f3f7f0
                   font-size: 13px
                   font-weight: 400
-                  line-height: 30px
+                  line-height: controlHeight
 
                   span.unread-notification-icon
                     position: absolute
@@ -636,7 +636,7 @@ html body
             line-height: normal
 
           &:hover
-            background-color: #515450
+            background-color: fontColorLink
 
             &::before
               image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/player/share-icon-hover.png' 18px 14px
@@ -655,22 +655,22 @@ html body
             padding: 10px 0
             width: 180px
 
-            background-color: #515450
+            background-color: fontColorLink
             border-radius: 0 6px 6px 6px
 
             > a
               display: block
-              height: 30px
+              height: controlHeight
               padding: 0 15px
               width: auto
 
               color: #f3f7f0
-              font-size: 14px
+              font-size: 13px
               font-weight: 400
-              line-height: 30px
+              line-height: controlHeight
 
               &:hover
-                background-color: #393b38
+                background-color: #6da831
                 color: #ffffff
                 text-decoration: none
 
@@ -997,21 +997,21 @@ html body
 
                 > a
                   display: block
-                  height: 30px
-                  padding: 0 15px
+                  height: controlHeight
+                  padding: 0 padding
                   width: auto
 
                   border: 0
                   color: #f3f7f0
                   font-size: 13px
-                  font-weight: 600
-                  line-height: 30px
+                  font-weight: 400
+                  line-height: controlHeight
 
                   span.checkmark
                     float: right
 
-                    font-weight: 600
-                    font-size: 14px
+                    font-weight: 400
+                    font-size: 13px
 
                   &:hover
                     background-color: #6da831
@@ -1173,12 +1173,18 @@ html body
                     font-size: 0
 
               &.section
+                position: relative
+                z-index: 50
+
                 display: block
                 overflow: visible
                 padding: 0
 
                 background-color: transparent
                 border: 0
+
+                &:hover
+                  z-index: 60
 
                 &.first
                   border-top: 1px solid #e1e6da
@@ -1213,6 +1219,9 @@ html body
                       display: block
 
                     h3.track_name
+                      opacity: 1
+
+                    div.controls
                       opacity: 1
 
                   ul.playpause
@@ -1268,7 +1277,7 @@ html body
 
                   /* artist & title */
                   h3.track_name
-                    position: relative
+                    position: static
 
                     margin: 0
                     padding: 0
@@ -1336,146 +1345,193 @@ html body
                     position: absolute
                     right: padding
                     top: trackPadding + ((trackArtwork - controlHeight)/2)
+                    z-index: 50
 
-                    /* sharing options */
-                    span.share-links
+                    opacity: 0.75
+
+                    &:hover
+                      z-index: 90
+
+                    /* options */
+                    div.options
                       float: right
                       position: relative
-                      right: auto
-                      top: auto
 
-                      display: block
-                      width: auto
+                      height: controlHeight
+                      width: controlWidth
 
-                      &::before
-                        display: block
-                        height: controlHeight
-                        width: controlWidth
-
-                        background-position: ((controlWidth - 18px)/2) ((controlHeight - 13px)/2)
-                        background-repeat: no-repeat
-                        border-radius: 3px 3px 0 0
-                        content: ''
-                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/share-icon.png' 18px 13px
-                        font-size: inherit
-                        line-height: normal
+                      background-position: ((controlWidth - 16px)/2) ((controlHeight - 16px)/2)
+                      background-repeat: no-repeat
+                      border-radius: 3px 3px 0 0
+                      content: ''
+                      image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/options-icon.png' 16px 16px
 
                       &:hover
+                        background-color: fontColorLink
+                        image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/options-icon-hover.png' 16px 16px
 
-                        &::before
-                          background-color: #444742
-                          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/share-icon-hover.png' 18px 13px
-                          text-decoration: none
-
-                        ul.sharemenu
+                        div.options-dropdown
                           display: block
 
-                      ul.sharemenu
+                      div.options-dropdown
                         position: absolute
                         right: 0
                         top: controlHeight
-                        z-index: 500
 
                         display: none
                         padding: 10px 0
                         width: 180px
 
-                        background-color: #444742
+                        background-color: fontColorLink
                         border-radius: 6px 0 6px 6px
 
-                        > a
+                        /* playlists */
+                        ul.playlistcontrols li.playlist-ctrls
+
+                          &::before
+                            display: block
+                            padding: 0 padding 3px
+
+                            color: rgba(#f3f7f0,0.8)
+                            content: 'Add to playlist...'
+                            font-sise: 12px
+                            font-weight: 400
+                            line-height: 17px
+
+                          a
+                            display: block
+                            height: controlHeight
+                            margin: 0
+                            padding: 0 padding
+                            width: auto
+
+                            &.active
+
+                              &::after
+                                float: right
+
+                                display: block
+                                height: controlHeight
+
+                                color: #f3f7f0
+                                content: '✓'
+                                font-size: 13px
+                                font-smoothing: auto
+                                font-weight: 400
+                                line-height: controlHeight
+                                text-align: right
+
+                              &:hover::after
+                                color: #ffffff
+
+                            &.playlist-selected
+                              display: none
+
+                            &::before
+                              color: #f3f7f0
+                              content: attr(title)
+                              font-size: 13px
+                              font-smoothing: auto
+                              font-weight: 400
+                              line-height: controlHeight
+
+                            &:hover
+                              background-color: #6da831
+                              opacity: 1
+                              text-decoration: none
+
+                              &::before
+                                color: #ffffff
+
+
+                        /* download */
+                        div.meta
+                          position: relative
+
                           display: block
-                          height: 30px
                           margin: 0
-                          padding: 0 15px
+                          padding: 10px 0
+
+                          &::before
+                            display: block
+                            padding: 0 padding 3px
+
+                            color: rgba(#f3f7f0,0.8)
+                            content: 'Download from...'
+                            font-sise: 12px
+                            font-weight: 400
+                            line-height: 17px
+
+                          span.buy
+                            display: block
+
+                            font-size: 0
+
+                            span.download
+                              left: auto
+                              position: static
+                              right: auto
+                              top: auto
+
+                              > a
+                                display: block
+                                height: controlHeight
+                                padding: 0 padding
+                                width: auto
+
+                                color: #f3f7f0
+                                font-size: 13px
+                                font-weight: 400
+                                line-height: controlHeight
+
+                                &:hover
+                                  background-color: #6da831
+                                  color: #ffffff
+                                  text-decoration: none
+
+                        /* sharing */
+                        span.share-links
+                          position: static
+                          right: auto
+                          top: auto
+
                           width: auto
 
                           &::before
-                            color: #f3f7f0
-                            content: 'Twitter'
-                            font-size: 14px
-                            font-smoothing: auto
-                            font-weight: 600
-                            line-height: 30px
-
-                          &.facebook-share::before
-                            content: 'Facebook'
-
-                          &:hover
-                            background-color: #393b38
-                            opacity: 1
-                            text-decoration: none
-
-                            &::before
-                              color: #ffffff
-
-                    /* download */
-                    div.meta
-                      float: right
-                      position: relative
-
-                      display: block
-                      margin: 0
-                      padding: 0
-
-                      span.buy
-                        display: block
-
-                        font-size: 0
-
-                        &::before
-                          display: block
-                          height: controlHeight
-                          width: controlWidth
-
-                          background-position: ((controlWidth - 16px)/2) ((controlHeight - 16px)/2)
-                          background-repeat: no-repeat
-                          content: ''
-                          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/download-icon.png' 16px 16px
-                          font-size: inherit
-                          line-height: normal
-
-                        &:hover
-                          background-color: #444742
-                          border-radius: 3px 3px 0 0
-
-                          &::before
-                            background-color: transparent
-                            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/download-icon-hover.png' 16px 16px
-                            text-decoration: none
-
-                          span.download
                             display: block
+                            padding: 0 padding 3px
 
-                        span.download
-                          left: auto
-                          position: absolute
-                          right: 0
-                          top: controlHeight
-                          z-index: 500
+                            color: rgba(#f3f7f0,0.8)
+                            content: 'Share to...'
+                            font-sise: 12px
+                            font-weight: 400
+                            line-height: 17px
 
-                          display: none
-                          padding: 10px 0
-                          width: 180px
-
-                          background-color: #444742
-                          border-radius: 6px 0 6px 6px
-
-                          > a
+                          a
                             display: block
-                            height: 30px
-                            padding: 0 15px
+                            height: controlHeight
+                            margin: 0
+                            padding: 0 padding
                             width: auto
 
-                            color: #f3f7f0
-                            font-size: 14px
-                            font-weight: 600
-                            line-height: 30px
+                            &::before
+                              color: #f3f7f0
+                              content: 'Twitter'
+                              font-size: 13px
+                              font-smoothing: auto
+                              font-weight: 400
+                              line-height: controlHeight
+
+                            &.facebook-share::before
+                              content: 'Facebook'
 
                             &:hover
-                              background-color: #393b38
-                              color: #ffffff
+                              background-color: #6da831
+                              opacity: 1
                               text-decoration: none
+
+                              &::before
+                                color: #ffffff
 
                     /* favorite */
                     ul.tools
@@ -1486,11 +1542,19 @@ html body
 
                       width: 100px
 
-                      li
+                      li.favdiv
                         float: right
                         position: relative
 
-                        a
+                        &:hover a
+
+                          &.haarp-fav-ctrl
+                            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon-hover.png' 16px 14px
+
+                          &.haarp-fav-count
+                            color: fontColorDark
+
+                        a.haarp-fav-ctrl
                           position: relative
 
                           display: block
@@ -1498,55 +1562,37 @@ html body
                           padding: 0
                           width: controlWidth
 
-                          background-position: ((controlWidth - 13px)/2) ((controlHeight - 14px)/2)
+                          background-position: ((controlWidth - 16px)/2) ((controlHeight - 14px)/2)
                           background-repeat: no-repeat
-                          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon.png' 13px 14px
+                          image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon.png' 16px 14px
                           font-size: inherit
                           line-height: normal
 
                           &:hover
-                            background-color: transparent
-                            text-decoration: none
+                            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon-hover.png' 16px 14px
 
-                        &.playdiv a.play-ctrl
-                          display: none
+                          &.fav-on, &.fav-on:hover
+                            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon-on.png' 16px 14px
+
+                        a.haarp-fav-count
+                          margin: 0
+                          padding: 0 1px 0 0
+                          width: auto
+
+                          background: transparent
+                          color: #76806c
+                          font-size: 14px
+                          font-weight: 600
+                          line-height: controlHeight
+                          text-align: right
+                          vertical-align: middle
 
                           &:hover
-                            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/play-icon-hover.png' 13px 14px
+                            color: fontColorDark
+                            text-decoration: none
 
-                          &.pause
-                            background-position: ((controlWidth - 10px)/2) ((controlHeight - 14px)/2)
-                            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon.png' 10px 14px
-
-                            &:hover
-                              image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/pause-icon-hover.png' 10px 14px
-
-                        &.favdiv
-
-                          a.haarp-fav-ctrl
-                            background-position: ((controlWidth - 18px)/2) ((controlHeight - 16px)/2)
-                            image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon.png' 18px 16px
-
-                            &:hover
-                              image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon-hover.png' 18px 16px
-
-                            &.fav-on, &.fav-on:hover
-                              image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/track/favorite-icon-on.png' 18px 16px
-
-                          a.haarp-fav-count
-                            margin: 0 1px 0 0
-                            width: auto
-
-                            background: transparent
-                            color: #76806c
-                            font-size: 15px
-                            font-weight: 600
-                            line-height: 28px
-                            text-align: right
-                            vertical-align: middle
-
-                            &.favcount-on
-                              color: fontColorFavorite
+                          &.favcount-on
+                            color: fontColorFavorite
 
                   /* twitter */
                   div.tweet-info

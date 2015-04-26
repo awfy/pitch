@@ -66,23 +66,22 @@ $(function(){
     // track
     $('div.section-player').each(function () {
 
-      // create the controls element
-      $(this).find('span.share-links, div.meta, ul.tools').addClass('control-latch');
-      $(this).find('> .control-latch').wrapAll('<div class="controls">');
+      // moves play/pause control
+      $(this).find('ul.tools li.playdiv').detach().appendTo(this);
+      $(this).find('> li.playdiv').wrapAll('<ul class="playpause">');
 
       // moves rank
       $(this).find('> span.rank').insertBefore($(this).find('> h3.track_name a.artist'));
 
-      // tidies up the sharing elements
-      $(this).find('.controls span.share-links').each(function () {
-
-        $(this).find('> .twitter-share, > .facebook-share').wrapAll('<ul class="sharemenu">');
-
-      });
-
-      // moves play/pause control
-      $(this).find('ul.tools li.playdiv').detach().appendTo(this);
-      $(this).find('> li.playdiv').wrapAll('<ul class="playpause">');
+      // create the controls element
+      $(this).find('span.share-links, div.meta, ul.tools').addClass('control-latch');
+      $(this).find('> .control-latch').wrapAll('<div class="controls">');
+      $(this).find('> div.controls > span.share-links, div.controls > div.meta').addClass('control-latch-sub');
+      $(this).find('> div.controls > .control-latch-sub').wrapAll('<div class="options">');
+      $(this).find('> div.controls > ul.tools > li.playlist-ctrls').insertBefore($(this).find('> div.controls > div.options > div.meta'));
+      $(this).find('> div.controls > div.options > li.playlist-ctrls').wrapAll('<ul class="playlistcontrols">');
+      $(this).find('> div.controls > div.options > ul.playlistcontrols, > div.controls > div.options > span.share-links, > div.controls > div.options > div.meta').wrapAll('<div class="options-dropdown">');
+      $(this).find('> div.controls > div.options > div.options-dropdown > span.share-links').insertAfter($(this).find('> div.controls > div.options > div.options-dropdown > div.meta'));
 
     });
 
