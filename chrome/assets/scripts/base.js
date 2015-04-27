@@ -23,6 +23,11 @@ $(function(){
     // header
     $('a#shuf').insertAfter($('div#header ul.menu'));
     $('div#filter').insertBefore($('form#search-form'));
+    if ($('div#filter > div#menu-username > div#menu-item-username > span.count').text().length > 0) {
+
+      $('div#filter > div#menu-username > div#menu-item-username > span.count').addClass('show-count');
+
+    }
 
     // player & track control consistancy
     $('a#playerPlay').click(function () {

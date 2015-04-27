@@ -480,6 +480,23 @@ html body div#header div#header-inner div#filter div#menu-username a#menu-item-u
   border-radius: 3px;
   vertical-align: middle;
 }
+html body div#header div#header-inner div#filter div#menu-username a#menu-item-username span.count {
+  display: none;
+  height: 20px;
+  margin: 0;
+  padding: 0 6px;
+  width: auto;
+  background-color: #ed2024;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+}
+html body div#header div#header-inner div#filter div#menu-username a#menu-item-username span.count.show-count {
+  display: inline-block;
+}
 html body div#header div#header-inner div#filter div#menu-username a#menu-item-username:hover {
   background-color: #83c441;
   color: #fff;
@@ -521,7 +538,7 @@ html body div#header div#header-inner div#filter div#menu-username ul li > a {
 html body div#header div#header-inner div#filter div#menu-username ul li > a span.unread-notification-icon {
   position: absolute;
   right: 12px;
-  top: 11px;
+  top: 10px;
   display: block;
   height: 8px;
   width: 8px;
