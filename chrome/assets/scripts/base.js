@@ -103,10 +103,15 @@ $(function(){
     // genres
     $('body#tags').each(function() {
 
+      // list
       $(this).find('div#browse-genres > ul#tags_more').insertBefore($('ul#submenu > li#nav-all'));
       $(this).find('ul#submenu > ul#tags_more').wrapAll('<li id="submenu-filter" class="submenu-genres">');
       $(this).find('ul#submenu > li#submenu-filter').prepend('<span class="submenu-filter-control"></span>');
       $(this).find('ul#submenu > li#submenu-filter > span.submenu-filter-control').html('<span class="title">Genre:</span><span id="submenu-filter-title">Funk</span>');
+
+      // active
+      $(this).find('ul#submenu > li#submenu-filter > span.submenu-filter-control > span#submenu-filter-title').empty();
+      $(this).find('ul#submenu > li#submenu-filter > span.submenu-filter-control > span#submenu-filter-title').text($('div#tags > ul#tags_more > li > a.active').text());
 
     });
 

@@ -1310,6 +1310,9 @@ html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filt
 html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter.submenu-genres span.submenu-filter-control {
   display: none;
 }
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter.submenu-genres span.submenu-filter-control span#submenu-filter-title {
+  text-transform: capitalize;
+}
 html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter.submenu-genres span.submenu-filter-control:first-child {
   display: block;
 }
