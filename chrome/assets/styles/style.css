@@ -1307,6 +1307,24 @@ html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filt
 html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter:hover ul {
   display: block;
 }
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter.submenu-genres span.submenu-filter-control {
+  display: none;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter.submenu-genres span.submenu-filter-control:first-child {
+  display: block;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter.submenu-genres ul {
+  padding: 10px;
+  width: 670px;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter.submenu-genres ul li {
+  float: left;
+  width: auto;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter.submenu-genres ul li a {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
 html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter a#shuffle-songs {
   background: transparent;
 }
@@ -1347,19 +1365,24 @@ html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filt
 }
 html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter ul li {
   float: none;
+  margin: 0;
+  padding: 0;
   font-size: inherit;
   line-height: normal;
 }
 html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter ul li > a {
+  float: none;
   display: block;
   height: 28px;
   padding: 0 12px;
   width: auto;
+  background-color: transparent;
   border: 0;
   color: #f3f7f0;
   font-size: 13px;
   font-weight: 400;
   line-height: 28px;
+  text-transform: none;
 }
 html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter ul li > a span.checkmark {
   float: right;

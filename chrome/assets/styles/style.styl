@@ -950,6 +950,26 @@ html body
               ul
                 display: block
 
+            &.submenu-genres
+
+              span.submenu-filter-control
+                display: none
+
+                &:first-child
+                  display: block
+
+              ul
+                padding: 10px
+                width: minWidth
+
+                li
+                  float: left
+
+                  width: auto
+
+                  a
+                    border-radius: 3px
+
             a#shuffle-songs
               background: transparent
 
@@ -992,20 +1012,27 @@ html body
               li
                 float: none
 
+                margin: 0
+                padding: 0
+
                 font-size: inherit
                 line-height: normal
 
                 > a
+                  float: none
+
                   display: block
                   height: controlHeight
                   padding: 0 padding
                   width: auto
 
+                  background-color: transparent
                   border: 0
                   color: #f3f7f0
                   font-size: 13px
                   font-weight: 400
                   line-height: controlHeight
+                  text-transform: none
 
                   span.checkmark
                     float: right
