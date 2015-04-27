@@ -762,7 +762,7 @@ html body
           padding: 0 (8px + controlWidth)
           width: auto
 
-          color: rgba(fontColorLighter,0.5)
+          color: rgba(fontColorLightest,0.5)
           font-size: 13px
           font-weight: 400
           line-height: 28px
@@ -774,7 +774,7 @@ html body
             right: padding
 
           a
-            color: fontColorLighter
+            color: fontColorLightest
 
             &:hover
               color: fontColorLink
@@ -969,14 +969,8 @@ html body
 
             &.submenu-genres
 
-              span.submenu-filter-control
-                display: none
-
-                span#submenu-filter-title
-                  text-transform: capitalize
-
-                &:first-child
-                  display: block
+              span.submenu-filter-control span#submenu-filter-title
+                text-transform: capitalize
 
               ul
                 padding: 10px
@@ -1274,10 +1268,11 @@ html body
                   ul.playpause
                     left: padding
                     position: absolute
-                    top: trackPadding
+                    top: 50%
                     z-index: 50
 
                     height: trackArtwork
+                    margin-top: (-(trackArtwork/2))
                     width: trackArtwork
 
                     li a
@@ -1307,11 +1302,12 @@ html body
                   a.thumb
                     left: padding
                     position: absolute
-                    top: trackPadding
+                    top: 50%
                     z-index: 30
 
                     display: block
                     height: trackArtwork
+                    margin-top: (-(trackArtwork/2))
                     width: trackArtwork
 
                     background-color: fontColorLink !important
@@ -1321,6 +1317,22 @@ html body
                     border: 0
                     border-radius: trackRadius
                     box-shadow: inset 0 0 0 1px rgba(#000000,0.1)
+
+                  /* track info */
+                  div.track-info
+                    display: none
+                    margin: -2px 0 0
+                    padding: 0
+
+                    color: fontColorLighter
+                    font-size: 10px
+                    font-weight: 400
+                    line-height: 13px
+                    vertical-align: middle
+                    text-transform: none
+
+                    // &.track-info-yes
+                    //   display: block
 
                   /* artist & title */
                   h3.track_name
@@ -1391,8 +1403,10 @@ html body
                   div.controls
                     position: absolute
                     right: padding
-                    top: trackPadding + ((trackArtwork - controlHeight)/2)
+                    top: 50%
                     z-index: 50
+
+                    margin-top: (-(controlHeight/2))
 
                     opacity: 0.75
 
@@ -1817,6 +1831,7 @@ html body
                 font-size: 0
                 line-height: normal
                 opacity: 0.9
+                text-align: center
                 vertical-align: middle
 
                 &::before
@@ -1826,6 +1841,7 @@ html body
                   color: #ffffff
                   content: 'Load more...'
                   font-size: 14px
+                  font-weight: 600
                   line-height: 38px
 
                 &:hover

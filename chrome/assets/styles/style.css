@@ -81,10 +81,10 @@ html body div#content-wrapper div#container div#content div#content-left div#lov
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-moreinpost {
   display: none !important;
 }
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section-track div.track-info,
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track div.track-info,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.artist div.track-info,
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.artist div.track-info,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section-track > div.track-info,
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track > div.track-info,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.artist > div.track-info,
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.artist > div.track-info,
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section-track h2,
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track h2,
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.artist h2,
@@ -1324,14 +1324,8 @@ html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filt
 html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter:hover ul {
   display: block;
 }
-html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter.submenu-genres span.submenu-filter-control {
-  display: none;
-}
 html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter.submenu-genres span.submenu-filter-control span#submenu-filter-title {
   text-transform: capitalize;
-}
-html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter.submenu-genres span.submenu-filter-control:first-child {
-  display: block;
 }
 html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter.submenu-genres ul {
   padding: 10px;
@@ -1618,6 +1612,7 @@ html body div#content-wrapper div#container div#content div#content-left div#lov
   min-height: 44px;
   padding: 8px 138px 8px 52px;
   width: auto;
+/* track info */
 /* artist & title */
 /* controls */
 /* twitter */
@@ -1642,9 +1637,10 @@ html body div#content-wrapper div#container div#content div#content-left div#tra
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player ul.playpause {
   left: 12px;
   position: absolute;
-  top: 8px;
+  top: 50%;
   z-index: 50;
   height: 28px;
+  margin-top: -14px;
   width: 28px;
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player ul.playpause li a,
@@ -1714,10 +1710,11 @@ html body div#content-wrapper div#container div#content div#content-left div#tra
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player a.thumb {
   left: 12px;
   position: absolute;
-  top: 8px;
+  top: 50%;
   z-index: 30;
   display: block;
   height: 28px;
+  margin-top: -14px;
   width: 28px;
   background-color: #83c441 !important;
   background-position: 0 0 !important;
@@ -1730,6 +1727,18 @@ html body div#content-wrapper div#container div#content div#content-left div#lov
   border-radius: 3px;
   -webkit-box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+}
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player div.track-info,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.track-info {
+  display: none;
+  margin: -2px 0 0;
+  padding: 0;
+  color: #91948e;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 13px;
+  vertical-align: middle;
+  text-transform: none;
 }
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section div.section-player h3.track_name,
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player h3.track_name {
@@ -1811,8 +1820,9 @@ html body div#content-wrapper div#container div#content div#content-left div#tra
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section div.section-player div.controls {
   position: absolute;
   right: 12px;
-  top: 8px;
+  top: 50%;
   z-index: 50;
+  margin-top: -14px;
   opacity: 0.75;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
   filter: alpha(opacity=75);
@@ -2309,6 +2319,7 @@ html body div#content-wrapper div#container div#content div#content-left div#end
   opacity: 0.9;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   filter: alpha(opacity=90);
+  text-align: center;
   vertical-align: middle;
 }
 html body div#content-wrapper div#container div#content div#content-left div.paginator div.paginator-inner a#infinite-tracks-button::before,
@@ -2318,6 +2329,7 @@ html body div#content-wrapper div#container div#content div#content-left div#end
   color: #fff;
   content: 'Load more...';
   font-size: 14px;
+  font-weight: 600;
   line-height: 38px;
 }
 html body div#content-wrapper div#container div#content div#content-left div.paginator div.paginator-inner a#infinite-tracks-button:hover,

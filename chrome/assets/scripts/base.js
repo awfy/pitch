@@ -69,31 +69,49 @@ $(function(){
     });
 
     // track
-    $('div.section-player').each(function () {
+    $('div.section').each(function () {
 
-      // moves play/pause control
-      $(this).find('ul.tools li.playdiv').detach().appendTo(this);
-      $(this).find('> li.playdiv').wrapAll('<ul class="playpause">');
+      $('div.track-info').each(function () {
 
-      // moves rank
-      $(this).find('> span.rank').insertBefore($(this).find('> h3.track_name a.artist'));
+        if ($(this).text().length > 10) {
 
-      // create the controls element
-      $(this).find('span.share-links, div.meta, ul.tools').addClass('control-latch');
-      $(this).find('> .control-latch').wrapAll('<div class="controls">');
-      $(this).find('> div.controls > span.share-links, div.controls > div.meta').addClass('control-latch-sub');
-      $(this).find('> div.controls > .control-latch-sub').wrapAll('<div class="options">');
-      $(this).find('> div.controls > ul.tools > li.playlist-ctrls').insertBefore($(this).find('> div.controls > div.options > div.meta'));
-      $(this).find('> div.controls > div.options > li.playlist-ctrls').wrapAll('<ul class="playlistcontrols">');
-      $(this).find('> div.controls > div.options > ul.playlistcontrols, > div.controls > div.options > span.share-links, > div.controls > div.options > div.meta').wrapAll('<div class="options-dropdown">');
-      $(this).find('> div.controls > div.options > div.options-dropdown > span.share-links').insertAfter($(this).find('> div.controls > div.options > div.options-dropdown > div.meta'));
+          $(this).addClass('track-info-yes');
+
+        }
+
+        $(this).insertAfter(
+
+          $(this).parent('div.section').find('> div.section-player > h3.track_name')
+
+        );
+
+      });
+
+      $('div.section-player').each(function () {
+
+        // moves play/pause control
+        $(this).find('ul.tools li.playdiv').detach().appendTo(this);
+        $(this).find('> li.playdiv').wrapAll('<ul class="playpause">');
+
+        // moves rank
+        $(this).find('> span.rank').insertBefore($(this).find('> h3.track_name a.artist'));
+
+        // create the controls element
+        $(this).find('span.share-links, div.meta, ul.tools').addClass('control-latch');
+        $(this).find('> .control-latch').wrapAll('<div class="controls">');
+        $(this).find('> div.controls > span.share-links, div.controls > div.meta').addClass('control-latch-sub');
+        $(this).find('> div.controls > .control-latch-sub').wrapAll('<div class="options">');
+        $(this).find('> div.controls > ul.tools > li.playlist-ctrls').insertBefore($(this).find('> div.controls > div.options > div.meta'));
+        $(this).find('> div.controls > div.options > li.playlist-ctrls').wrapAll('<ul class="playlistcontrols">');
+        $(this).find('> div.controls > div.options > ul.playlistcontrols, > div.controls > div.options > span.share-links, > div.controls > div.options > div.meta').wrapAll('<div class="options-dropdown">');
+        $(this).find('> div.controls > div.options > div.options-dropdown > span.share-links').insertAfter($(this).find('> div.controls > div.options > div.options-dropdown > div.meta'));
+
+      });
 
     });
 
-    // move submenu
-    $('div#content-left ul#submenu').prependTo($('div#content-wrapper')).wrapAll('<div id="submenu-container">');
-
     // submenu
+    $('div#content-left ul#submenu').prependTo($('div#content-wrapper')).wrapAll('<div id="submenu-container">');
     $('ul#submenu').each(function () {
 
       // favorite selection fix
@@ -111,8 +129,8 @@ $(function(){
       // list
       $(this).find('div#browse-genres > ul#tags_more').insertBefore($('ul#submenu > li#nav-all'));
       $(this).find('ul#submenu > ul#tags_more').wrapAll('<li id="submenu-filter" class="submenu-genres">');
-      $(this).find('ul#submenu > li#submenu-filter').prepend('<span class="submenu-filter-control"></span>');
-      $(this).find('ul#submenu > li#submenu-filter > span.submenu-filter-control').html('<span class="title">Genre:</span><span id="submenu-filter-title">Funk</span>');
+      $(this).find('ul#submenu > li#submenu-filter > span.submenu-filter-control').remove();
+      $(this).find('ul#submenu > li#submenu-filter').prepend('<span class="submenu-filter-control"><span class="title">Genre:</span><span id="submenu-filter-title"></span></span>');
 
       // active
       $(this).find('ul#submenu > li#submenu-filter > span.submenu-filter-control > span#submenu-filter-title').empty();
