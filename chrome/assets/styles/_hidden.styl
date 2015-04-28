@@ -16,13 +16,19 @@ html body
   div.ignite-takeover-clickthru,
   div#keyboard,
   div#toast-prompt,
+  div#top-notice,
   div#VIZUSURVEY
     display: none !important
 
   div#header div#header-inner
 
-    a#logo-txt::before
-      display: none !important
+    a
+
+      &#logo-temp
+        display: none !important
+
+      &#logo-txt::before
+        display: none !important
 
     div#hh-header,
     div#hh-wrap-header,
@@ -45,6 +51,8 @@ html body
         display: none !important
 
   div#player-container div#player-inner
+
+    &::before,
 
     div#filter
       display: none !important

@@ -4,7 +4,12 @@
 @import '_hidden.styl'
 
 /* build */
-html body
+html body,
+html body#wrapper,
+html body#latest,
+html body#popular,
+html body#tags,
+html body#contact
   box-sizing: border-box !important
   min-width: minWidth !important
   padding: border !important
@@ -32,7 +37,7 @@ html body
     margin: 0
 
   /* header */
-  div#header
+  > div#header
     position: relative
     z-index: 100
 
@@ -61,6 +66,7 @@ html body
         top: 0
         z-index: 5
 
+        display: block
         height: headerHeight
         padding: 0
         width: padding + logoWidth + padding
@@ -110,6 +116,7 @@ html body
           display: block
           margin-left: -1px
 
+          background-color: transparent
           vertical-align: middle
 
           > a
@@ -285,6 +292,7 @@ html body
               vertical-align: middle
 
               img#avatar-mini
+                display: inline-block
                 height: 20px
                 margin: -3px 0 0 5px
                 width: 20px
@@ -431,7 +439,7 @@ html body
             image: 'chrome-extension://__MSG_@@extension_id__/assets/imgs/header/search-icon-focus.png' 14px 14px
 
   /* loader */
-  div#player-loading
+  > div#player-loading
     bottom: auto
     left: 50%
     position: fixed
@@ -467,11 +475,11 @@ html body
       text-transform: lowercase
 
   /* player */
-  div#player-container
+  > div#player-container
     left: border
     position: absolute
     right: border
-    top: headerHeight
+    top: headerHeight !important
     z-index: 90
 
     height: playerHeight
@@ -487,7 +495,7 @@ html body
 
     &.stick
       position: fixed
-      top: 0
+      top: 0 !important
       z-index: 998
 
     div#player-inner
@@ -498,6 +506,8 @@ html body
       margin: 0 auto
       max-width: maxWidth
       width: auto
+
+      border: 0
 
       /* return */
       div#player-page
@@ -803,6 +813,7 @@ html body
 
         /* time & position */
         div#player-timebar
+          left: auto
           position: absolute
           right: padding
           top: playerPadding
@@ -1251,7 +1262,7 @@ html body
                   margin: 0 auto
                   max-width: maxWidth
                   min-height: trackArtwork + (trackPadding * 2)
-                  padding: trackPadding (126px + padding) trackPadding (padding + trackArtwork + 12px)
+                  padding: trackPadding (94px + padding) trackPadding (padding + trackArtwork + 12px)
                   width: auto
 
                   &:hover
@@ -1448,6 +1459,7 @@ html body
 
                         /* playlists */
                         ul.playlistcontrols li.playlist-ctrls
+                          display: block
 
                           &::before
                             display: block
@@ -1455,7 +1467,7 @@ html body
 
                             color: rgba(#f3f7f0,0.8)
                             content: 'Add to playlist...'
-                            font-sise: 12px
+                            font-size: 12px
                             font-weight: 400
                             line-height: 17px
 
@@ -1519,7 +1531,7 @@ html body
 
                             color: rgba(#f3f7f0,0.8)
                             content: 'Download from...'
-                            font-sise: 12px
+                            font-size: 12px
                             font-weight: 400
                             line-height: 17px
 
@@ -1564,7 +1576,7 @@ html body
 
                             color: rgba(#f3f7f0,0.8)
                             content: 'Share to...'
-                            font-sise: 12px
+                            font-size: 12px
                             font-weight: 400
                             line-height: 17px
 
@@ -1601,7 +1613,7 @@ html body
                       right: auto
                       top: 0
 
-                      width: 100px
+                      width: 66px
 
                       li.favdiv
                         float: right
