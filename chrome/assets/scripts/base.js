@@ -123,6 +123,20 @@ $(function(){
 
     });
 
+    // time machine
+    $('div#time-machine').each(function() {
+
+      if($("ul#submenu > li#nav-lastweek").length === 0) {
+        $('ul#submenu').prepend('<li id="nav-lastweek"><a class="selected" href="/popular/lastweek">Time Machine</a></li>');
+      }
+
+      $(this).find('div#message, div.time-machine-short-desc').remove();
+      $(this).appendTo(
+        $('ul#submenu > li#nav-lastweek')
+      );
+
+    });
+
     // genres
     $('body#tags').each(function() {
 

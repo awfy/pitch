@@ -921,6 +921,7 @@ html body
     /* filter (submenu) */
     div#submenu-container
       position: relative
+      z-index: 70
 
       height: submenuHeight + (submenuPadding * 2)
       margin: 0 auto
@@ -934,7 +935,7 @@ html body
         position: relative
 
         box-sizing: border-box
-        height: submenuHeight
+        height: submenuHeight + (submenuPadding * 2)
         margin: 0 auto
         max-width: maxWidth
         padding: submenuPadding padding
@@ -952,6 +953,237 @@ html body
 
           vertical-align: middle
 
+          /* time machine */
+
+          &#nav-lastweek
+            position: relative
+
+            &:hover
+
+              a
+                background-color: fontColorLink
+                border-radius: 4px 4px 0 0
+                color: #ffffff
+
+              div#time-machine
+                display: block
+
+            div#time-machine
+              left: 0
+              position: absolute
+              top: submenuHeight
+
+              display: none
+              margin: 0
+              padding: padding
+              width: 512px
+
+              background-color: fontColorLink
+              border-radius: 0 6px 6px 6px
+              color: fontColorLightest
+
+              div.stage
+
+                a.shuffle
+                  position: absolute
+                  right: padding
+                  top: padding
+
+                  display: none
+                  height: controlHeight
+                  padding: 0 8px
+
+                  border: 1px solid #6da831
+                  border-radius: 4px
+                  color: #f3f7f0
+                  font-size: 13px
+                  font-weight: 600
+                  line-height: controlHeight
+                  text-transform: none
+                  vertical-align: middle
+
+                  span.shuffle-icon
+                    display: none
+
+                  &:hover
+                    background-color: #6da831
+                    border-color: #5c9423
+                    color: #ffffff
+                    text-decoration: none
+
+                ul#flux-capacitor li.year
+                  position: relative
+                  z-index: 40
+
+                  display: block
+                  height: controlHeight + 2px
+                  padding: 0 0 8px
+
+                  background-color: transparent
+                  border: 0
+
+                  &:last-child
+                    padding: 0
+
+                    li.month:last-child
+                      border: 0 !important
+
+                  &.selected
+                    z-index: 50
+
+                    > a
+                      background-color: #6da831
+                      border-color: #5c9423
+
+                  &:hover
+                    z-index: 60
+
+                  > a
+                    float: left
+                    position: relative
+                    z-index: 5
+
+                    display: block
+                    height: controlHeight
+                    padding: 0 8px
+
+                    border: 1px solid #6da831
+                    border-radius: 4px 0 0 4px
+                    color: #f3f7f0
+                    font-size: 13px
+                    font-weight: 600
+                    line-height: controlHeight
+                    vertical-align: middle
+
+                    &:hover
+                      position: relative
+                      z-index: 10
+
+                      background-color: #6da831
+                      border-color: #5c9423
+                      color: #ffffff
+                      text-decoration: none
+
+                  > ul.months
+                    float: left
+
+                    > li.month
+                      float: left
+                      position: relative
+                      z-index: 40
+
+                      display: block !important
+
+                      background-color: transparent
+                      border: 0
+                      line-height: normal
+
+                      &.selected
+                        z-index: 50
+
+                        border: 0 !important
+
+                        > a
+                          background-color: #6da831
+                          border-color: #5c9423
+
+                      &:hover
+                        z-index: 60
+
+                        > a
+                          position: relative
+                          z-index: 10
+
+                          background-color: #444742
+                          border-color: #393b38
+                          color: #ffffff
+                          text-decoration: none
+
+                        > div.full
+                          display: block
+
+                      > a
+                        position: relative
+                        z-index: 5
+
+                        display: block
+                        height: controlHeight
+                        margin: 0 0 0 -1px
+                        padding: 0 8px
+
+                        border: 1px solid #6da831
+                        border-radius: 0
+                        color: #f3f7f0
+                        font-size: 13px
+                        font-weight: 400
+                        line-height: controlHeight
+                        vertical-align: middle
+
+                        &:hover
+                          position: relative
+                          z-index: 10
+
+                          background-color: #444742
+                          border-color: #393b38
+                          color: #ffffff
+                          text-decoration: none
+
+                      &:last-child > a
+                        border-radius: 0 4px 4px 0
+
+                      div.full
+                        left: -1px
+                        position: absolute
+                        top: controlHeight + 1px
+                        width: 180px
+
+                        display: none
+                        padding: 10px 0
+
+                        background-color: #444742
+                        border: 0
+                        border-radius: 0 4px 4px 4px
+
+                        > a
+                          display: block
+
+                          height: controlHeight
+                          overflow: visible
+                          padding: 0 padding
+                          width: auto
+
+                          background-color: transparent
+                          border-radius: 0
+                          line-height: controlHeight
+
+                          > div.date
+                            position: static
+
+                            height: controlHeight
+                            margin: 0
+                            width: auto
+
+                            background: transparent
+                            color: #f3f7f0
+                            font-size: 13px
+                            font-weight: 400
+                            line-height: controlHeight
+                            text-align: left
+
+                            &::before
+                              content: 'Week starting '
+
+                          > div.artists, > ul
+                            display: none
+
+                          &:hover
+                            background-color: #393b38
+
+                            > div.date
+                              color: #ffffff
+
+
+          /* right side dropdown */
           &#submenu-filter
             position: absolute
             right: padding

@@ -61,6 +61,7 @@ html body div#content-wrapper div#container div.ad-breakout,
 html body div#content-wrapper div#container div#ad-breakout {
   display: none !important;
 }
+html body div#content-wrapper div#container div#content > div#time-machine,
 html body div#content-wrapper div#container div#content div.ad-wrapper,
 html body div#content-wrapper div#container div#content div#message-intro-new {
   display: none !important;
@@ -81,10 +82,10 @@ html body div#content-wrapper div#container div#content div#content-left div#lov
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-moreinpost {
   display: none !important;
 }
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section-track > div.track-info,
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track > div.track-info,
-html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.artist > div.track-info,
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.artist > div.track-info,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section-track >div.track-info,
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track >div.track-info,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.artist >div.track-info,
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.artist >div.track-info,
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section-track h2,
 html body div#content-wrapper div#container div#content div#content-left div#track-list div.section.section-track h2,
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.artist h2,
@@ -164,9 +165,6 @@ html body div#content-wrapper div#container div#content div#content-left div.pag
   display: none !important;
 }
 html body div#content-wrapper div#container div#content div#content-right {
-  display: none !important;
-}
-html body div#content-wrapper div#container div#content div#time-machine {
   display: none !important;
 }
 /* build */
@@ -1282,6 +1280,7 @@ html body div#content-wrapper.scrolling div#submenu-container {
 }
 html body div#content-wrapper div#submenu-container {
   position: relative;
+  z-index: 70;
   height: 45px;
   margin: 0 auto;
   width: auto;
@@ -1294,7 +1293,7 @@ html body div#content-wrapper div#submenu-container ul#submenu {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  height: 29px;
+  height: 45px;
   margin: 0 auto;
   max-width: 1080px;
   padding: 8px 12px;
@@ -1308,7 +1307,219 @@ html body div#content-wrapper div#submenu-container ul#submenu > li {
   position: relative;
   display: block;
   vertical-align: middle;
+/* time machine */
+/* right side dropdown */
 /* playlists */
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek {
+  position: relative;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek:hover a {
+  background-color: #83c441;
+  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  color: #fff;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek:hover div#time-machine {
+  display: block;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine {
+  left: 0;
+  position: absolute;
+  top: 29px;
+  display: none;
+  margin: 0;
+  padding: 12px;
+  width: 512px;
+  background-color: #83c441;
+  -webkit-border-radius: 0 6px 6px 6px;
+  border-radius: 0 6px 6px 6px;
+  color: #f7faf2;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage a.shuffle {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  display: none;
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid #6da831;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: #f3f7f0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 28px;
+  text-transform: none;
+  vertical-align: middle;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage a.shuffle span.shuffle-icon {
+  display: none;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage a.shuffle:hover {
+  background-color: #6da831;
+  border-color: #5c9423;
+  color: #fff;
+  text-decoration: none;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year {
+  position: relative;
+  z-index: 40;
+  display: block;
+  height: 30px;
+  padding: 0 0 8px;
+  background-color: transparent;
+  border: 0;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year:last-child {
+  padding: 0;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year:last-child li.month:last-child {
+  border: 0 !important;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year.selected {
+  z-index: 50;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year.selected > a {
+  background-color: #6da831;
+  border-color: #5c9423;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year:hover {
+  z-index: 60;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > a {
+  float: left;
+  position: relative;
+  z-index: 5;
+  display: block;
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid #6da831;
+  -webkit-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+  color: #f3f7f0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 28px;
+  vertical-align: middle;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > a:hover {
+  position: relative;
+  z-index: 10;
+  background-color: #6da831;
+  border-color: #5c9423;
+  color: #fff;
+  text-decoration: none;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months {
+  float: left;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month {
+  float: left;
+  position: relative;
+  z-index: 40;
+  display: block !important;
+  background-color: transparent;
+  border: 0;
+  line-height: normal;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month.selected {
+  z-index: 50;
+  border: 0 !important;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month.selected > a {
+  background-color: #6da831;
+  border-color: #5c9423;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month:hover {
+  z-index: 60;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month:hover > a {
+  position: relative;
+  z-index: 10;
+  background-color: #444742;
+  border-color: #393b38;
+  color: #fff;
+  text-decoration: none;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month:hover > div.full {
+  display: block;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month > a {
+  position: relative;
+  z-index: 5;
+  display: block;
+  height: 28px;
+  margin: 0 0 0 -1px;
+  padding: 0 8px;
+  border: 1px solid #6da831;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: #f3f7f0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 28px;
+  vertical-align: middle;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month > a:hover {
+  position: relative;
+  z-index: 10;
+  background-color: #444742;
+  border-color: #393b38;
+  color: #fff;
+  text-decoration: none;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month:last-child > a {
+  -webkit-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month div.full {
+  left: -1px;
+  position: absolute;
+  top: 29px;
+  width: 180px;
+  display: none;
+  padding: 10px 0;
+  background-color: #444742;
+  border: 0;
+  -webkit-border-radius: 0 4px 4px 4px;
+  border-radius: 0 4px 4px 4px;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month div.full > a {
+  display: block;
+  height: 28px;
+  overflow: visible;
+  padding: 0 12px;
+  width: auto;
+  background-color: transparent;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  line-height: 28px;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month div.full > a > div.date {
+  position: static;
+  height: 28px;
+  margin: 0;
+  width: auto;
+  background: transparent;
+  color: #f3f7f0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month div.full > a > div.date::before {
+  content: 'Week starting ';
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month div.full > a > div.artists,
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month div.full > a > ul {
+  display: none;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month div.full > a:hover {
+  background-color: #393b38;
+}
+html body div#content-wrapper div#submenu-container ul#submenu > li#nav-lastweek div#time-machine div.stage ul#flux-capacitor li.year > ul.months > li.month div.full > a:hover > div.date {
+  color: #fff;
 }
 html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter {
   position: absolute;
