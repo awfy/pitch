@@ -2124,7 +2124,7 @@ html body#contact div#content-wrapper div#submenu-container ul#submenu {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  height: 29px;
+  height: 45px;
   margin: 0 auto;
   max-width: 1080px;
   padding: 8px 12px;
@@ -2223,9 +2223,13 @@ html body#latest div#content-wrapper div#submenu-container ul#submenu > li#subme
 html body#popular div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter span.title,
 html body#tags div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter span.title,
 html body#contact div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter span.title {
+  float: left;
+  display: block;
+  height: 29px;
   color: #666963;
   font-size: 12px;
   font-weight: 600;
+  line-height: 29px;
   text-align: right;
 }
 html body div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter span#submenu-filter-title,
@@ -2234,10 +2238,11 @@ html body#latest div#content-wrapper div#submenu-container ul#submenu > li#subme
 html body#popular div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter span#submenu-filter-title,
 html body#tags div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter span#submenu-filter-title,
 html body#contact div#content-wrapper div#submenu-container ul#submenu > li#submenu-filter span#submenu-filter-title {
+  float: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  display: inline-block;
+  display: block;
   margin: 0 0 0 6px;
   height: 29px;
   padding: 0 13px;

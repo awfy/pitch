@@ -945,7 +945,7 @@ html body#contact
         position: relative
 
         box-sizing: border-box
-        height: submenuHeight
+        height: submenuHeight + (submenuPadding * 2)
         margin: 0 auto
         max-width: maxWidth
         padding: submenuPadding padding
@@ -1001,14 +1001,22 @@ html body#contact
             span
 
               &.title
+                float: left
+
+                display: block
+                height: submenuHeight
+
                 color: fontColorLight
                 font-size: 12px
                 font-weight: 600
+                line-height: submenuHeight
                 text-align: right
 
               &#submenu-filter-title
+                float: left
+
                 box-sizing: border-box
-                display: inline-block
+                display: block
                 margin: 0 0 0 6px
                 height: submenuHeight
                 padding: 0 13px
