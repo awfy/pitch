@@ -296,7 +296,9 @@ html body#contact > div#header {
   z-index: 100;
   height: auto;
   width: auto;
+  background: #3e403d;
   background-color: #3e403d;
+  background-image: none;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
   line-height: normal;
   text-align: left;
