@@ -31,7 +31,8 @@ html body div#header div#header-inner ul.menu li#menu-item-directory,
 html body div#header div#header-inner ul.menu li#menu-item-hh,
 html body div#header div#header-inner ul.menu li#menu-item-more,
 html body div#header div#header-inner ul.menu li#menu-item-premiere,
-html body div#header div#header-inner ul.menu li#menu-item-search {
+html body div#header div#header-inner ul.menu li#menu-item-search,
+html body div#header div#header-inner ul.menu li#menu-item-zeitgeist {
   display: none !important;
 }
 html body div#player-container div#player-inner::before,
@@ -62,6 +63,9 @@ html body div#content-wrapper a#phonograph,
 html body div#content-wrapper div.tsad-skin {
   display: none !important;
 }
+html body div#content-wrapper div#submenu-container ul#submenu li#nav-videos {
+  display: none !important;
+}
 html body div#content-wrapper div#container div.ad-breakout,
 html body div#content-wrapper div#container div#ad-breakout {
   display: none !important;
@@ -79,7 +83,11 @@ html body div#content-wrapper div#container div#content div#content-left ul#subm
   display: none !important;
 }
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.no-search-results img,
-html body div#content-wrapper div#container div#content div#content-left div#track-list div.no-search-results img {
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.no-search-results img,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.wb-hypem-ad-grid-title,
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.wb-hypem-ad-grid-title,
+html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.wb-ad-grid,
+html body div#content-wrapper div#container div#content div#content-left div#track-list div.wb-ad-grid {
   display: none !important;
 }
 html body div#content-wrapper div#container div#content div#content-left div#loved-tracks div.section.section-moreinpost,
@@ -575,7 +583,7 @@ html body#latest > div#header div#header-inner a#shuf,
 html body#popular > div#header div#header-inner a#shuf,
 html body#tags > div#header div#header-inner a#shuf,
 html body#contact > div#header div#header-inner a#shuf {
-  left: 267px;
+  left: 267px /* 197 is the width of the menu */;
   position: absolute;
   top: 0;
   display: block;
